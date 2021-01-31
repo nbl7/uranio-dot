@@ -1,15 +1,15 @@
 
-import {BookPropertyType, BookSecurityType} from './_core/types';
+import urn_core from 'urn_core';
 
 const core_atoms_book = {
 	superuser: {
 		security: {
-			type: BookSecurityType.UNIFORM,
+			type: urn_core.types.BookSecurityType.UNIFORM,
 			_r: null
 		},
 		properties: {
 			email: {
-				type: BookPropertyType.EMAIL,
+				type: urn_core.types.BookPropertyType.EMAIL,
 				label: 'Email',
 				unique: true,
 				on_error: () => {
@@ -17,27 +17,27 @@ const core_atoms_book = {
 				}
 			},
 			password: {
-				type: BookPropertyType.ENCRYPTED,
+				type: urn_core.types.BookPropertyType.ENCRYPTED,
 				label: 'Password'
 			}
 		}
 	},
 	user: {
 		securiy: {
-			type: BookSecurityType.GRANULAR
+			type: urn_core.types.BookSecurityType.GRANULAR
 		},
 		properties: {
 			email: {
-				type: BookPropertyType.EMAIL,
+				type: urn_core.types.BookPropertyType.EMAIL,
 				label: 'Email',
 				unique: true,
 			},
 			password: {
-				type: BookPropertyType.ENCRYPTED,
+				type: urn_core.types.BookPropertyType.ENCRYPTED,
 				label: 'Password'
 			},
 			groups: {
-				type: BookPropertyType.ATOM_ARRAY,
+				type: urn_core.types.BookPropertyType.ATOM_ARRAY,
 				atom: 'group',
 				label: 'Groups',
 				optional: true
@@ -47,7 +47,7 @@ const core_atoms_book = {
 	group: {
 		properties: {
 			name: {
-				type: BookPropertyType.TEXT,
+				type: urn_core.types.BookPropertyType.TEXT,
 				label: 'Name'
 			}
 		}

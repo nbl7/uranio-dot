@@ -4,9 +4,7 @@
  * @packageDocumentation
  */
 
-import * as urn_core from './_core/main';
-
-export default urn_core;
+import urn_core from 'urn_core';
 
 const bll = urn_core.bll.create_basic('superuser');
 
