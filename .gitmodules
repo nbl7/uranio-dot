@@ -1,0 +1,12 @@
+[submodule "modules_dep/urn-core-dep"]
+	path = modules_dep/urn-core-dep
+	url = git@bitbucket.org:nbl7/urn-core-dep.git
+[submodule "modules_dep/urn-core-dep-dev"]
+	path = modules_dep/urn-core-dep-dev
+	url = git@bitbucket.org:nbl7/urn-core-dep-dev.git
+[submodule "modules_dep/urn-web-dep"]
+	path = modules_dep/urn-web-dep
+	url = git@bitbucket.org:nbl7/urn-web-dep.git
+[submodule "modules_dep/urn-web-dep-dev"]
+	path = modules_dep/urn-web-dep-dev
+	url = git@bitbucket.org:nbl7/urn-web-dep-dev.git
