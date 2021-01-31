@@ -27,6 +27,7 @@
 		"urn-core-dep": "git+ssh://git@bitbucket.org/nbl7/urn-core-dep.git"
 	},
 	"_moduleAliases": {
-		"@book": "dist/book.js"
+		"urn_book": "dist/book.js",
+		"urn_core": "dist/_adm/_web/_core/"
 	}
 }
