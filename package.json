@@ -21,10 +21,11 @@
 	"license": "ISC",
 	"homepage": "https://bitbucket.org/nbl7/urn-bld#readme",
 	"devDependencies": {
-		"urn-core-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git"
+		"urn-core-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git",
+		"urn-web-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-web-dep-dev.git"
 	},
 	"dependencies": {
-		"urn-core-dep": "git+ssh://git@bitbucket.org/nbl7/urn-core-dep.git"
+		"urn-web-dep": "git+ssh://git@bitbucket.org/nbl7/urn-web-dep.git"
 	},
 	"_moduleAliases": {
 		"urn_book": "dist/book.js",
