@@ -21,7 +21,6 @@
 	"license": "ISC",
 	"homepage": "https://bitbucket.org/nbl7/urn-bld#readme",
 	"devDependencies": {
-		"urn-core-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git",
 		"urn-web-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-web-dep-dev.git"
 	},
 	"dependencies": {
