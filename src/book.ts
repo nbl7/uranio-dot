@@ -1,10 +1,10 @@
 
-import urn_core from 'urn_core';
+import * as book_types from './types';
 
 const core_atoms_book = {
 	superuser: {
 		security: {
-			type: urn_core.types.BookSecurityType.UNIFORM,
+			type: book_types.BookSecurityType.UNIFORM,
 			_r: null
 		},
 		api:{
@@ -12,7 +12,7 @@ const core_atoms_book = {
 		},
 		properties: {
 			email: {
-				type: urn_core.types.BookPropertyType.EMAIL,
+				type: book_types.BookPropertyType.EMAIL,
 				label: 'Email',
 				unique: true,
 				on_error: () => {
@@ -20,30 +20,30 @@ const core_atoms_book = {
 				}
 			},
 			password: {
-				type: urn_core.types.BookPropertyType.ENCRYPTED,
+				type: book_types.BookPropertyType.ENCRYPTED,
 				label: 'Password'
 			}
 		}
 	},
 	user: {
 		securiy: {
-			type: urn_core.types.BookSecurityType.GRANULAR
+			type: book_types.BookSecurityType.GRANULAR
 		},
 		api:{
 			url: 'user'
 		},
 		properties: {
 			email: {
-				type: urn_core.types.BookPropertyType.EMAIL,
+				type: book_types.BookPropertyType.EMAIL,
 				label: 'Email',
 				unique: true,
 			},
 			password: {
-				type: urn_core.types.BookPropertyType.ENCRYPTED,
+				type: book_types.BookPropertyType.ENCRYPTED,
 				label: 'Password'
 			},
 			groups: {
-				type: urn_core.types.BookPropertyType.ATOM_ARRAY,
+				type: book_types.BookPropertyType.ATOM_ARRAY,
 				atom: 'group',
 				label: 'Groups',
 				optional: true
@@ -56,7 +56,7 @@ const core_atoms_book = {
 		},
 		properties: {
 			name: {
-				type: urn_core.types.BookPropertyType.TEXT,
+				type: book_types.BookPropertyType.TEXT,
 				label: 'Name'
 			}
 		}
