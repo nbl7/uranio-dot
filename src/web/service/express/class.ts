@@ -29,6 +29,8 @@ express_app.use(express.json());
 
 express_app.use(express.urlencoded({extended: true}));
 
+@urn_log.decorators.debug_constructor
+@urn_log.decorators.debug_methods
 class ExpressWebService implements Service {
 	
 	constructor(){
