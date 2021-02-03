@@ -12,6 +12,8 @@ import cors from 'cors';
 
 import {urn_log} from 'urn-lib';
 
+import urn_core from 'urn_core';
+
 import {
 	AtomName,
 	Book
@@ -32,9 +34,9 @@ class ExpressWebService implements Service {
 	constructor(){
 		let atom_name:AtomName;
 		for(atom_name in atom_book){
-			const atom_api = atom_book[atom_name]['api'] as Book.Definition.Api;
-			const router = _create_atom_route();
-			express_app.use(atom_api.url, router);
+			const atom_def = atom_book[atom_name] as Book.Definition;
+			const router = _create_atom_route(atom_name);
+			express_app.use(atom_def.api.url, router);
 		}
 	}
 	
@@ -44,12 +46,15 @@ class ExpressWebService implements Service {
 	
 }
 
-function _create_atom_route():express.Router{
+function _create_atom_route(atom_name:AtomName):express.Router{
 	
 	const router = express.Router();
 	
+	const urn_bll = urn_core.bll.create_basic(atom_name);
+	
 	router.get('/', async (_, res) => {
-		res.status(200).send('SUCCESS');
+		const res_find = await urn_bll.find({});
+		res.status(200).send(res_find);
 	});
 	
 	return router;

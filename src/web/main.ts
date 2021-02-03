@@ -6,6 +6,9 @@
 
 import * as types from './types';
 
+import * as service from './service/';
+
 export {
-	types
+	types,
+	service
 };
