@@ -8,7 +8,7 @@ const core_atoms_book = {
 			_r: null
 		},
 		api:{
-			url: 'superuser'
+			url: '/superusers'
 		},
 		properties: {
 			email: {
@@ -30,7 +30,7 @@ const core_atoms_book = {
 			type: book_types.BookSecurityType.GRANULAR
 		},
 		api:{
-			url: 'user'
+			url: '/users'
 		},
 		properties: {
 			email: {
@@ -52,7 +52,7 @@ const core_atoms_book = {
 	},
 	group: {
 		api:{
-			url: 'group'
+			url: '/groups'
 		},
 		properties: {
 			name: {
