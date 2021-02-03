@@ -7,6 +7,9 @@ const core_atoms_book = {
 			type: urn_core.types.BookSecurityType.UNIFORM,
 			_r: null
 		},
+		api:{
+			url: 'superuser'
+		},
 		properties: {
 			email: {
 				type: urn_core.types.BookPropertyType.EMAIL,
@@ -25,6 +28,9 @@ const core_atoms_book = {
 	user: {
 		securiy: {
 			type: urn_core.types.BookSecurityType.GRANULAR
+		},
+		api:{
+			url: 'user'
 		},
 		properties: {
 			email: {
@@ -45,6 +51,9 @@ const core_atoms_book = {
 		}
 	},
 	group: {
+		api:{
+			url: 'group'
+		},
 		properties: {
 			name: {
 				type: urn_core.types.BookPropertyType.TEXT,
