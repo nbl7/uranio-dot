@@ -6,8 +6,8 @@
 	"types": "dist/index.d.ts",
 	"scripts": {
 		"build": "tsc -b",
-		"core": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/core/run.js\"",
-		"web": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/web/run.js\""
+		"core": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/urn-core/run.js\"",
+		"web": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/urn-web/run.js\""
 	},
 	"repository": {
 		"type": "git",
@@ -28,7 +28,7 @@
 	},
 	"_moduleAliases": {
 		"urn_book": "dist/book.js",
-		"urn_core": "dist/core/",
-		"urn_web": "dist/web/"
+		"urn_core": "dist/urn-core/",
+		"urn_web": "dist/urn-web/"
 	}
 }
