@@ -24,8 +24,8 @@
 		"baseUrl": ".",
 		"paths": {
 			"urn_book": ["src/book"],
-			"urn_core": ["src/core"],
-			"urn_web": ["src/web"]
+			"urn_core": ["src/urn-core"],
+			"urn_web": ["src/urn-web"]
 		}
 	},
 	"include": [
