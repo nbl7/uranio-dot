@@ -65,4 +65,38 @@ const core_atoms_book = {
 
 export const atom_book = {
 	...core_atoms_book,
+	media: {
+		api: {
+			url: '/medias'
+		},
+		security: {
+			type: book_types.BookSecurityType.GRANULAR
+		},
+		properties: {
+			src: {
+				type: book_types.BookPropertyType.TEXT,
+				label: 'SRC'
+			}
+		}
+	},
+	product: {
+		api: {
+			url: '/products'
+		},
+		security: {
+			type: book_types.BookSecurityType.GRANULAR
+		},
+		properties: {
+			title: {
+				type: book_types.BookPropertyType.TEXT,
+				label: 'Title',
+				optional: true
+			},
+			images: {
+				type: book_types.BookPropertyType.ATOM_ARRAY,
+				atom: 'media',
+				optional: true
+			}
+		}
+	}
 } as const;
