@@ -2,24 +2,55 @@
 import * as book_types from './types';
 
 const core_atoms_book = {
-	log: {
+	debug: {
 		connection: 'log',
 		security: {
 			type: book_types.BookSecurityType.UNIFORM,
 			_r: null
 		},
 		api:{
-			url: '/logs'
+			url: '/log-debug'
 		},
 		properties: {
 			msg: {
 				type: book_types.BookPropertyType.TEXT,
 				label: 'Message'
 			},
-			type: {
-				type: book_types.BookPropertyType.ENUM_STRING,
-				label: 'Type',
-				values: ['debug','log','warning','error']
+			body: {
+				type: book_types.BookPropertyType.LONG_TEXT,
+				label: 'Body'
+			},
+			path: {
+				type: book_types.BookPropertyType.TEXT,
+				label: 'Path'
+			},
+			ip: {
+				type: book_types.BookPropertyType.TEXT,
+				label: 'IP',
+			},
+			params: {
+				type: book_types.BookPropertyType.TEXT,
+				label: 'Params'
+			},
+			query: {
+				type: book_types.BookPropertyType.TEXT,
+				label: 'Query'
+			}
+		}
+	},
+	error: {
+		connection: 'log',
+		security: {
+			type: book_types.BookSecurityType.UNIFORM,
+			_r: null
+		},
+		api:{
+			url: '/log-error'
+		},
+		properties: {
+			msg: {
+				type: book_types.BookPropertyType.TEXT,
+				label: 'Message'
 			},
 			body: {
 				type: book_types.BookPropertyType.LONG_TEXT,
