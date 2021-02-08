@@ -20,6 +20,26 @@ const core_atoms_book = {
 				type: book_types.BookPropertyType.ENUM_STRING,
 				label: 'Type',
 				values: ['debug','log','warning','error']
+			},
+			body: {
+				type: book_types.BookPropertyType.LONG_TEXT,
+				label: 'Body'
+			},
+			path: {
+				type: book_types.BookPropertyType.TEXT,
+				label: 'Path'
+			},
+			ip: {
+				type: book_types.BookPropertyType.TEXT,
+				label: 'IP',
+			},
+			params: {
+				type: book_types.BookPropertyType.TEXT,
+				label: 'Params'
+			},
+			query: {
+				type: book_types.BookPropertyType.TEXT,
+				label: 'Query'
 			}
 		}
 	},
