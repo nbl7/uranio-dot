@@ -10,7 +10,7 @@ export const dev_atom_book = {
 			url: '/medias'
 		},
 		security: {
-			type: book_types.BookSecurityType.GRANULAR
+			type: book_types.BookSecurityType.UNIFORM
 		},
 		properties: {
 			src: {
@@ -24,7 +24,7 @@ export const dev_atom_book = {
 			url: '/products'
 		},
 		security: {
-			type: book_types.BookSecurityType.GRANULAR
+			type: book_types.BookSecurityType.UNIFORM
 		},
 		properties: {
 			title: {
