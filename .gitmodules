@@ -16,3 +16,6 @@
 [submodule "src/urn-web"]
 	path = src/urn-web
 	url = ssh://git@bitbucket.org/nbl7/urn-web.git
+[submodule "src/urn-trx"]
+	path = src/urn-trx
+	url = ssh://git@bitbucket.org/nbl7/urn-trx.git
