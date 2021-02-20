@@ -3,11 +3,17 @@ import * as book_types from './types';
 
 import {web_atom_book} from 'urn_web/book';
 
+const default_routes = {};
+
+const my_validate_route = {};
+
+dev_atom_book.product.api.routes.validate.call(
+
 export const dev_atom_book = {
 	...web_atom_book,
 	media: {
 		api: {
-			url: '/medias'
+			url: 'medias'
 		},
 		security: {
 			type: book_types.BookSecurityType.UNIFORM
@@ -19,29 +25,48 @@ export const dev_atom_book = {
 			}
 		}
 	},
-	// product: {
-	//   api: {
-	//     url: '/products'
-	//   },
-	//   security: {
-	//     type: book_types.BookSecurityType.UNIFORM
-	//   },
-	//   properties: {
-	//     title: {
-	//       type: book_types.BookPropertyType.TEXT,
-	//       label: 'Title',
-	//       optional: true
-	//     },
-	//     images: {
-	//       type: book_types.BookPropertyType.ATOM_ARRAY,
-	//       atom: 'media',
-	//       optional: true
-	//     }
-	//   }
-	// },
+	product: {
+		api: {
+			url: 'products',
+			routes: {
+				...default_routes,
+				validate: {
+					method: 'GET',
+					action: AuthAction.READ,
+					url: '/validate/:id',
+					call: (id:string, body:Atom<'user'>, options:Query.Options<'user'>) => {
+						const urn_bll = urn_core.bll.create('user');
+						return await urn_bll.validate(id, body, options);
+					}
+					// client_call: (id:string, body:Atom<'user'>, options:Query.Options<'user'>) => {
+					//   axios.get('/${id}?=filter{options}', body, )
+					// },
+					// server_call: async (req, res) => {
+					//   const urn_bll = urn_core.bll.create('user');
+					//   return await urn_bll.validate(id, options);
+					// }
+				}
+			}
+		},
+		security: {
+			type: book_types.BookSecurityType.UNIFORM
+		},
+		properties: {
+			title: {
+				type: book_types.BookPropertyType.TEXT,
+				label: 'Title',
+				optional: true
+			},
+			images: {
+				type: book_types.BookPropertyType.ATOM_ARRAY,
+				atom: 'media',
+				optional: true
+			}
+		}
+	},
 	// product2: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -61,7 +86,7 @@ export const dev_atom_book = {
 	// },
 	// product3: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -81,7 +106,7 @@ export const dev_atom_book = {
 	// },
 	// product4: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -101,7 +126,7 @@ export const dev_atom_book = {
 	// },
 	// product5: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -121,7 +146,7 @@ export const dev_atom_book = {
 	// },
 	// product6: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -141,7 +166,7 @@ export const dev_atom_book = {
 	// },
 	// product7: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -161,7 +186,7 @@ export const dev_atom_book = {
 	// },
 	// product8: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -181,7 +206,7 @@ export const dev_atom_book = {
 	// },
 	// product9: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -201,7 +226,7 @@ export const dev_atom_book = {
 	// },
 	// product10: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -221,7 +246,7 @@ export const dev_atom_book = {
 	// },
 	// product11: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -241,7 +266,7 @@ export const dev_atom_book = {
 	// },
 	// product12: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -261,7 +286,7 @@ export const dev_atom_book = {
 	// },
 	// product13: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -281,7 +306,7 @@ export const dev_atom_book = {
 	// },
 	// product14: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -301,7 +326,7 @@ export const dev_atom_book = {
 	// },
 	// product15: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -321,7 +346,7 @@ export const dev_atom_book = {
 	// },
 	// product16: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -341,7 +366,7 @@ export const dev_atom_book = {
 	// },
 	// product17: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -361,7 +386,7 @@ export const dev_atom_book = {
 	// },
 	// product18: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -381,7 +406,7 @@ export const dev_atom_book = {
 	// },
 	// product19: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -401,7 +426,7 @@ export const dev_atom_book = {
 	// },
 	// product20: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -421,7 +446,7 @@ export const dev_atom_book = {
 	// },
 	// product21: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -441,7 +466,7 @@ export const dev_atom_book = {
 	// },
 	// product22: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -461,7 +486,7 @@ export const dev_atom_book = {
 	// },
 	// product23: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -481,7 +506,7 @@ export const dev_atom_book = {
 	// },
 	// product24: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -501,7 +526,7 @@ export const dev_atom_book = {
 	// },
 	// product25: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -521,7 +546,7 @@ export const dev_atom_book = {
 	// },
 	// product26: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -541,7 +566,7 @@ export const dev_atom_book = {
 	// },
 	// product27: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -561,7 +586,7 @@ export const dev_atom_book = {
 	// },
 	// product28: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -581,7 +606,7 @@ export const dev_atom_book = {
 	// },
 	// product29: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -601,7 +626,7 @@ export const dev_atom_book = {
 	// },
 	// product30: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -621,7 +646,7 @@ export const dev_atom_book = {
 	// },
 	// product31: {
 	//   api: {
-	//     url: '/products'
+	//     url: 'products'
 	//   },
 	//   security: {
 	//     type: book_types.BookSecurityType.UNIFORM
@@ -639,26 +664,26 @@ export const dev_atom_book = {
 	//     }
 	//   }
 	// },
-	product32: {
-		api: {
-			url: '/products'
-		},
-		security: {
-			type: book_types.BookSecurityType.UNIFORM
-		},
-		properties: {
-			title: {
-				type: book_types.BookPropertyType.TEXT,
-				label: 'Title',
-				optional: true
-			},
-			images: {
-				type: book_types.BookPropertyType.ATOM_ARRAY,
-				atom: 'media',
-				optional: true
-			}
-		}
-	}
+	// product32: {
+	//   api: {
+	//     url: 'products'
+	//   },
+	//   security: {
+	//     type: book_types.BookSecurityType.UNIFORM
+	//   },
+	//   properties: {
+	//     title: {
+	//       type: book_types.BookPropertyType.TEXT,
+	//       label: 'Title',
+	//       optional: true
+	//     },
+	//     images: {
+	//       type: book_types.BookPropertyType.ATOM_ARRAY,
+	//       atom: 'media',
+	//       optional: true
+	//     }
+	//   }
+	// }
 } as const;
 
 export const atom_book = {
