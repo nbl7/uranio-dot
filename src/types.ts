@@ -14,3 +14,6 @@ export import  AuthAction = urn_core.types.AuthAction;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export import  RouteMethod = urn_web.types.RouteMethod;
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export import  RouteRequest = urn_web.types.RouteRequest;

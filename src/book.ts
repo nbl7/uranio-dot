@@ -13,52 +13,58 @@ import {urn_log} from 'urn-lib';
 
 import urn_core from 'urn_core';
 
+// class my_bll extends urn_core.bll.BLL<'product'> {
+//   public async find_by_id<D extends urn_core.types.Depth>(id:string){
+//     console.log('AAAAAAAAAAAAAAAAAAAAA',id);
+//     return await super.find_by_id(id) as urn_core.types.Molecule<'product',D>;
+//   }
+// }
+//
+// import {my_bll} from './my';
+
+// import urn_web from 'urn_web';
+
 // import {Query, AtomShape, TokenObject} from 'urn_core/types';
 
-
-// export const route_book = {
-//   validate: {
-//     method: 'GET',
-//     // action: AuthAction.READ,
-//     url: '/validate/:id/:region',
-//     client_call: (id:string, region:string, options:Query.Options<'product'>, body:AtomShape<'product'>) => {
-//       return {
-//         params: {id: id, region: region},
-//         query: {options: options},
-//         body: body
-//       };
+// export const dev_route_book = {
+//   user: {
+//     auth: {
+//       method: book_types.RouteMethod.POST,
+//       action: book_types.AuthAction.AUTH,
+//       url: '/auth',
+//       call: async (urn_req:urn_web.types.RouteRequest<'user'>) => {
+//         console.log(urn_req);
+//       }
+//     }
+//   },
+//   product: {
+//     find: {
+//       method: book_types.RouteMethod.GET,
+//       action: book_types.AuthAction.READ,
+//       url: '/',
+//       query: ['filter', 'options'],
+//       call: async (urn_request:urn_web.types.RouteRequest<'product'>) => {
+//         urn_log.fn_debug(`Router Call GET / [${urn_request.atom_name}]`);
+//         const urn_bll = urn_core.bll.create(urn_request.atom_name, urn_request.token_object);
+//         const bll_res = await urn_bll.find(urn_request.query.filter, urn_request.query.options);
+//         return urn_core.atm.util.hide_hidden_properties(urn_request.atom_name, bll_res);
+//       }
 //     },
-//     server_call: async (params:RouteParams, query:RouteQuery, body:RouteBody, token_object:TokenObject) => {
-//       const urn_bll = urn_core.bll.create('user', token_object);
-//       console.log(body);
-//       return await urn_bll.find_by_id(params.id, query.options);
+//     find_id: {
+//       method: book_types.RouteMethod.GET,
+//       action: book_types.AuthAction.READ,
+//       url: '/:id',
+//       query: ['options'],
+//       call: async (urn_request:urn_web.types.RouteRequest<'product'>) => {
+//         urn_log.fn_debug(`Router Call GET / [${urn_request.atom_name}]`);
+//         const urn_bll = urn_core.bll.create(urn_request.atom_name, urn_request.token_object);
+//         const bll_res = await urn_bll.find_by_id(urn_request.params.id, urn_request.query.options);
+//         return urn_core.atm.util.hide_hidden_properties(urn_request.atom_name, bll_res);
+//       }
 //     }
 //   }
 // } as const;
 
-// export type RouteName = keyof typeof route_book;
-
-// export type RouteParams = {
-	
-// }
-
-// export type ClientReturn = {
-//   params: {
-//     [k:string]: string
-//   },
-//   query: any,
-//   body: any
-// }
-
-
-// export type RouteBook = {
-//   [k:string]: {
-//     method: 'GET' | 'POST' | 'DELETE',
-//     url:string,
-//     client_call: (...args:any) => ClientReturn,
-//     server_call: (params: RouteParams, query: RouteQuery, body: RouteBody, token_object:TokenObject) => any
-//   }
-// }
 
 export const dev_atom_book = {
 	...web_atom_book,
@@ -77,6 +83,7 @@ export const dev_atom_book = {
 		}
 	},
 	product: {
+		// bll: my_bll,
 		api: {
 			url: 'products',
 			routes: {
@@ -84,25 +91,26 @@ export const dev_atom_book = {
 					method: book_types.RouteMethod.GET,
 					action: book_types.AuthAction.READ,
 					url: '/',
-					call: async (urn_request) => {
-						
-						urn_log.fn_debug(`Router GET / [${urn_request.atom_name}]`);
-						
-						// req_validator.only_valid_query_keys(urn_request.query, ['filter','options']);
-						// req_validator.empty(urn_request.params, 'params');
-						// req_validator.empty(urn_request.body, 'body');
-						
-						// const filter = req_validator.process_request_filter(urn_request.query.filter);
-						// const options = req_validator.process_request_options(urn_request.query.options);
-						
-						const urn_bll = urn_core.bll.create(urn_request.atom_name, urn_request.token_object);
-						
+					query: ['filter', 'options'],
+					call: async (urn_request:book_types.RouteRequest) => {
+						urn_log.fn_debug(`Router Call GET / [product]`);
+						const urn_bll = urn_core.bll.create('product', urn_request.token_object);
 						const bll_res = await urn_bll.find(urn_request.query.filter, urn_request.query.options);
-						
-						return urn_core.atm.util.hide_hidden_properties(urn_request.atom_name, bll_res);
-						
+						return urn_core.atm.util.hide_hidden_properties('product', bll_res);
 					}
-				}
+				},
+				find_id: {
+					method: book_types.RouteMethod.GET,
+					action: book_types.AuthAction.READ,
+					url: '/:id',
+					query: ['options'],
+					call: async (urn_request:book_types.RouteRequest) => {
+						urn_log.fn_debug(`Router Call GET /:id [product]`);
+						const urn_bll = urn_core.bll.create('product', urn_request.token_object);
+						const bll_res = await urn_bll.find_by_id(urn_request.params.id, urn_request.query.options);
+						return urn_core.atm.util.hide_hidden_properties('product', bll_res);
+					}
+				},
 			}
 		},
 		security: {
@@ -746,3 +754,53 @@ export const dev_atom_book = {
 export const atom_book = {
 	...dev_atom_book
 } as const;
+
+// export const route_book = {
+//   ...dev_route_book
+// } as const;
+
+
+// export const route_book = {
+//   validate: {
+//     method: 'GET',
+//     // action: AuthAction.READ,
+//     url: '/validate/:id/:region',
+//     client_call: (id:string, region:string, options:Query.Options<'product'>, body:AtomShape<'product'>) => {
+//       return {
+//         params: {id: id, region: region},
+//         query: {options: options},
+//         body: body
+//       };
+//     },
+//     server_call: async (params:RouteParams, query:RouteQuery, body:RouteBody, token_object:TokenObject) => {
+//       const urn_bll = urn_core.bll.create('user', token_object);
+//       console.log(body);
+//       return await urn_bll.find_by_id(params.id, query.options);
+//     }
+//   }
+// } as const;
+
+// export type RouteName = keyof typeof route_book;
+
+// export type RouteParams = {
+	
+// }
+
+// export type ClientReturn = {
+//   params: {
+//     [k:string]: string
+//   },
+//   query: any,
+//   body: any
+// }
+
+
+// export type RouteBook = {
+//   [k:string]: {
+//     method: 'GET' | 'POST' | 'DELETE',
+//     url:string,
+//     client_call: (...args:any) => ClientReturn,
+//     server_call: (params: RouteParams, query: RouteQuery, body: RouteBody, token_object:TokenObject) => any
+//   }
+// }
+
