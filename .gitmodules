@@ -16,3 +16,12 @@
 [submodule "modules_dep/urn-trx-dep-dev"]
 	path = modules_dep/urn-trx-dep-dev
 	url = ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev.git
+[submodule ".urn/urn-core"]
+	path = .urn/urn-core
+	url = ssh://git@bitbucket.org/nbl7/urn-core.git
+[submodule ".urn/urn-web"]
+	path = .urn/urn-web
+	url = ssh://git@bitbucket.org/nbl7/urn-web.git
+[submodule ".urn/urn-trx"]
+	path = .urn/urn-trx
+	url = ssh://git@bitbucket.org/nbl7/urn-trx.git
