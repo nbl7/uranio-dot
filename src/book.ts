@@ -3,68 +3,9 @@ import * as book_types from './types';
 
 import {web_atom_book} from 'urn_web/book';
 
-// const default_routes = {};
-
-// const my_validate_route = {};
-
-// dev_atom_book.product.api.routes.validate.call(
-
 import {urn_log} from 'urn-lib';
 
 import urn_core from 'urn_core';
-
-// class my_bll extends urn_core.bll.BLL<'product'> {
-//   public async find_by_id<D extends urn_core.types.Depth>(id:string){
-//     console.log('AAAAAAAAAAAAAAAAAAAAA',id);
-//     return await super.find_by_id(id) as urn_core.types.Molecule<'product',D>;
-//   }
-// }
-//
-// import {my_bll} from './my';
-
-// import urn_web from 'urn_web';
-
-// import {Query, AtomShape, TokenObject} from 'urn_core/types';
-
-// export const dev_route_book = {
-//   user: {
-//     auth: {
-//       method: book_types.RouteMethod.POST,
-//       action: book_types.AuthAction.AUTH,
-//       url: '/auth',
-//       call: async (urn_req:urn_web.types.RouteRequest<'user'>) => {
-//         console.log(urn_req);
-//       }
-//     }
-//   },
-//   product: {
-//     find: {
-//       method: book_types.RouteMethod.GET,
-//       action: book_types.AuthAction.READ,
-//       url: '/',
-//       query: ['filter', 'options'],
-//       call: async (urn_request:urn_web.types.RouteRequest<'product'>) => {
-//         urn_log.fn_debug(`Router Call GET / [${urn_request.atom_name}]`);
-//         const urn_bll = urn_core.bll.create(urn_request.atom_name, urn_request.token_object);
-//         const bll_res = await urn_bll.find(urn_request.query.filter, urn_request.query.options);
-//         return urn_core.atm.util.hide_hidden_properties(urn_request.atom_name, bll_res);
-//       }
-//     },
-//     find_id: {
-//       method: book_types.RouteMethod.GET,
-//       action: book_types.AuthAction.READ,
-//       url: '/:id',
-//       query: ['options'],
-//       call: async (urn_request:urn_web.types.RouteRequest<'product'>) => {
-//         urn_log.fn_debug(`Router Call GET / [${urn_request.atom_name}]`);
-//         const urn_bll = urn_core.bll.create(urn_request.atom_name, urn_request.token_object);
-//         const bll_res = await urn_bll.find_by_id(urn_request.params.id, urn_request.query.options);
-//         return urn_core.atm.util.hide_hidden_properties(urn_request.atom_name, bll_res);
-//       }
-//     }
-//   }
-// } as const;
-
 
 export const dev_atom_book = {
 	...web_atom_book,
@@ -93,7 +34,8 @@ export const dev_atom_book = {
 					url: '/',
 					query: ['filter', 'options'],
 					call: async (urn_request:book_types.RouteRequest) => {
-						urn_log.fn_debug(`Router Call GET / [product]`);
+						console.log('CUSTOOOOM ROUTE');
+						urn_log.fn_debug(`CUSTOOOOOM Router Call GET / [product]`);
 						const urn_bll = urn_core.bll.create('product', urn_request.token_object);
 						const bll_res = await urn_bll.find(urn_request.query.filter, urn_request.query.options);
 						return urn_core.atm.util.hide_hidden_properties('product', bll_res);
@@ -105,7 +47,8 @@ export const dev_atom_book = {
 					url: '/:id',
 					query: ['options'],
 					call: async (urn_request:book_types.RouteRequest) => {
-						urn_log.fn_debug(`Router Call GET /:id [product]`);
+						console.log('CUSTOOOOM ROUTE');
+						urn_log.fn_debug(`CUSTOOOOM Router Call GET /:id [product]`);
 						const urn_bll = urn_core.bll.create('product', urn_request.token_object);
 						const bll_res = await urn_bll.find_by_id(urn_request.params.id, urn_request.query.options);
 						return urn_core.atm.util.hide_hidden_properties('product', bll_res);
