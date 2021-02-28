@@ -1,18 +1,19 @@
 {
-	"name": "urn-bld",
+	"name": "urn-dot",
 	"version": "0.0.1",
-	"description": "Uranio builder",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"description": "Uranio dot",
+	"main": "dist/src/index.js",
+	"types": "dist/src/index.d.ts",
 	"scripts": {
 		"build": "tsc -b",
+		"dev": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/src/index.js\"",
 		"core": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.urn/urn-core/run.js\"",
 		"web": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.urn/urn-web/run.js\"",
 		"trx": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.urn/urn-trx/run.js\""
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@bitbucket.org/nbl7/urn-bld.git"
+		"url": "git+ssh://git@bitbucket.org/nbl7/urn-dot.git"
 	},
 	"keywords": [
 		"uranio",
@@ -20,14 +21,14 @@
 	],
 	"author": "Andrea Reni <mail@nbl7.net>",
 	"license": "ISC",
-	"homepage": "https://bitbucket.org/nbl7/urn-bld#readme",
+	"homepage": "https://bitbucket.org/nbl7/urn-dot#readme",
 	"devDependencies": {
-		"urn-web-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-web-dep-dev.git",
-		"urn-trx-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev.git"
+		"urn-trx-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev.git",
+		"urn-web-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-web-dep-dev.git"
 	},
 	"dependencies": {
-		"urn-web-dep": "git+ssh://git@bitbucket.org/nbl7/urn-web-dep.git",
-		"urn-trx-dep": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep.git"
+		"urn-trx-dep": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep.git",
+		"urn-web-dep": "git+ssh://git@bitbucket.org/nbl7/urn-web-dep.git"
 	},
 	"_moduleAliases": {
 		"urn_book": "dist/.urn/book.js",
