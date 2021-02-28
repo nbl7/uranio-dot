@@ -33,6 +33,7 @@
 	"_moduleAliases": {
 		"urn_book": "dist/.urn/book.js",
 		"urn_core": "dist/.urn/urn-core/",
-		"urn_web": "dist/.urn/urn-web/"
+		"urn_web": "dist/.urn/urn-web/",
+		"uranio": "dist/.urn/urn-web/uranio.js"
 	}
 }
