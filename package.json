@@ -23,6 +23,7 @@
 	"license": "ISC",
 	"homepage": "https://bitbucket.org/nbl7/urn-dot#readme",
 	"devDependencies": {
+		"ts-morph": "^10.0.1",
 		"urn-trx-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev.git",
 		"urn-web-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-web-dep-dev.git"
 	},

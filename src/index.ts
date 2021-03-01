@@ -4,83 +4,87 @@
  * @packageDocumentation
  */
 
-// const code = new SourceCode("\uFEFFvar foo = bar;", estree);
+import { Project, Node, ts, VariableDeclaration } from 'ts-morph';
 
-// console.log(code);
+const project = new Project({tsConfigFilePath: `/home/nbl7/repos/uranio/urn-dot/tsconfig.json`});
+const sourceFile = project.addSourceFileAtPath(`/home/nbl7/repos/uranio/urn-dot/src/book.ts`);
 
-// assert(code.hasBOM === true);
-// assert(code.text === "var foo = bar;");
+sourceFile.forEachChild((node:Node) => {
+	switch(node.getKind()){
+		case ts.SyntaxKind.ImportDeclaration:{
+			_change_realtive_import(node);
+			break;
+		}
+		case ts.SyntaxKind.VariableStatement:{
+			let var_decl = _find_atom_book_declaration(node);
+			if(var_decl){
+				var_decl = _remove_type_reference(var_decl);
+				var_decl = _remove_bll_property_assignment(var_decl);
+				return false;
+			}
+			break;
+		}
+		case ts.SyntaxKind.EndOfFileToken:{
+			break;
+		}
+		default:{
+			console.log(node.getKindName());
+		}
+	}
+});
 
+console.log(sourceFile.print());
 
-// import fs from 'fs';
+function _change_realtive_import(node:Node)
+		:Node{
+	const str_lit = node.getFirstChildByKind(ts.SyntaxKind.StringLiteral);
+	if(str_lit){
+		const text = str_lit.getText();
+		if(text.includes('./')){
+			str_lit.replaceWithText(text.replace('./','../src/'));
+		}
+	}
+	return node;
+}
 
-// import {atom_book} from './book';
+function _remove_bll_property_assignment(var_decl:VariableDeclaration){
+	const obj_lit_exp = var_decl.getFirstChildByKind(ts.SyntaxKind.ObjectLiteralExpression);
+	if(obj_lit_exp){
+		const prop_assi = obj_lit_exp.getChildrenOfKind(ts.SyntaxKind.PropertyAssignment);
+		for(const p of prop_assi){
+			const p_obj_lit_exp = p.getFirstChildByKind(ts.SyntaxKind.ObjectLiteralExpression);
+			if(p_obj_lit_exp){
+				const prop_prop = p_obj_lit_exp.getChildrenOfKind(ts.SyntaxKind.PropertyAssignment);
+				for(const pp of prop_prop){
+					if(pp.getName() === 'bll'){
+						pp.remove();
+					}
+				}
+			}
+		}
+	}
+	return var_decl;
+}
 
-// const stringified = JSON.stringify(atom_book, (_, v) => {
-//   return (typeof v === 'function' ) ? v.toString() : v;
-// }, '\t');
+function _remove_type_reference(var_decl:VariableDeclaration){
+	const type_ref = var_decl.getFirstChildByKind(ts.SyntaxKind.TypeReference);
+	if(type_ref){
+		var_decl.removeType();
+	}
+	return var_decl;
+}
 
-// fs.writeFileSync(`${__dirname}/../.urn/nbook.ts`, stringified);
+function _find_atom_book_declaration(node:Node){
+	const var_decl_list = node.getFirstChildByKind(ts.SyntaxKind.VariableDeclarationList);
+	if(var_decl_list){
+		const var_decl = var_decl_list.getFirstChildByKind(ts.SyntaxKind.VariableDeclaration);
+		if(var_decl){
+			const name = var_decl.getName();
+			if(name === 'atom_book'){
+				return var_decl;
+			}
+		}
+	}
+	return undefined;
+}
 
-// console.log(__dirname);
-
-// const read = fs.readFileSync(`${__dirname}/book.js`, 'utf8');
-
-// const splitted = read.split('exports.atom_book = {');
-// const part = splitted[1];
-
-// let count_brackets = 0;
-// let i = 0;
-// for(i = 0; i < part.length; i++){
-//   const char = part[i];
-//   if(char !== '{' && char !== '}'){
-//     continue;
-//   }
-//   if(char === '{'){
-//     count_brackets++;
-//   }
-//   if(char === '}'){
-//     count_brackets--;
-//   }
-//   if(count_brackets === -1){
-//     break;
-//   }
-// }
-
-// const atom_book = `{${part.slice(0,i+1)}`;
-// console.log(atom_book);
-
-
-
-// import ts from "typescript";
-
-// const source = "let x: string  = 'string'";
-
-// const result = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS }});
-
-// console.log(JSON.stringify(result));
-
-
-// import {BLL} from './urn-core/bll/bll';
-
-// import {
-//   TokenObject,
-//   Depth,
-//   Molecule
-// } from './urn-core/types';
-
-// export class my_class extends BLL<'product'> {
-//   constructor(token_object?:TokenObject){
-//     super('product', token_object);
-//   }
-//   public async find_by_id<D extends Depth>(id:string,options:unknown)
-//       :Promise<Molecule<'product', D>>{
-//     console.log('AAAAAAAAAAAAAAAAAAAAA',id, options);
-//     return await super.find_by_id(id) as Molecule<'product',D>;
-//   }
-// }
-
-// export function my_bll(token_object:TokenObject)
-//       :BLL<'product'>{
-//   return new my_class(token_object);
-// }
