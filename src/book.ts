@@ -8,6 +8,8 @@ import {urn_log} from 'urn-lib';
 
 import uranio from 'uranio';
 
+import {my_prod_bll} from './myprodbll';
+
 export const atom_book:uranio.types.Book = {
 	media: {
 		api: {
@@ -24,7 +26,7 @@ export const atom_book:uranio.types.Book = {
 		}
 	},
 	product: {
-		// bll: my_bll,
+		bll: my_prod_bll,
 		api: {
 			url: 'products',
 			routes: {
@@ -33,7 +35,9 @@ export const atom_book:uranio.types.Book = {
 					action: uranio.types.AuthAction.READ,
 					url: '/',
 					query: ['filter', 'options'],
-					call: async <D extends uranio.types.Depth>(urn_request:uranio.types.RouteRequest):Promise<uranio.types.Molecule<'product',D>[]> => {
+					call: async <D extends uranio.types.Depth>(
+						urn_request:uranio.types.RouteRequest
+					):Promise<uranio.types.Molecule<'product',D>[]> => {
 						console.log('CUSTOOOOM ROUTE');
 						urn_log.fn_debug(`CUSTOOOOOM Router Call GET / [product]`);
 						const urn_bll = uranio.core.bll.create('product', urn_request.token_object);
@@ -46,7 +50,9 @@ export const atom_book:uranio.types.Book = {
 					action: uranio.types.AuthAction.READ,
 					url: '/:id',
 					query: ['options'],
-					call: async <D extends uranio.types.Depth>(urn_request:uranio.types.RouteRequest):Promise<uranio.types.Molecule<'product',D>> => {
+					call: async <D extends uranio.types.Depth>(
+						urn_request:uranio.types.RouteRequest
+					):Promise<uranio.types.Molecule<'product',D>> => {
 						console.log('CUSTOOOOM ROUTE');
 						urn_log.fn_debug(`CUSTOOOOM Router Call GET /:id [product]`);
 						const urn_bll = uranio.core.bll.create('product', urn_request.token_object);
