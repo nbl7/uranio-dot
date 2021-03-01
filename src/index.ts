@@ -4,6 +4,14 @@
  * @packageDocumentation
  */
 
+// const code = new SourceCode("\uFEFFvar foo = bar;", estree);
+
+// console.log(code);
+
+// assert(code.hasBOM === true);
+// assert(code.text === "var foo = bar;");
+
+
 // import fs from 'fs';
 
 // import {atom_book} from './book';
