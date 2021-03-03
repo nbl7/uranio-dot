@@ -6,7 +6,7 @@
 import { urn_log } from 'urn-lib';
 import uranio from 'uranio';
 import { my_prod_bll } from '../src/myprodbll';
-export const atom_book = { ...uranio.types.required_book,
+export const atom_book = { ...uranio.types.required_books.atom,
     media: {
         security: {
             type: uranio.types.BookSecurityType.UNIFORM
@@ -38,12 +38,14 @@ export const atom_book = { ...uranio.types.required_book,
     },
 } as const;
 export const bll_book = {
+    ...uranio.types.required_books.bll,
     media: {},
     product: {
         bll: my_prod_bll
     },
 } as const;
 export const api_book = {
+    ...uranio.types.required_books.api,
     media: {
         api: {
             url: 'medias'
