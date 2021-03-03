@@ -23,7 +23,7 @@
 		"sourceMap": true,
 		"baseUrl": ".",
 		"paths": {
-			"urn_book": [".urn/books"],
+			"urn_books": [".urn/books"],
 			"urn_core": [".urn/urn-core"],
 			"urn_core/*": [".urn/urn-core/*"],
 			"urn_web": [".urn/urn-web"],
