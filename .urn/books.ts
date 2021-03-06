@@ -4,36 +4,35 @@
  * @packageDocumentation
  */
 import { urn_log } from 'urn-lib';
-// import uranio from './urn-web/fake';
-// import { return_bll } from '../src/myprodbll';
-// import { my_prod_bll } from '../src/myprodbll';
-// import urn_core from 'urn_core';
 
-// import {atom, bll, api} from './urn-web/books';
+import { my_prod_bll } from '../src/myprodbll';
 
-import uranio from 'urn_web';
-import urn_core from 'urn_core';
+import uranio from './urn-web/uranio';
 
-import {BLL} from './urn-core/bll/bll';
+// import uranio.core from './urn-core/';
 
-class my_prod_bll extends BLL<'product'>{
-	constructor(to?:uranio.types.TokenObject){
-		super('product', to);
-	}
-	public async find<D extends uranio.types.Depth>(query:uranio.types.Query<'product'>, options?:uranio.types.Query.Options<'product',D>)
-			:Promise<uranio.types.Molecule<'product',D>[]>{
-		console.warn('kdajflkjdfAJFHDKSHFLKSDHFLKSDHFLKHSDLKFHDSKLHFLSDKHFLKSDHFLKSHDFKLSDH');
-		return await this._al.select(query, options);
-	}
-}
+// import {BLL} from './urn-core/bll/bll';
+
+// class my_prod_bll extends BLL<'product'>{
+//   constructor(to?:uranio.types.TokenObject){
+//     super('product', to);
+//   }
+//   public async find<D extends uranio.types.Depth>(query:uranio.types.Query<'product'>, options?:uranio.types.Query.Options<'product',D>)
+//       :Promise<uranio.types.Molecule<'product',D>[]>{
+//     console.warn('kdajflkjdfAJFHDKSHFLKSDHFLKSDHFLKHSDLKFHDSKLHFLSDKHFLKSDHFLKSHDFKLSDH');
+//     return await this._al.select(query, options);
+//   }
+// }
 
 // import * as uranio.types from './uranio.types';
 
 // console.log(atom);
 // console.log(bll);
 
+import {find} from '../src/r';
+
 export const atom_book = {
-superuser: {
+	superuser: {
 		security: {
 			type: uranio.types.BookSecurityType.UNIFORM,
 			_r: uranio.types.BookPermissionType.NOBODY
@@ -212,7 +211,7 @@ export const bll_book = {
     product: {
 				bll: my_prod_bll
 				// bll: (token_object?:uranio.types.TokenObject) => {
-				//   class my_prod_bll extends urn_core.bll.BLL<'product'>{
+				//   class my_prod_bll extends uranio.core.bll.BLL<'product'>{
 				//     constructor(to?:uranio.types.TokenObject){
 				//       super('product', to);
 				//     }
@@ -251,19 +250,20 @@ export const api_book = {
         api: {
             url: 'products',
 						routes: {
-								find: {
-										method: uranio.types.RouteMethod.GET,
-										action: uranio.types.AuthAction.READ,
-										url: '/',
-										query: ['filter', 'options'],
-										call: async <D extends uranio.types.Depth>(urn_request: uranio.types.RouteRequest): Promise<uranio.types.Molecule<'product', D>[]> => {
-												console.log('CUSTOOOOM ROUTE');
-												urn_log.fn_debug(`CUSTOOOOOM Router Call GET / [product]`);
-												const urn_bll = urn_core.bll.create('product', urn_request.token_object);
-												const bll_res = await urn_bll.find(urn_request.query.filter, urn_request.query.options) as uranio.types.Molecule<'product', D>[];
-												return urn_core.atm.util.hide_hidden_properties('product', bll_res);
-										}
-								},
+								...find,
+								// find: {
+								//     method: uranio.types.RouteMethod.GET,
+								//     action: uranio.types.AuthAction.READ,
+								//     url: '/',
+								//     query: ['filter', 'options'],
+								//     call: async <D extends uranio.types.Depth>(urn_request: uranio.types.RouteRequest): Promise<uranio.types.Molecule<'product', D>[]> => {
+								//         console.log('CUSTOOOOM ROUTE');
+								//         urn_log.fn_debug(`CUSTOOOOOM Router Call GET / [product]`);
+								//         const urn_bll = uranio.core.bll.create('product', urn_request.token_object);
+								//         const bll_res = await urn_bll.find(urn_request.query.filter, urn_request.query.options) as uranio.types.Molecule<'product', D>[];
+								//         return uranio.core.atm.util.hide_hidden_properties('product', bll_res);
+								//     }
+								// },
 								find_id: {
 										method: uranio.types.RouteMethod.GET,
 										action: uranio.types.AuthAction.READ,
@@ -272,9 +272,9 @@ export const api_book = {
 										call: async <D extends uranio.types.Depth>(urn_request: uranio.types.RouteRequest): Promise<uranio.types.Molecule<'product', D>> => {
 												console.log('CUSTOOOOM ROUTE');
 												urn_log.fn_debug(`CUSTOOOOM Router Call GET /:id [product]`);
-												const urn_bll = urn_core.bll.create('product', urn_request.token_object);
+												const urn_bll = uranio.core.bll.create('product', urn_request.token_object);
 												const bll_res = await urn_bll.find_by_id(urn_request.params.id, urn_request.query.options) as uranio.types.Molecule<'product', D>;
-												return urn_core.atm.util.hide_hidden_properties('product', bll_res);
+												return uranio.core.atm.util.hide_hidden_properties('product', bll_res);
 										}
 								},
 						}

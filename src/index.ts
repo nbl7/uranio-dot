@@ -18,12 +18,13 @@
 
 import {urn_log} from 'urn-lib';
 
-urn_log.defaults.log_level = urn_log.LogLevel.FUNCTION_DEBUG;
+// urn_log.defaults.log_level = urn_log.LogLevel.FUNCTION_DEBUG;
 
-import uranio from 'uranio';
+import uranio from '../.urn/urn-web/uranio';
 
 const express_service = uranio.web.service.express.create();
 
 express_service.listen(3000, () => {
 	urn_log.debug(`Listening on port 3000...`);
 });
+
