@@ -18,9 +18,9 @@
 
 import {urn_log} from 'urn-lib';
 
-// urn_log.defaults.log_level = urn_log.LogLevel.FUNCTION_DEBUG;
+urn_log.defaults.log_level = urn_log.LogLevel.FUNCTION_DEBUG;
 
-import uranio from '../.urn/urn-web/uranio';
+import uranio from 'uranio';
 
 const express_service = uranio.web.service.express.create();
 

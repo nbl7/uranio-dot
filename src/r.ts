@@ -1,6 +1,6 @@
 import {urn_log} from 'urn-lib';
 
-import uranio from '../.urn/urn-web/uranio';
+import uranio from 'uranio';
 
 export const find = {
 	find: {
