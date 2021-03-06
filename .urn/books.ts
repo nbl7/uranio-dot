@@ -5,9 +5,10 @@
  */
 import { urn_log } from 'urn-lib';
 
-import { my_prod_bll } from '../src/myprodbll';
+// import { my_prod_bll } from '../src/myprodbll';
+import { return_bll } from '../src/myprodbll';
 
-import uranio from './urn-web/uranio';
+import uranio from 'uranio';
 
 // import uranio.core from './urn-core/';
 
@@ -91,7 +92,7 @@ export const atom_book = {
 			}
 		}
 	},
-    error: {
+	error: {
 		connection: 'log',
 		security: {
 			type: uranio.types.BookSecurityType.UNIFORM,
@@ -209,7 +210,8 @@ export const bll_book = {
     error: {},
     media: {},
     product: {
-				bll: my_prod_bll
+				// bll: my_prod_bll
+				bll: return_bll
 				// bll: (token_object?:uranio.types.TokenObject) => {
 				//   class my_prod_bll extends uranio.core.bll.BLL<'product'>{
 				//     constructor(to?:uranio.types.TokenObject){
