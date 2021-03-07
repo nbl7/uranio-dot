@@ -2,5 +2,4 @@ node_modules/
 dist/
 config/*
 !config/example.env
-urn-cli
-urn-cli/*
+.urnlog
