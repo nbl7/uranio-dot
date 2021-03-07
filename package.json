@@ -7,9 +7,9 @@
 	"scripts": {
 		"build": "tsc -b",
 		"dev": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/src/index.js\"",
-		"core": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.urn/urn-core/run.js\"",
-		"web": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.urn/urn-web/run.js\"",
-		"trx": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.urn/urn-trx/run.js\""
+		"core": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.urn/web/core/run.js\"",
+		"web": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.urn/web/run.js\"",
+		"trx": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.urn/trx/run.js\""
 	},
 	"repository": {
 		"type": "git",
@@ -23,7 +23,6 @@
 	"license": "ISC",
 	"homepage": "https://bitbucket.org/nbl7/urn-dot#readme",
 	"devDependencies": {
-		"ts-morph": "^10.0.1",
 		"urn-trx-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev.git",
 		"urn-web-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-web-dep-dev.git"
 	},
@@ -33,8 +32,6 @@
 	},
 	"_moduleAliases": {
 		"urn_book": "./dist/.urn/book.js",
-		"urn_core": "./dist/.urn/urn-core/",
-		"uranio": "./dist/.urn/urn-web/",
-		"urn_web": "./dist/.urn/urn-web/"
+		"uranio": "./dist/.urn/urn-web/"
 	}
 }
