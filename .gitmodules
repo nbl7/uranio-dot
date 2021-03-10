@@ -1,21 +1,35 @@
 [submodule "modules_dep/urn-core-dep"]
 	path = modules_dep/urn-core-dep
 	url = git@bitbucket.org:nbl7/urn-core-dep.git
+	branch = master
+	update = merge
 [submodule "modules_dep/urn-core-dep-dev"]
 	path = modules_dep/urn-core-dep-dev
 	url = git@bitbucket.org:nbl7/urn-core-dep-dev.git
+	branch = master
+	update = merge
 [submodule "modules_dep/urn-web-dep"]
 	path = modules_dep/urn-web-dep
 	url = git@bitbucket.org:nbl7/urn-web-dep.git
+	branch = master
+	update = merge
 [submodule "modules_dep/urn-web-dep-dev"]
 	path = modules_dep/urn-web-dep-dev
 	url = git@bitbucket.org:nbl7/urn-web-dep-dev.git
+	branch = master
+	update = merge
 [submodule "modules_dep/urn-trx-dep"]
 	path = modules_dep/urn-trx-dep
 	url = ssh://git@bitbucket.org/nbl7/urn-trx-dep.git
+	branch = master
+	update = merge
 [submodule "modules_dep/urn-trx-dep-dev"]
 	path = modules_dep/urn-trx-dep-dev
 	url = ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev.git
+	branch = master
+	update = merge
 [submodule ".urn/web"]
 	path = .urn/web
 	url = ssh://git@bitbucket.org/nbl7/urn-web.git
+	branch = master
+	update = merge
