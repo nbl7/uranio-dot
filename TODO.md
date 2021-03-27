@@ -11,7 +11,7 @@ Check if Atom reference type are on the same connection
 
 --
 
-Check if AuthAtom have email, password non-optional and groups (optional?).
+Check if AuthAtom have email, password and groups non-optional.
 
 --
 
