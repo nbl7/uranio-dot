@@ -148,22 +148,6 @@ export const atom_book = {
 			},
 		},
 	},
-	product: {
-		properties: {
-			title: {
-				type: uranio.types.BookPropertyType.TEXT,
-				label: "Title",
-			},
-		},
-	},
-	media: {
-		properties: {
-			title: {
-				type: uranio.types.BookPropertyType.TEXT,
-				label: "Title",
-			},
-		},
-	},
 } as const;
 export const bll_book = {
 	superuser: {},
@@ -171,8 +155,6 @@ export const bll_book = {
 	group: {},
 	error: {},
 	request: {},
-	product: {},
-	media: {},
 } as const;
 export const api_book = {
 	superuser: {
@@ -200,16 +182,6 @@ export const api_book = {
 	request: {
 		api: {
 			url: "requests",
-		},
-	},
-	product: {
-		api: {
-			url: "products",
-		},
-	},
-	media: {
-		api: {
-			url: "medias",
 		},
 	},
 } as const;
