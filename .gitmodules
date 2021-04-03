@@ -33,3 +33,8 @@
 	url = ssh://git@bitbucket.org/nbl7/urn-web.git
 	branch = master
 	update = merge
+[submodule ".urn/fnc"]
+	path = .urn/fnc
+	url = ssh://git@bitbucket.org/nbl7/urn-fnc
+	branch = master
+	update = rebase
