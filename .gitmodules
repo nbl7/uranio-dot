@@ -38,3 +38,13 @@
 	url = ssh://git@bitbucket.org/nbl7/urn-fnc
 	branch = master
 	update = rebase
+[submodule "modules_dep/urn-fnc-dep"]
+	path = modules_dep/urn-fnc-dep
+	url = ssh://git@bitbucket.org/nbl7/urn-fnc-dep.git
+	branch = master
+	update = rebase
+[submodule "modules_dep/urn-fnc-dep-dev"]
+	path = modules_dep/urn-fnc-dep-dev
+	url = ssh://git@bitbucket.org/nbl7/urn-fnc-dep-dev.git
+	branch = master
+	update = rebase
