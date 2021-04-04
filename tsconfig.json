@@ -19,7 +19,7 @@
 		"rootDir": "./",
 		"paths": {
 			"urn_books": [".uranio/books"],
-			"uranio": [".uranio/web/"]
+			"uranio": [".uranio/repo/"]
 		},
 		"sourceMap": true,
 		"strict": true,
