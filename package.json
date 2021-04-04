@@ -35,7 +35,7 @@
 		"urn-web-dep": "git+ssh://git@bitbucket.org/nbl7/urn-web-dep.git"
 	},
 	"_moduleAliases": {
-		"urn_books": "./dist/.urn/books.js",
-		"uranio": "./dist/.urn/web/"
+		"urn_books": "./dist/.uranio/books.js",
+		"uranio": "./dist/.uranio/web/"
 	}
 }
