@@ -36,6 +36,6 @@
 	},
 	"_moduleAliases": {
 		"urn_books": "./dist/.uranio/books.js",
-		"uranio": "./dist/.uranio/web/"
+		"uranio": "./dist/.uranio/repo/"
 	}
 }
