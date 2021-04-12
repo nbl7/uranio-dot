@@ -24,6 +24,8 @@
 	"license": "ISC",
 	"homepage": "https://bitbucket.org/nbl7/urn-dot#readme",
 	"devDependencies": {
+		"@types/minimist": "^1.2.1",
+		"minimist": "^1.2.5",
 		"urn-fnc-dep": "bitbucket:nbl7/urn-fnc-dep-dev",
 		"urn-trx-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev.git",
 		"urn-web-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-web-dep-dev.git"
