@@ -17,9 +17,9 @@ if(fs.existsSync(json_filepath)){
 		_spawn(`git submodule deinit ${current_submodule}`);
 		_spawn(`git rm ${current_submodule}`);
 		_spawn(`rm -rf ${current_submodule}`);
+		_spawn(`rm -rf ../.git/modules/urn-dot/modules/${current_submodule}`);
 		_spawn('git add .');
 		_spawn(`git commit -m "[removed submodule ${current_submodule}]"`);
-		_spawn(`rm -rf ../.git/modules/urn-dot/modules/${current_submodule}`);
 	}
 }else{
 	_spawn(`touch ${json_filepath}`);
