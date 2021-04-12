@@ -28,8 +28,3 @@
 	url = ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev.git
 	branch = master
 	update = merge
-[submodule ".uranio/core"]
-	path = .uranio/core
-	url = git+ssh://git@bitbucket.org/nbl7/urn-core
-	branch = master
-	update = rebase
