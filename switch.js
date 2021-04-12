@@ -33,7 +33,7 @@ _execute(`git config -f .gitmodules submodule..uranio/${urn_repo}.update rebase`
 _execute(`git submodule update --remote`);
 
 const urnsub = {submodule: `.uranio/${urn_repo}`};
-fs.writeFileSync(json_filepath, JSON.stringify(urnsub));
+fs.writeFileSync(json_filepath, JSON.stringify(urnsub) + '\n');
 
 _execute('git add .');
 _execute(`git commit -m "[added submodule ${urn_repo}]"`);
