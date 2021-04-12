@@ -16,7 +16,9 @@ if(fs.existsSync(json_filepath)){
 	if(typeof current_submodule === 'string'){
 		_spawn(`git submodule deinit ${current_submodule}`);
 		_spawn(`git rm ${current_submodule}`);
-		_spawn(`git commit -m "removed submodule ${current_submodule}"`);
+		_spawn(`rm -rf ${current_submodule}`);
+		_spawn('git add .');
+		_spawn(`git commit -m "[removed submodule ${current_submodule}]"`);
 		_spawn(`rm -rf ../.git/modules/urn-dot/modules/${current_submodule}`);
 	}
 }else{
@@ -29,6 +31,9 @@ const urn_repo = args._[0];
 _spawn(`git submodule add -b master git+ssh://git@bitbucket.org/nbl7/urn-${urn_repo} .uranio/${urn_repo}`);
 _spawn(`git config -f .gitmodules submodule..uranio/${urn_repo}.update rebase`);
 _spawn(`git submodule update --remote`);
+
+_spawn('git add .');
+_spawn(`git commit -m "[added submodule ${urn_repo}]"`);
 
 const urnsub = {submodule: `.uranio/${urn_repo}`};
 fs.writeFileSync(json_filepath, JSON.stringify(urnsub));
