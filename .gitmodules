@@ -28,8 +28,3 @@
 	url = ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev.git
 	branch = master
 	update = merge
-[submodule ".urn/web"]
-	path = .urn/web
-	url = ssh://git@bitbucket.org/nbl7/urn-web.git
-	branch = master
-	update = merge
