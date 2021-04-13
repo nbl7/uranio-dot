@@ -28,7 +28,9 @@ if(fs.existsSync(json_filepath)){
 const selected_repo = args._[0];
 // const dest = args._[1] || args._[0];
 
-_execute(`git submodule add -b master git+ssh://git@bitbucket.org/nbl7/urn-${selected_repo} .uranio/repo`);
+const origin = `git+ssh://git@bitbucket.org/nbl7/urn-${selected_repo}`;
+
+_execute(`git submodule add -b master ${origin} .uranio/repo --recursive`);
 _execute(`git config -f .gitmodules submodule..uranio/repo.update rebase`);
 _execute(`git submodule update --remote`);
 
