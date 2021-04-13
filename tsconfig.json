@@ -20,6 +20,7 @@
 		"paths": {
 			"urn_books": [".uranio/books"],
 			"urn_core": [".uranio/repo/core"],
+			"urn_core/*": [".uranio/repo/core/*"],
 			"uranio": [".uranio/repo/"]
 		},
 		"sourceMap": true,
