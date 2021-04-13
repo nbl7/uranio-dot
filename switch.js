@@ -30,9 +30,10 @@ const selected_repo = args._[0];
 
 const origin = `git+ssh://git@bitbucket.org/nbl7/urn-${selected_repo}`;
 
-_execute(`git submodule add -b master ${origin} .uranio/repo --recursive`);
+_execute(`git submodule add -b master ${origin} .uranio/repo`);
 _execute(`git config -f .gitmodules submodule..uranio/repo.update rebase`);
-_execute(`git submodule update --remote`);
+_execute(`git submodule update --remote --init --recursive`);
+// _execute(`git submodule update --remote`);
 
 const urnsub = {submodule: `${selected_repo}`};
 fs.writeFileSync(json_filepath, JSON.stringify(urnsub) + '\n');
