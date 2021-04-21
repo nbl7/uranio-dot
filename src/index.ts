@@ -4,12 +4,14 @@
  * @packageDocumentation
  */
 
-// import uranio from 'uranio';
+import {urn_log} from 'urn-lib';
 
-// uranio.lib.log.defaults.log_level = uranio.lib.log.LogLevel.FUNCTION_DEBUG;
+urn_log.defaults.log_level = urn_log.LogLevel.FUNCTION_DEBUG;
 
-// const express_service = uranio.service.create();
+import urn_web from 'uranio';
 
-// express_service.listen(3000, () => {
-//   uranio.lib.log.debug(`Listening on port 3000...`);
-// });
+const express_service = urn_web.service.create();
+
+express_service.listen(3000, () => {
+	urn_log.debug(`Listening on port 3000...`);
+});
