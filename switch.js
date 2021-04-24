@@ -7,6 +7,14 @@ const fs = require('fs');
 
 const args = minimist(process.argv.slice(2));
 
+const selected_repo = args._[0];
+const valid_repos = ['core', 'web', 'fnc'];
+
+if(!valid_repos.includes(selected_repo)){
+	console.log('Invalid repo argument.');
+	process.exit(1);
+}
+
 const json_filepath = `urnsub.json`;
 
 if(fs.existsSync(json_filepath)){
@@ -23,14 +31,6 @@ if(fs.existsSync(json_filepath)){
 	}
 }else{
 	_execute(`touch ${json_filepath}`);
-}
-
-const selected_repo = args._[0];
-// const dest = args._[1] || args._[0];
-
-if(!selected_repo){
-	console.log('Invalid repo argument.');
-	process.exit(1);
 }
 
 const origin = `git+ssh://git@bitbucket.org/nbl7/urn-${selected_repo}`;
