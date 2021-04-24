@@ -28,6 +28,11 @@ if(fs.existsSync(json_filepath)){
 const selected_repo = args._[0];
 // const dest = args._[1] || args._[0];
 
+if(!selected_repo){
+	console.log('Invalid repo argument.');
+	process.exit(1);
+}
+
 const origin = `git+ssh://git@bitbucket.org/nbl7/urn-${selected_repo}`;
 
 _execute(`git submodule add -b master ${origin} .uranio/repo`);
