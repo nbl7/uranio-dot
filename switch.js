@@ -5,19 +5,28 @@ const minimist = require('minimist');
 const cp = require('child_process');
 const fs = require('fs');
 
-const spawn = cp.spawn('git', ['status','--porcelain']);
-spawn.stdout.on('data', function(data){
-	console.log('D: ' + data);
-	console.log(data.toString() === '');
-	if(data.toString() === ''){
-		console.log('Working directory clean.');
-		_proceed();
-	}else{
-		console.log('-------------------------------------------------------------');
-		console.log('Working directory not clean. Please commit before proceeding.');
-		console.log('-------------------------------------------------------------');
-	}
-});
+// const spawn = cp.spawn('git', ['status','--porcelain']);
+
+// spawn.stdout.on('data', function(data){
+//   console.log('D: ' + data);
+//   console.log(data.toString() === '');
+//   if(data.toString() === ''){
+//     console.log('Working directory clean.');
+//     _proceed();
+//   }else{
+//     console.log('-------------------------------------------------------------');
+//     console.log('Working directory not clean. Please commit before proceeding.');
+//     console.log('-------------------------------------------------------------');
+//   }
+// });
+
+const output = cp.execSync(`git status --porcelain`).toString();
+console.log(output);
+console.log(output == '');
+
+if(1 == 0){
+	_proceed();
+}
 
 function _proceed(){
 	
