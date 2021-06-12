@@ -19,7 +19,6 @@ if(output === ''){
 function _proceed(){
 	
 	const args = minimist(process.argv.slice(2));
-	console.log(args);
 	const selected_repo = args._[0];
 	const valid_repos = ['core', 'web', 'fnc'];
 	
