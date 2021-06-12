@@ -7,6 +7,8 @@ const fs = require('fs');
 
 const spawn = cp.spawn('git', ['status','--porcelain']);
 spawn.stdout.on('data', function(data){
+	console.log('D: ' + data);
+	console.log(data.toString() === '');
 	if(data.toString() === ''){
 		console.log('Working directory clean.');
 		_proceed();
