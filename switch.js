@@ -19,7 +19,7 @@ spawn.stdout.on('data', function(data){
 function _proceed(){
 	
 	const args = minimist(process.argv.slice(2));
-	
+	console.log(args);
 	const selected_repo = args._[0];
 	const valid_repos = ['core', 'web', 'fnc'];
 	
@@ -63,7 +63,5 @@ function _proceed(){
 
 function _execute(command){
 	console.log(command);
-	
 	cp.execSync(command);
-	
 }
