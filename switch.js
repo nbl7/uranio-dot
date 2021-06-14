@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 "use strict";
 
-import minimist from 'minimist';
-import cp from 'child_process';
-import fs from 'fs';
+const minimist = require('minimist');
+const cp = require('child_process');
+const fs = require('fs');
 
 const output = cp.execSync(`git status --porcelain`).toString();
 const repo_folder_name = 'lib';
