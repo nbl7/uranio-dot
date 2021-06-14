@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 "use strict";
 
-const minimist = require('minimist');
-const cp = require('child_process');
-const fs = require('fs');
+import minimist from 'minimist';
+import cp from 'child_process';
+import fs from 'fs';
 
 const output = cp.execSync(`git status --porcelain`).toString();
+const repo_folder_name = 'lib';
 
 if(output === ''){
 	console.log('Working directory clean.');
@@ -20,7 +21,7 @@ function _proceed(){
 	
 	const args = minimist(process.argv.slice(2));
 	const selected_repo = args._[0];
-	const valid_repos = ['core', 'web', 'fnc'];
+	const valid_repos = ['core', 'web', 'ntl'];
 	
 	if(!valid_repos.includes(selected_repo)){
 		console.log('Invalid repo argument.');
@@ -34,10 +35,10 @@ function _proceed(){
 		const urnsub = JSON.parse(content);
 		const current_submodule = urnsub.submodule;
 		if(typeof current_submodule === 'string'){
-			_execute(`git submodule deinit .uranio/repo`);
-			_execute(`git rm .uranio/repo`);
-			_execute(`rm -rf .uranio/repo`);
-			_execute(`rm -rf ../.git/modules/urn-dot/modules/.uranio/repo`);
+			_execute(`git submodule deinit .uranio/${repo_folder_name}`);
+			_execute(`git rm .uranio/${repo_folder_name}`);
+			_execute(`rm -rf .uranio/${repo_folder_name}`);
+			_execute(`rm -rf ../.git/modules/urn-dot/modules/.uranio/${repo_folder_name}`);
 			_execute('git add .');
 			_execute(`git commit -m "[removed submodule ${current_submodule}]"`);
 		}
@@ -47,8 +48,8 @@ function _proceed(){
 	
 	const origin = `git+ssh://git@bitbucket.org/nbl7/urn-${selected_repo}`;
 	
-	_execute(`git submodule add -b master ${origin} .uranio/repo`);
-	_execute(`git config -f .gitmodules submodule..uranio/repo.update rebase`);
+	_execute(`git submodule add -b master ${origin} .uranio/${repo_folder_name}`);
+	_execute(`git config -f .gitmodules submodule..uranio/${repo_folder_name}.update rebase`);
 	_execute(`git submodule update --remote --init --recursive`);
 	// _execute(`git submodule update --remote`);
 	
