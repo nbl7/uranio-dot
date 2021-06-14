@@ -19,9 +19,9 @@
 		"rootDir": "./",
 		"paths": {
 			"urn_books": [".uranio/books"],
-			"urn_core": [".uranio/repo/core"],
-			"urn_core/*": [".uranio/repo/core/*"],
-			"uranio": [".uranio/repo/"]
+			"urn_core": [".uranio/lib/core"],
+			"urn_core/*": [".uranio/lib/core/*"],
+			"uranio": [".uranio/lib/"]
 		},
 		"sourceMap": true,
 		"strict": true,
