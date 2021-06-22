@@ -23,13 +23,11 @@
 	"devDependencies": {
 		"@types/minimist": "^1.2.1",
 		"minimist": "^1.2.5",
-		"urn-core-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git",
-		"urn-web-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-web-dep-dev.git"
+		"urn-core-dep-dev": "bitbucket:nbl7/urn-core-dep-dev"
 	},
 	"dependencies": {
 		"mongoose": "^5.11.15",
-		"urn-core-dep": "git+ssh://git@bitbucket.org/nbl7/urn-core-dep.git",
-		"urn-web-dep": "git+ssh://git@bitbucket.org/nbl7/urn-web-dep.git"
+		"urn-core-dep": "bitbucket:nbl7/urn-core-dep"
 	},
 	"_moduleAliases": {
 		"urn_books": "./dist/.uranio/books.js",
