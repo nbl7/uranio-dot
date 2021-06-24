@@ -53,6 +53,12 @@ function _proceed(){
 	_execute(`git submodule update --remote --init --recursive`);
 	// _execute(`git submodule update --remote`);
 	
+	if(selected_repo === 'web' || selected_repo === 'ntl'){
+		_execute(`cd .uranio/lib/core/`);
+		_execute(`git checkout master`);
+		_execute(`cd ../../../`);
+	}
+	
 	const urnsub = {submodule: `${selected_repo}`};
 	fs.writeFileSync(json_filepath, JSON.stringify(urnsub) + '\n');
 	
