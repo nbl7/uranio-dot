@@ -51,13 +51,14 @@ function _proceed(){
 	_execute(`git submodule add -b master ${origin} .uranio/${repo_folder_name}`);
 	_execute(`git config -f .gitmodules submodule..uranio/${repo_folder_name}.update rebase`);
 	_execute(`git submodule update --remote --init --recursive`);
+	
 	// _execute(`git submodule update --remote`);
 	
-	if(selected_repo === 'web' || selected_repo === 'ntl'){
-		_execute(`cd .uranio/lib/core/`);
-		_execute(`git checkout master`);
-		_execute(`cd ../../../`);
-	}
+	// if(selected_repo === 'web' || selected_repo === 'ntl'){
+	//   _execute(`cd .uranio/lib/core/`);
+	//   _execute(`git checkout master`);
+	//   _execute(`cd ../../../`);
+	// }
 	
 	const urnsub = {submodule: `${selected_repo}`};
 	fs.writeFileSync(json_filepath, JSON.stringify(urnsub) + '\n');
