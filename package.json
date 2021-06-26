@@ -7,7 +7,7 @@
 	"scripts": {
 		"build": "tsc -b",
 		"dev": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/src/index.js\"",
-		"run": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.uranio/repo/run.js\""
+		"run": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.uranio/lib/run.js\""
 	},
 	"repository": {
 		"type": "git",
