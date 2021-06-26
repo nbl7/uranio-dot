@@ -52,7 +52,7 @@ function _proceed(){
 	_execute(`git config -f .gitmodules submodule..uranio/${repo_folder_name}.update rebase`);
 	_execute(`git submodule update --remote --init --recursive`);
 	
-	// _execute(`git submodule update --remote`);
+	_execute(`git submodule foreach --recursive git checkout master`);
 	
 	// if(selected_repo === 'web' || selected_repo === 'ntl'){
 	//   _execute(`cd .uranio/lib/core/`);
