@@ -18,10 +18,11 @@
 		"outDir": "./dist",
 		"rootDir": "./",
 		"paths": {
-			"urn_books": [".uranio/books"],
-			"urn_core": [".uranio/lib/core"],
-			"urn_core/*": [".uranio/lib/core/*"],
-			"uranio": [".uranio/lib/"]
+			"uranio-books": [".uranio/server_books"],
+			"uranio": [".uranio/lib/"],
+			"uranio-client": [".uranio/lib/client"],
+			"uranio-core": [".uranio/lib/core"],
+			"uranio-core/*": [".uranio/lib/core/*"]
 		},
 		"sourceMap": true,
 		"strict": true,
