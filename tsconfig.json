@@ -28,6 +28,7 @@
 				"./*"
 			],
 			"uranio-books": [".uranio/server/books"],
+			"uranio-books/*": [".uranio/server/books/*"],
 			"uranio": [".uranio/lib/"],
 			"uranio-client": [".uranio/lib/client"],
 			"uranio-core": [".uranio/lib/core"],
