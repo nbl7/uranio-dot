@@ -18,11 +18,6 @@
 	url = ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev.git
 	branch = master
 	update = merge
-[submodule ".uranio/lib"]
-	path = .uranio/lib
-	url = git+ssh://git@bitbucket.org/nbl7/urn-core.git
-	branch = master
-	update = rebase
 [submodule "modules_dep/urn-api-dep"]
 	path = modules_dep/urn-api-dep
 	url = git+ssh://git@bitbucket.org/nbl7/urn-api-dep.git
