@@ -21,7 +21,7 @@ function _proceed(){
 	
 	const args = minimist(process.argv.slice(2));
 	const selected_repo = args._[0];
-	const valid_repos = ['core', 'web', 'ntl'];
+	const valid_repos = ['core', 'api'];
 	
 	if(!valid_repos.includes(selected_repo)){
 		console.log('Invalid repo argument.');
@@ -54,7 +54,7 @@ function _proceed(){
 	
 	_execute(`git submodule foreach --recursive git checkout master`);
 	
-	// if(selected_repo === 'web' || selected_repo === 'ntl'){
+	// if(selected_repo === 'api' || selected_repo === 'ntl'){
 	//   _execute(`cd .uranio/lib/core/`);
 	//   _execute(`git checkout master`);
 	//   _execute(`cd ../../../`);
