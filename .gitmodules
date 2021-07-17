@@ -20,7 +20,7 @@
 	update = merge
 [submodule ".uranio/lib"]
 	path = .uranio/lib
-	url = git+ssh://git@bitbucket.org/nbl7/urn-web
+	url = git+ssh://git@bitbucket.org/nbl7/urn-core.git
 	branch = master
 	update = rebase
 [submodule "modules_dep/urn-api-dep"]
