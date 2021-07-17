@@ -23,3 +23,13 @@
 	url = git+ssh://git@bitbucket.org/nbl7/urn-web
 	branch = master
 	update = rebase
+[submodule "modules_dep/urn-api-dep"]
+	path = modules_dep/urn-api-dep
+	url = git+ssh://git@bitbucket.org/nbl7/urn-api-dep.git
+	branch = master
+	update = rebase
+[submodule "modules_dep/urn-api-dep-dev"]
+	path = modules_dep/urn-api-dep-dev
+	url = git+ssh://git@bitbucket.org/nbl7/urn-api-dep-dev.git
+	branch = master
+	update = rebase
