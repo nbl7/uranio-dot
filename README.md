@@ -10,7 +10,7 @@ The `switch.js` file will install or replace a submodule. The command to switch 
 
 ```
 node switch.js core
-node switch.js web
+node switch.js api
 ...
 ```
 
