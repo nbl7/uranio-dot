@@ -115,6 +115,7 @@ export const atom_book = {
 			ip: {
 				type: uranio.types.BookPropertyType.TEXT,
 				label: "IP",
+				optional: true
 			},
 			params: {
 				type: uranio.types.BookPropertyType.TEXT,
