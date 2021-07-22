@@ -108,14 +108,37 @@ export const atom_book = {
 			_r: uranio.types.BookPermissionType.NOBODY,
 		},
 		properties: {
-			url: {
+			full_path: {
 				type: uranio.types.BookPropertyType.TEXT,
-				label: "URL",
+				label: "Full path",
 			},
-			ip: {
+			route_path: {
 				type: uranio.types.BookPropertyType.TEXT,
-				label: "IP",
-				optional: true
+				label: "Route path",
+			},
+			atom_path: {
+				type: uranio.types.BookPropertyType.TEXT,
+				label: "Atom path",
+			},
+			connection_path: {
+				type: uranio.types.BookPropertyType.TEXT,
+				label: "Connection path",
+			},
+			method: {
+				type: uranio.types.BookPropertyType.ENUM_STRING,
+				label: "Method",
+				values: ['GET', 'POST', 'DELETE']
+			},
+			atom_name: {
+				type: uranio.types.BookPropertyType.TEXT,
+				label: "Atom name",
+				on_error: () => {
+					return "generic_atom";
+				},
+			},
+			route_name: {
+				type: uranio.types.BookPropertyType.TEXT,
+				label: "Route name",
 			},
 			params: {
 				type: uranio.types.BookPropertyType.TEXT,
@@ -127,17 +150,25 @@ export const atom_book = {
 				label: "Query",
 				optional: true,
 			},
+			headers: {
+				type: uranio.types.BookPropertyType.LONG_TEXT,
+				label: "Headers",
+				optional: true,
+			},
 			body: {
 				type: uranio.types.BookPropertyType.LONG_TEXT,
 				label: "Body",
 				optional: true,
 			},
-			atom_name: {
+			ip: {
 				type: uranio.types.BookPropertyType.TEXT,
-				label: "Atom name",
-				on_error: () => {
-					return "generic_atom";
-				},
+				label: "IP",
+				optional: true
+			},
+			is_auth: {
+				type: uranio.types.BookPropertyType.BINARY,
+				label: "Is auth",
+				optional: true
 			},
 			auth_action: {
 				type: uranio.types.BookPropertyType.ENUM_STRING,
@@ -148,5 +179,13 @@ export const atom_book = {
 				},
 			},
 		},
+	},
+	products: {
+		properties: {
+			title: {
+				type: uranio.types.BookPropertyType.TEXT,
+				label: 'Title'
+			}
+		}
 	}
 } as const;
