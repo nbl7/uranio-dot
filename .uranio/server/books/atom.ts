@@ -115,19 +115,23 @@ export const atom_book = {
 			route_path: {
 				type: uranio.types.BookPropertyType.TEXT,
 				label: "Route path",
+				optional: true,
 			},
 			atom_path: {
 				type: uranio.types.BookPropertyType.TEXT,
 				label: "Atom path",
+				optional: true,
 			},
 			connection_path: {
 				type: uranio.types.BookPropertyType.TEXT,
 				label: "Connection path",
+				optional: true,
 			},
 			method: {
 				type: uranio.types.BookPropertyType.ENUM_STRING,
 				label: "Method",
-				values: ['GET', 'POST', 'DELETE']
+				values: ['GET', 'POST', 'DELETE'],
+				optional: true,
 			},
 			atom_name: {
 				type: uranio.types.BookPropertyType.TEXT,
@@ -135,10 +139,12 @@ export const atom_book = {
 				on_error: () => {
 					return "generic_atom";
 				},
+				optional: true,
 			},
 			route_name: {
 				type: uranio.types.BookPropertyType.TEXT,
 				label: "Route name",
+				optional: true,
 			},
 			params: {
 				type: uranio.types.BookPropertyType.TEXT,
@@ -177,6 +183,7 @@ export const atom_book = {
 				on_error: () => {
 					return "READ";
 				},
+				optional: true,
 			},
 		},
 	},
