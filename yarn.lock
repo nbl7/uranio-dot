@@ -2916,7 +2916,7 @@ uri-js@^4.2.2:
 
 "urn-lib@git+ssh://git@bitbucket.org/nbl7/urn-lib.git":
   version "0.0.1"
-  resolved "git+ssh://git@bitbucket.org/nbl7/urn-lib.git#f38f5f58bbcbbb40736df6c4c9ccc917484de4dd"
+  resolved "git+ssh://git@bitbucket.org/nbl7/urn-lib.git#78266df2badf8300c348f72e54145c0eb7cec6c4"
   dependencies:
     dateformat "^3.0.3"
 
