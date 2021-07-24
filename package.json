@@ -29,6 +29,7 @@
 	"dependencies": {
 		"mongoose": "^5.11.15",
 		"urn-core-dep": "bitbucket:nbl7/urn-core-dep",
+		"urn-lib": "git+ssh://git@bitbucket.org/nbl7/urn-lib.git",
 		"urn-web-dep": "git+ssh://git@bitbucket.org/nbl7/urn-web-dep.git"
 	},
 	"_moduleAliases": {
