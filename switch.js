@@ -34,7 +34,7 @@ function _proceed(){
 		const content = fs.readFileSync(json_filepath, {encoding: 'utf8'});
 		const urnsub = JSON.parse(content);
 		const current_submodule = urnsub.submodule;
-		if(typeof current_submodule === 'string'){
+		if(typeof current_submodule === 'string' && fs.existsSync(`.uranio/${repo_folder_name}`)){
 			_execute(`git submodule deinit .uranio/${repo_folder_name}`);
 			_execute(`git rm .uranio/${repo_folder_name}`);
 			_execute(`rm -rf .uranio/${repo_folder_name}`);
