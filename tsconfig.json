@@ -27,12 +27,9 @@
 			"@/*": [
 				"./*"
 			],
-			"uranio-books": [".uranio/server/books"],
-			"uranio-books/*": [".uranio/server/books/*"],
 			"uranio": [".uranio/lib/"],
-			"uranio-client": [".uranio/lib/client"],
-			"uranio-core": [".uranio/lib/core"],
-			"uranio-core/*": [".uranio/lib/core/*"]
+			"uranio-book": [".uranio/client/books/atom"],
+			"uranio-client": [".uranio/lib/client"]
 		},
 		"sourceMap": true,
 		"strict": true,
@@ -51,5 +48,15 @@
 	],
 	"exclude": [
 		"node_modules"
-	]
+	],
+	"watchOptions": {
+		"watchFile": "useFsEvents",
+		"watchDirectory": "useFsEvents",
+		"fallbackPolling": "dynamicPriority",
+		"synchronousWatchDirectory": true,
+		"excludeFiles": [
+			"src/**/*",
+			".uranio/.tmp/*"
+		]
+	}
 }
