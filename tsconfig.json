@@ -28,9 +28,9 @@
 				"./*"
 			],
 			"uranio": [".uranio/lib/"],
-			"uranio-book": [".uranio/client/books/atom"],
 			"uranio-core": [".uranio/lib/core"],
 			"uranio-core/*": [".uranio/lib/core/*"],
+			"uranio-books": [".uranio/client/books/atom"],
 			"uranio-client": [".uranio/lib/client"]
 		},
 		"sourceMap": true,
