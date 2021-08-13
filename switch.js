@@ -21,7 +21,7 @@ function _proceed(){
 	
 	const args = minimist(process.argv.slice(2));
 	const selected_repo = args._[0];
-	const valid_repos = ['core', 'api'];
+	const valid_repos = ['core', 'api', 'trx'];
 	
 	if(!valid_repos.includes(selected_repo)){
 		console.log('Invalid repo argument.');
