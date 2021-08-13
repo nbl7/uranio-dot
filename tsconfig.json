@@ -27,9 +27,11 @@
 			"@/*": [
 				"./*"
 			],
-			"uranio": [".uranio/lib/"],
-			"uranio-core": [".uranio/lib/core"],
-			"uranio-core/*": [".uranio/lib/core/*"],
+			"uranio": [".uranio/lib"],
+			"uranio-core": [".uranio/lib/api/core"],
+			"uranio-core/*": [".uranio/lib/api/core/*"],
+			"uranio-api": [".uranio/lib/api"],
+			"uranio-api/*": [".uranio/lib/api/*"],
 			"uranio-books": [".uranio/server/books"],
 			"uranio-books/*": [".uranio/server/books/*"],
 			"uranio-books-client": [".uranio/client/books"],
