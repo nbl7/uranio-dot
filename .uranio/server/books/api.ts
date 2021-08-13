@@ -30,10 +30,5 @@ export const api_book = {
 		api: {
 			url: "/requests",
 		},
-	},
-	products: {
-		api: {
-			url: "/products"
-		}
 	}
 } as const;

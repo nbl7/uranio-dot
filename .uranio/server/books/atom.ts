@@ -130,16 +130,16 @@ export const atom_book = {
 			method: {
 				type: uranio.types.BookPropertyType.ENUM_STRING,
 				label: "Method",
-				values: ['GET', 'POST', 'DELETE'],
+				values: ["GET", "POST", "DELETE"],
 				optional: true,
 			},
 			atom_name: {
 				type: uranio.types.BookPropertyType.TEXT,
 				label: "Atom name",
+				optional: true,
 				on_error: () => {
 					return "generic_atom";
 				},
-				optional: true,
 			},
 			route_name: {
 				type: uranio.types.BookPropertyType.TEXT,
@@ -169,12 +169,12 @@ export const atom_book = {
 			ip: {
 				type: uranio.types.BookPropertyType.TEXT,
 				label: "IP",
-				optional: true
+				optional: true,
 			},
 			is_auth: {
 				type: uranio.types.BookPropertyType.BINARY,
 				label: "Is auth",
-				optional: true
+				optional: true,
 			},
 			auth_action: {
 				type: uranio.types.BookPropertyType.ENUM_STRING,
@@ -187,12 +187,4 @@ export const atom_book = {
 			},
 		},
 	},
-	products: {
-		properties: {
-			title: {
-				type: uranio.types.BookPropertyType.TEXT,
-				label: 'Title'
-			}
-		}
-	}
 } as const;

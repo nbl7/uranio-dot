@@ -32,6 +32,8 @@
 			"uranio-core/*": [".uranio/lib/core/*"],
 			"uranio-books": [".uranio/server/books"],
 			"uranio-books/*": [".uranio/server/books/*"],
+			"uranio-books-client": [".uranio/client/books"],
+			"uranio-books-client/*": [".uranio/client/books/*"],
 			"uranio-client": [".uranio/lib/client"]
 		},
 		"sourceMap": true,
