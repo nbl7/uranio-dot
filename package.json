@@ -24,18 +24,21 @@
 		"@types/minimist": "^1.2.1",
 		"minimist": "^1.2.5",
 		"urn-core-dep-dev": "bitbucket:nbl7/urn-core-dep-dev",
+		"urn-trx-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev.git",
 		"urn-web-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-web-dep-dev.git"
 	},
 	"dependencies": {
 		"mongoose": "^5.11.15",
 		"urn-core-dep": "bitbucket:nbl7/urn-core-dep",
 		"urn-lib": "git+ssh://git@bitbucket.org/nbl7/urn-lib.git",
+		"urn-trx-dep": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep.git",
 		"urn-web-dep": "git+ssh://git@bitbucket.org/nbl7/urn-web-dep.git"
 	},
 	"_moduleAliases": {
 		"uranio-books": "./dist/.uranio/server/books/",
 		"uranio-books/*": "./dist/.uranio/server/books/*",
-		"uranio-core": "./dist/.uranio/lib/core/",
+		"uranio-core": "./dist/.uranio/lib/api/core/",
+		"uranio-api": "./dist/.uranio/lib/api/",
 		"uranio": "./dist/.uranio/lib/",
 		"uranio-client": "./dist/.uranio/lib/client"
 	}
