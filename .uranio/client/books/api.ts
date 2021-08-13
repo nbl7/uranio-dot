@@ -6,27 +6,27 @@
 export const api_book = {
 	superuser: {
 		api: {
-			url: "superusers",
+			url: "/superusers",
 		},
 	},
 	user: {
 		api: {
-			url: "users",
+			url: "/users",
 		},
 	},
 	group: {
 		api: {
-			url: "groups",
+			url: "/groups",
 		},
 	},
 	error: {
 		api: {
-			url: "errors",
+			url: "/errors",
 		},
 	},
 	request: {
 		api: {
-			url: "requests",
+			url: "/requests",
 		},
-	}
+	},
 } as const;
