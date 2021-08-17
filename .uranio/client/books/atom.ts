@@ -169,5 +169,17 @@ export const atom_book = {
 				optional: true,
 			},
 		},
-	}
+	},
+	kart: {
+		properties: {
+			email: {
+				type: uranio.types.BookPropertyType.EMAIL,
+				label: "Email",
+				unique: true,
+				on_error: () => {
+					return "email@email.com";
+				},
+			},
+		},
+	},
 } as const;
