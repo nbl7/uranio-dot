@@ -9,4 +9,5 @@ export const bll_book = {
 	group: {},
 	error: {},
 	request: {},
+	kart: {}
 } as const;

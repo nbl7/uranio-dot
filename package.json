@@ -37,9 +37,11 @@
 	"_moduleAliases": {
 		"uranio-books": "./dist/.uranio/server/books/",
 		"uranio-books/*": "./dist/.uranio/server/books/*",
-		"uranio-core": "./dist/.uranio/lib/api/core/",
-		"uranio-api": "./dist/.uranio/lib/api/",
+		"uranio-books-client": "./dist/.uranio/server/books/",
+		"uranio-books-client/*": "./dist/.uranio/server/books/*",
 		"uranio": "./dist/.uranio/lib/",
-		"uranio-client": "./dist/.uranio/lib/client"
+		"uranio-client": "./dist/.uranio/lib/client",
+		"uranio-core": "./dist/.uranio/lib/api/core/",
+		"uranio-api": "./dist/.uranio/lib/api/"
 	}
 }
