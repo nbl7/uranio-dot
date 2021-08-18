@@ -5,36 +5,36 @@
  */
 import uranio from '../../lib/client';
 import * as bll from '../../lib/api/core/bll/';
-export const api_book = {
+export const dock_book = {
 	superuser: {
-		api: {
+		dock: {
 			url: "/superusers",
 			auth: "/superauth",
 		},
 	},
 	user: {
-		api: {
+		dock: {
 			url: "/users",
 			auth: "/auth",
 		},
 	},
 	group: {
-		api: {
+		dock: {
 			url: "/groups",
 		},
 	},
 	error: {
-		api: {
+		dock: {
 			url: "/errors",
 		},
 	},
 	request: {
-		api: {
+		dock: {
 			url: "/requests",
 		},
 	},
 	kart:{
-		api: {
+		dock: {
 			url: "/karts",
 			routes: {
 				mycustom: {

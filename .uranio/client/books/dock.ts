@@ -4,29 +4,29 @@
  *
  */
 import uranio from '../../lib/client';
-export const api_book = {
+export const dock_book = {
 	superuser: {
-		api: {
+		dock: {
 			url: "/superusers",
 		},
 	},
 	user: {
-		api: {
+		dock: {
 			url: "/users",
 		},
 	},
 	group: {
-		api: {
+		dock: {
 			url: "/groups",
 		},
 	},
 	error: {
-		api: {
+		dock: {
 			url: "/errors",
 		},
 	},
 	request: {
-		api: {
+		dock: {
 			url: "/requests",
 			routes: {
 				mycustom: {
@@ -39,7 +39,7 @@ export const api_book = {
 		},
 	},
 	kart: {
-		api: {
+		dock: {
 			url: "/karts",
 			routes: {
 				mycustom: {
