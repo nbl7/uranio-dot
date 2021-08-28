@@ -174,18 +174,100 @@ export const atom_book = {
 		},
 	},
 	mykart: {
+		plural: "mykarts",
 		properties: {
 			title: {
 				type: types_202516519.BookPropertyType.TEXT,
-				label: `${some}title`,
+				label: `${some}titless`,
 			},
 		},
 	},
-	kart: {
+	product: {
 		properties: {
+			title: {
+				type: types_202516519.BookPropertyType.TEXT,
+				label: "Title",
+				validation: {
+					alphanum: true,
+					contain_digit: false,
+					max: 8,
+				},
+			},
+			description: {
+				type: types_202516519.BookPropertyType.LONG_TEXT,
+				label: "Description",
+			},
+			kart: {
+				type: types_202516519.BookPropertyType.ATOM,
+				label: "Kart",
+				atom: "mykart",
+			},
+			users: {
+				type: types_202516519.BookPropertyType.ATOM_ARRAY,
+				label: "Users",
+				atom: "user",
+			},
+			active: {
+				type: types_202516519.BookPropertyType.BINARY,
+				label: "Active",
+			},
 			email: {
 				type: types_202516519.BookPropertyType.EMAIL,
-				label: "EMAIL",
+				label: "Email",
+			},
+			password: {
+				type: types_202516519.BookPropertyType.ENCRYPTED,
+				label: "Password",
+			},
+			type: {
+				type: types_202516519.BookPropertyType.ENUM_NUMBER,
+				label: "Type Code",
+				values: [1, 2, 3],
+			},
+			type_str: {
+				type: types_202516519.BookPropertyType.ENUM_STRING,
+				label: "Type String",
+				values: ["Red", "Green", "Blue"],
+			},
+			price: {
+				type: types_202516519.BookPropertyType.FLOAT,
+				label: "Price",
+				validation: {
+					min: 0,
+				},
+			},
+			unit: {
+				type: types_202516519.BookPropertyType.INTEGER,
+				label: "Unit",
+				validation: {
+					min: 0,
+					max: 10,
+				},
+			},
+			categories: {
+				type: types_202516519.BookPropertyType.SET_NUMBER,
+				label: "Categories",
+				validation: {
+					length: 2,
+				},
+			},
+			categories_str: {
+				type: types_202516519.BookPropertyType.SET_STRING,
+				label: "Categories string",
+			},
+			pub_date: {
+				type: types_202516519.BookPropertyType.DAY,
+				label: "Pub date",
+				validation: {
+					min: new Date("2011-03-08"),
+				},
+			},
+			pub_time: {
+				type: types_202516519.BookPropertyType.TIME,
+				label: "Pub time",
+				validation: {
+					min: new Date("2011-03-08T00:00:00Z"),
+				},
 			},
 		},
 	},
