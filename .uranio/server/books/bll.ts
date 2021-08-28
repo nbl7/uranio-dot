@@ -13,9 +13,9 @@ export const bll_book = {
 	request: {},
 	mykart: {
 		bll: () => {
-			console.log(some);
+			console.log(some + `s`);
 			return new MYBLL();
 		},
 	},
-	kart: {},
+	product: {},
 } as const;
