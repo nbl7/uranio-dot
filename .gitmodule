@@ -1,2 +1,4 @@
 [submodule ".uranio/server/lib"]
 	update = rebase
+[submodule ".uranio/server/src/uranio"]
+	update = rebase
