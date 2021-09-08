@@ -1,4 +1,4 @@
-import * as lambda_12113241 from "../../lib/api/lambda";
+import * as lambda_12113241 from "../lib/api/lambda";
 const uranio_lambda = lambda_12113241.create();
 const handler = async (
 	event: lambda_12113241.LambdaEvent,
