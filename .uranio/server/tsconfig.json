@@ -21,11 +21,11 @@
 		"outDir": "../../dist/server/",
 		"rootDir": "./src",
 		"paths": {
-			"uranio": ["./src/lib"],
-			"uranio-core": ["./src/lib/api/core"],
-			"uranio-core/*": ["./src/lib/api/core/*"],
-			"uranio-api": ["./src/lib/api"],
-			"uranio-api/*": ["./src/lib/api/*"],
+		"uranio": ["./src/uranio"],
+			"uranio-core": ["./src/uranio/api/core"],
+			"uranio-core/*": ["./src/uranio/api/core/*"],
+			"uranio-api": ["./src/uranio/api"],
+			"uranio-api/*": ["./src/uranio/api/*"],
 			"uranio-books": ["./src/books"],
 			"uranio-books/*": ["./src/books/*"]
 		},
