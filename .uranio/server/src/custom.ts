@@ -1,5 +1,5 @@
-import * as bll_21212 from "../lib/api/core/bll";
-import * as types_202516519 from "../lib/srv/types";
+import * as bll_21212 from "./lib/api/core/bll";
+import * as types_202516519 from "./lib/srv/types";
 export class MYBLL extends bll_21212.BLL<"mykart"> {
 	constructor() {
 		super("mykart");

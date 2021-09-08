@@ -2,11 +2,11 @@
 	"name": "urn-dot",
 	"version": "0.0.1",
 	"description": "Uranio dot",
-	"main": "dist/src/index.js",
-	"types": "dist/src/index.d.ts",
+	"main": "dist/server/index.js",
+	"types": "dist/server/index.d.ts",
 	"scripts": {
-		"build": "tsc -b --project .uranio/server/tsconfig.json",
-		"dev": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.uranio/server/lib/run.js\""
+		"build": "cd .uranio/server && npx tsc -b",
+		"dev": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/server/lib/run.js\""
 	},
 	"repository": {
 		"type": "git",
@@ -30,9 +30,9 @@
 		"urn-trx-dep": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep.git"
 	},
 	"_moduleAliases": {
-		"uranio": "./dist/.uranio/lib/",
-		"uranio-core": "./dist/.uranio/lib/api/core/",
-		"uranio-api": "./dist/.uranio/lib/api/",
-		"uranio-books": "./dist/.uranio/server/books/"
+		"uranio": "./dist/server/lib/",
+		"uranio-core": "./dist/server/lib/api/core/",
+		"uranio-api": "./dist/server/lib/api/",
+		"uranio-books": "./dist/server/books/"
 	}
 }

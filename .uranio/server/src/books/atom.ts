@@ -4,7 +4,7 @@
  *
  */
 import uranio from "../lib";
-import { some } from "../src/s";
+import { some } from "../s";
 export const atom_book = {
 	superuser: {
 		security: {
