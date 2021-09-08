@@ -2887,7 +2887,7 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-"urn-core-dep-dev@bitbucket:nbl7/urn-core-dep-dev", "urn-core-dep-dev@git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git":
+"urn-core-dep-dev@git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git":
   version "0.0.1"
   resolved "git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git#8d87bd77e4a20a80d3929436f88168bd2d40c9cb"
   dependencies:
@@ -2895,7 +2895,7 @@ uri-js@^4.2.2:
     "@types/jsonwebtoken" "^8.5.0"
     urn-dev "git+ssh://git@bitbucket.org/nbl7/urn-dev.git"
 
-"urn-core-dep@bitbucket:nbl7/urn-core-dep", "urn-core-dep@git+ssh://git@bitbucket.org/nbl7/urn-core-dep.git":
+"urn-core-dep@git+ssh://git@bitbucket.org/nbl7/urn-core-dep.git":
   version "0.0.1"
   resolved "git+ssh://git@bitbucket.org/nbl7/urn-core-dep.git#7f0b7cce6115cf1e09f17d5d22c5b1153988cc4e"
   dependencies:
@@ -2948,16 +2948,7 @@ uri-js@^4.2.2:
 
 "urn-web-dep-dev@git+ssh://git@bitbucket.org/nbl7/urn-api-dep-dev.git":
   version "0.0.1"
-  uid dd3f14fddcfadd279e2cc6954f71202ee50d1748
   resolved "git+ssh://git@bitbucket.org/nbl7/urn-api-dep-dev.git#dd3f14fddcfadd279e2cc6954f71202ee50d1748"
-  dependencies:
-    "@types/cors" "^2.8.9"
-    "@types/express" "^4.17.11"
-    urn-core-dep-dev "git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git"
-
-"urn-web-dep-dev@git+ssh://git@bitbucket.org/nbl7/urn-web-dep-dev.git":
-  version "0.0.1"
-  resolved "git+ssh://git@bitbucket.org/nbl7/urn-web-dep-dev.git#dd3f14fddcfadd279e2cc6954f71202ee50d1748"
   dependencies:
     "@types/cors" "^2.8.9"
     "@types/express" "^4.17.11"
@@ -2966,14 +2957,6 @@ uri-js@^4.2.2:
 "urn-web-dep@git+ssh://git@bitbucket.org/nbl7/urn-api-dep.git":
   version "0.0.1"
   resolved "git+ssh://git@bitbucket.org/nbl7/urn-api-dep.git#04dce27fedd600e2adf79bebdb11127b985fbc3a"
-  dependencies:
-    cors "^2.8.5"
-    express "^4.17.1"
-    urn-core-dep "git+ssh://git@bitbucket.org/nbl7/urn-core-dep.git"
-
-"urn-web-dep@git+ssh://git@bitbucket.org/nbl7/urn-web-dep.git":
-  version "0.0.1"
-  resolved "git+ssh://git@bitbucket.org/nbl7/urn-web-dep.git#04dce27fedd600e2adf79bebdb11127b985fbc3a"
   dependencies:
     cors "^2.8.5"
     express "^4.17.1"
