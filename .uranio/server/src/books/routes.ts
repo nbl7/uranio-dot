@@ -47,26 +47,12 @@ export const dock_book = {
 					method: uranio_types.RouteMethod.GET,
 					action: uranio_types.AuthAction.READ,
 					url: "/pippos",
-					call: async (
-						api_request: uranio_types.Api.Request<"product", "pippo">
-					): Promise<number> => {
-						console.log(api_request);
-						console.log("Pippo");
-						return 7;
-					},
 					return: Number,
 				},
 				pippi2: {
 					method: uranio_types.RouteMethod.GET,
 					action: uranio_types.AuthAction.READ,
 					url: "/pippi",
-					call: async (
-						api_request: uranio_types.Api.Request<"product", "pippi2">
-					): Promise<number> => {
-						console.log(api_request);
-						console.log("Pippo3");
-						return 8;
-					},
 					return: Number,
 				},
 			},

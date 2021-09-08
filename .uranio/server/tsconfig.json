@@ -18,16 +18,16 @@
 		"noImplicitAny": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"outDir": "./dist",
-		"rootDir": "./",
+		"outDir": "../../dist/server/",
+		"rootDir": "./src",
 		"paths": {
-			"uranio": ["./lib"],
-			"uranio-core": ["./lib/api/core"],
-			"uranio-core/*": ["./lib/api/core/*"],
-			"uranio-api": ["./lib/api"],
-			"uranio-api/*": ["./lib/api/*"],
-			"uranio-books": ["./books"],
-			"uranio-books/*": ["./books/*"]
+			"uranio": ["./src/lib"],
+			"uranio-core": ["./src/lib/api/core"],
+			"uranio-core/*": ["./src/lib/api/core/*"],
+			"uranio-api": ["./src/lib/api"],
+			"uranio-api/*": ["./src/lib/api/*"],
+			"uranio-books": ["./src/books"],
+			"uranio-books/*": ["./src/books/*"]
 		},
 		"sourceMap": true,
 		"strict": true,
@@ -37,7 +37,7 @@
 		"target": "ES2018"
 	},
 	"include": [
-	"./src/**/*",
+	"./**/*",
 	],
 	"exclude": [
 	]
