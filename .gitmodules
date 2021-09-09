@@ -28,11 +28,6 @@
 	url = git+ssh://git@bitbucket.org/nbl7/urn-api-dep-dev.git
 	branch = master
 	update = rebase
-[submodule ".uranio/server/src/uranio"]
-	path = .uranio/server/src/uranio
-	url = git+ssh://git@bitbucket.org/nbl7/urn-api
-	branch = master
-	update = rebase
 [submodule ".uranio/client/src/uranio"]
 	path = .uranio/client/src/uranio
 	url = git+ssh://git@bitbucket.org/nbl7/urn-api
