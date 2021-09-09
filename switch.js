@@ -23,6 +23,8 @@ function _proceed(){
 	const selected_repo = args._[0];
 	const valid_repos = ['core', 'api', 'trx'];
 	
+	const selected_branch = args._[1] || 'master';
+	
 	if(!valid_repos.includes(selected_repo)){
 		console.log('Invalid repo argument.');
 		process.exit(1);
@@ -51,8 +53,8 @@ function _proceed(){
 	
 	const origin = `git+ssh://git@bitbucket.org/nbl7/urn-${selected_repo}`;
 	
-	_add_submodule(origin, submodule_server_path);
-	_add_submodule(origin, submodule_client_path);
+	_add_submodule(origin, submodule_server_path, selected_branch);
+	_add_submodule(origin, submodule_client_path, selected_branch);
 	
 	const urnsub = {submodule: `${selected_repo}`};
 	fs.writeFileSync(json_filepath, JSON.stringify(urnsub) + '\n');
@@ -62,12 +64,12 @@ function _proceed(){
 	
 }
 
-function _add_submodule(origin, submodule_path){
+function _add_submodule(origin, submodule_path, branch='master'){
 	
-	_execute(`git submodule add -b master ${origin} ${submodule_path}`);
+	_execute(`git submodule add -b ${branch} ${origin} ${submodule_path}`);
 	_execute(`git config -f .gitmodules submodule.${submodule_path}.update rebase`);
 	_execute(`git submodule update --remote --init --recursive`);
-	_execute(`git submodule foreach --recursive git checkout master`);
+	_execute(`git submodule foreach --recursive git checkout ${branch}`);
 	
 }
 
