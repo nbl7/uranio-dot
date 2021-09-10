@@ -55,6 +55,7 @@ function _proceed(){
 	
 	_add_submodule(origin, submodule_server_path, selected_branch);
 	_add_submodule(origin, submodule_client_path, selected_branch);
+	_execute(`git submodule update --remote --init --recursive`);
 	
 	const urnsub = {submodule: `${selected_repo}`};
 	fs.writeFileSync(json_filepath, JSON.stringify(urnsub) + '\n');
@@ -68,8 +69,7 @@ function _add_submodule(origin, submodule_path, branch='master'){
 	
 	_execute(`git submodule add -b ${branch} ${origin} ${submodule_path}`);
 	_execute(`git config -f .gitmodules submodule.${submodule_path}.update rebase`);
-	_execute(`git submodule update --remote --init --recursive`);
-
+	
 	_execute(`git submodule foreach --recursive 'case $displaypath in ".uranio"*) git checkout ${branch} ;; *) : ;; esac'`);
 	
 }
