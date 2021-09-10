@@ -69,7 +69,8 @@ function _add_submodule(origin, submodule_path, branch='master'){
 	_execute(`git submodule add -b ${branch} ${origin} ${submodule_path}`);
 	_execute(`git config -f .gitmodules submodule.${submodule_path}.update rebase`);
 	_execute(`git submodule update --remote --init --recursive`);
-	_execute(`git submodule foreach --recursive git checkout ${branch}`);
+
+	_execute(`git submodule foreach --recursive 'case $displaypath in ".uranio"*) git checkout ${branch} ;; *) : ;; esac'`);
 	
 }
 
