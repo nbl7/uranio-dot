@@ -4,7 +4,7 @@
  *
  */
 import * as uranio_types from "../uranio/cln/types";
-export const dock_book = {
+export const routes_book = {
 	superuser: {
 		dock: {
 			url: "/superusers",
