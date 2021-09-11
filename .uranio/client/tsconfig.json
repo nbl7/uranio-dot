@@ -27,7 +27,7 @@
 			"uranio-api": ["./src/uranio/api"],
 			"uranio-api/*": ["./src/uranio/api/*"],
 			"uranio-books": ["./src/books"],
-			"uranio-books/*": ["./src/books/*"],
+			"uranio-books/*": ["./src/books/*"]
 		},
 		"sourceMap": true,
 		"strict": true,
@@ -43,7 +43,5 @@
 	},
 	"files": [
 		"./src/uranio/client.ts"
-	],
-	"exclude": [
 	]
 }
