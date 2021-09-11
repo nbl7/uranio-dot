@@ -21,7 +21,7 @@
 		"outDir": "../../dist/server/",
 		"rootDir": "./src",
 		"paths": {
-		"uranio": ["./src/uranio"],
+			"uranio": ["./src/uranio"],
 			"uranio-core": ["./src/uranio/api/core"],
 			"uranio-core/*": ["./src/uranio/api/core/*"],
 			"uranio-api": ["./src/uranio/api"],
@@ -37,8 +37,6 @@
 		"target": "ES2018"
 	},
 	"include": [
-	"./**/*",
-	],
-	"exclude": [
+		"./**/*"
 	]
 }

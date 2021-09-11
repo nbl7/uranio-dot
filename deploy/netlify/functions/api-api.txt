@@ -1,4 +1,4 @@
-import uranio from '../../lib/';
+import uranio from '../uranio/';
 const uranio_lambda = uranio.lambda.create();
 const handler = async (event:uranio.lambda.LambdaEvent, context:uranio.lambda.LambdaContext)
 		:Promise<uranio.lambda.HandlerResponse> => {
