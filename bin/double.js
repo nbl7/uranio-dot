@@ -4,6 +4,7 @@
 const minimist = require('minimist');
 const cp = require('child_process');
 const fs = require('fs');
+const {execute, add_submodule, deinit} = require('./common');
 
 const output = cp.execSync(`git status --porcelain`).toString();
 const repo_folder_name = 'uranio';
@@ -41,49 +42,27 @@ function _proceed(){
 		const current_submodule = urnsub.submodule;
 		if(typeof current_submodule === 'string'){
 			if(fs.existsSync(submodule_server_path)){
-				_deinit(submodule_server_path);
+				deinit(submodule_server_path);
 			}
 			if(fs.existsSync(submodule_client_path)){
-				_deinit(submodule_client_path);
+				deinit(submodule_client_path);
 			}
 		}
 	}else{
-		_execute(`touch ${json_filepath}`);
+		execute(`touch ${json_filepath}`);
 	}
 	
 	const origin = `git+ssh://git@bitbucket.org/nbl7/urn-${selected_repo}`;
 	
-	_add_submodule(origin, submodule_server_path, selected_branch);
-	_add_submodule(origin, submodule_client_path, selected_branch);
-	_execute(`git submodule update --remote --init --recursive`);
+	add_submodule(origin, submodule_server_path, selected_branch);
+	add_submodule(origin, submodule_client_path, selected_branch);
+	execute(`git submodule update --remote --init --recursive`);
 	
 	const urnsub = {submodule: `${selected_repo}`};
 	fs.writeFileSync(json_filepath, JSON.stringify(urnsub) + '\n');
 	
-	_execute('git add .');
-	_execute(`git commit -m "[added submodules ${selected_repo}]"`);
+	execute('git add .');
+	execute(`git commit -m "[added submodules ${selected_repo}]"`);
 	
 }
 
-function _add_submodule(origin, submodule_path, branch='master'){
-	
-	_execute(`git submodule add -b ${branch} ${origin} ${submodule_path}`);
-	_execute(`git config -f .gitmodules submodule.${submodule_path}.update rebase`);
-	
-	_execute(`git submodule foreach --recursive 'case $displaypath in ".uranio"*) git checkout ${branch} ;; *) : ;; esac'`);
-	
-}
-
-function _deinit(submodule_path){
-	_execute(`git submodule deinit ${submodule_path}`);
-	_execute(`git rm ${submodule_path}`);
-	_execute(`rm -rf ${submodule_path}`);
-	_execute(`rm -rf ../.git/modules/urn-dot/modules/${submodule_path}`);
-	_execute('git add .');
-	_execute(`git commit -m "[removed submodule ${submodule_path}]"`);
-}
-
-function _execute(command){
-	console.log(command);
-	cp.execSync(command);
-}
