@@ -7,7 +7,9 @@ const fs = require('fs');
 const {execute, add_submodule, deinit} = require('./common');
 
 const output = cp.execSync(`git status --porcelain`).toString();
+
 const repo_folder_name = 'uranio';
+const submodule_path = `.uranio/server/src/${repo_folder_name}`;
 
 if(output === ''){
 	console.log('Working directory clean.');
@@ -33,7 +35,6 @@ function _proceed(){
 	
 	const json_filepath = `urnsub.json`;
 	
-	const submodule_path = `.uranio/${repo_folder_name}`;
 	
 	if(fs.existsSync(json_filepath)){
 		const content = fs.readFileSync(json_filepath, {encoding: 'utf8'});

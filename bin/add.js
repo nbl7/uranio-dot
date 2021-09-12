@@ -6,6 +6,7 @@ const fs = require('fs');
 const {execute} = require('./common');
 
 const repo_folder_name = 'uranio';
+const submodule_path = `.uranio/server/src/${repo_folder_name}`;
 
 _proceed();
 
@@ -23,8 +24,6 @@ function _proceed(){
 	}
 	
 	const json_filepath = `urnsub.json`;
-	
-	const submodule_path = `.uranio/server/src/${repo_folder_name}`;
 	
 	if(!fs.existsSync(json_filepath)){
 		execute(`touch ${json_filepath}`);

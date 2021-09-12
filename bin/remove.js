@@ -6,6 +6,7 @@ const fs = require('fs');
 const {deinit} = require('./common');
 
 const repo_folder_name = 'uranio';
+const submodule_path = `.uranio/server/src/${repo_folder_name}`;
 
 _proceed();
 
@@ -15,7 +16,6 @@ function _proceed(){
 	
 	// const submodule_server_path = `.uranio/server/src/${repo_folder_name}`;
 	// const submodule_client_path = `.uranio/client/src/${repo_folder_name}`;
-	const submodule_path = `.uranio/${repo_folder_name}`;
 	
 	if(fs.existsSync(json_filepath)){
 		const content = fs.readFileSync(json_filepath, {encoding: 'utf8'});
