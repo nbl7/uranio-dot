@@ -43,5 +43,12 @@
 	},
 	"files": [
 		"./src/uranio/client.ts"
+	],
+	"exclude": [
+		"./src/uranio/api/core/bll/**/*",
+		"./src/uranio/api/core/dal/**/*",
+		"./src/uranio/api/core/rel/**/*",
+		"./src/uranio/api/core/acl/**/*",
+		"./src/uranio/api/core/srv/**/*"
 	]
 }
