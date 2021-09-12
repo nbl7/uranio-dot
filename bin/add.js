@@ -24,7 +24,7 @@ function _proceed(){
 	
 	const json_filepath = `urnsub.json`;
 	
-	const submodule_path = `.uranio/${repo_folder_name}`;
+	const submodule_path = `.uranio/server/src/${repo_folder_name}`;
 	
 	if(!fs.existsSync(json_filepath)){
 		execute(`touch ${json_filepath}`);
