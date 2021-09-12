@@ -21,13 +21,13 @@
 		"outDir": "./dist",
 		"rootDir": "./",
 		"paths": {
-			"uranio": [".uranio/lib"],
-			"uranio-core": [".uranio/lib/api/core"],
-			"uranio-core/*": [".uranio/lib/api/core/*"],
-			"uranio-api": [".uranio/lib/api"],
-			"uranio-api/*": [".uranio/lib/api/*"],
-			"uranio-books": [".uranio/server/books"],
-			"uranio-books/*": [".uranio/server/books/*"]
+			"uranio": [".uranio/server/src/uranio"],
+			"uranio-core": [".uranio/server/src/uranio/api/core"],
+			"uranio-core/*": [".uranio/server/src/uranio/api/core/*"],
+			"uranio-api": [".uranio/server/src/uranio/api"],
+			"uranio-api/*": [".uranio/server/src/uranio/api/*"],
+			"uranio-books": [".uranio/server/src/books"],
+			"uranio-books/*": [".uranio/server/src/books/*"]
 		},
 		"sourceMap": true,
 		"strict": true,
