@@ -6,6 +6,14 @@
 import uranio from "../uranio";
 import { some } from "../s";
 export const atom_book = {
+	customer: {
+		properties:{
+			first_name: {
+				type: uranio.types.BookPropertyType.TEXT,
+				label: 'First name'
+			}
+		}
+	},
 	superuser: {
 		security: {
 			type: uranio.types.BookSecurityType.UNIFORM,
