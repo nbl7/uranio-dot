@@ -6,6 +6,7 @@
 import { some } from "../s";
 import { MYBLL } from "../custom";
 export const bll_book = {
+	customer: {},
 	superuser: {},
 	user: {},
 	group: {},

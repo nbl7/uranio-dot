@@ -5,11 +5,7 @@
 	"main": "dist/server/index.js",
 	"types": "dist/server/index.d.ts",
 	"scripts": {
-		"server:build": "cd .uranio/server && npx tsc -b",
-		"server:dev": "cd .uranio/server && npx tsc -w -p ./tsconfig.json",
-		"client:build": "cd .uranio/client && npx nuxt build -c ./nuxt.config.js",
-		"client:dev": "cd .uranio/client && npx nuxt dev -c ./nuxt.config.js",
-		"client:generate": "cd .uranio/client && npx nuxt generate -c ./nuxt.config.js"
+		"dev:server": "cd .uranio/server && npx tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ../../dist/server/uranio/run.js\""
 	},
 	"repository": {
 		"type": "git",
