@@ -5,7 +5,9 @@ export default {
 		'uranio': resolve(__dirname, './src/uranio/client'),
 		'uranio-api': resolve(__dirname, './src/uranio/api/'),
 		'uranio-core': resolve(__dirname, './src/uranio/api/core/'),
+		'uranio-client': resolve(__dirname, './src/uranio/client'),
 		'uranio-books': resolve(__dirname, './src/books/'),
+		'uranio-books-client': resolve(__dirname, './src/books/'),
 	},
 	components: [
 		{
@@ -24,7 +26,6 @@ export default {
 		typeCheck: true
 	},
 	generate: {
-		dir: '../../dist/client/',
 		fallback: '404.html',
 		exclude: ['/urn-admin'],
 	},
