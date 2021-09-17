@@ -5,6 +5,11 @@
  */
 import * as uranio_types from "../uranio/cln/types";
 export const routes_book = {
+	customer: {
+		dock: {
+			url: '/customers'
+		}
+	},
 	superuser: {
 		dock: {
 			url: "/superusers",
