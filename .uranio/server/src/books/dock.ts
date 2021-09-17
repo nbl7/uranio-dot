@@ -5,7 +5,11 @@
  */
 import * as uranio_types from "../uranio/types";
 export const dock_book = {
-	customer:{},
+	customer:{
+		dock: {
+			url: '/customers'
+		}
+	},
 	superuser: {
 		dock: {
 			url: "/superusers",
