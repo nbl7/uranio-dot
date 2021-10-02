@@ -11,14 +11,16 @@ const output = cp.execSync(`git status --porcelain`).toString();
 const repo_folder_name = 'uranio';
 const submodule_path = `.uranio/server/src/${repo_folder_name}`;
 
-if(output === ''){
-	console.log('Working directory clean.');
-	_proceed();
-}else{
-	console.log('-------------------------------------------------------------');
-	console.log('Working directory not clean. Please commit before proceeding.');
-	console.log('-------------------------------------------------------------');
-}
+// if(output === ''){
+//   console.log('Working directory clean.');
+//   _proceed();
+// }else{
+//   console.log('-------------------------------------------------------------');
+//   console.log('Working directory not clean. Please commit before proceeding.');
+//   console.log('-------------------------------------------------------------');
+// }
+
+_proceed();
 
 function _proceed(){
 	
@@ -85,7 +87,7 @@ function _update_package_aliases(package_filepath, aliases){
 		pack_data._moduleAliases = [];
 	}
 	pack_data._moduleAliases = aliases;
-	fs.writeFileSync(package_filepath, pack_data);
+	fs.writeFileSync(package_filepath, JSON.stringify(pack_data));
 }
 
 function _update_paths(tsconfig_filepath, paths){
@@ -101,7 +103,7 @@ function _update_paths(tsconfig_filepath, paths){
 		tsdata.compilerOptions.paths = [];
 	}
 	tsdata.compilerOptions.paths = paths;
-	fs.writeFileSync(tsconfig_filepath, tsdata);
+	fs.writeFileSync(tsconfig_filepath, JSON.stringify(tsdata));
 }
 
 function _generate_package_aliases(repo){
