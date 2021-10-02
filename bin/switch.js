@@ -33,11 +33,9 @@ function _proceed(){
 		process.exit(1);
 	}
 	
-	const json_filepath = `urnsub.json`;
-	
-	
-	if(fs.existsSync(json_filepath)){
-		const content = fs.readFileSync(json_filepath, {encoding: 'utf8'});
+	const urn_rc_filepath = `urnsub.json`;
+	if(fs.existsSync(urn_rc_filepath)){
+		const content = fs.readFileSync(urn_rc_filepath, {encoding: 'utf8'});
 		const urnsub = JSON.parse(content);
 		const current_submodule = urnsub.submodule;
 		if(typeof current_submodule === 'string'){
@@ -46,19 +44,126 @@ function _proceed(){
 			}
 		}
 	}else{
-		execute(`touch ${json_filepath}`);
+		execute(`touch ${urn_rc_filepath}`);
 	}
+
+	const paths = _generate_paths(selected_repo, `.uranio/server`);
+	const real_paths = _generate_paths(selected_repo, `.`);
 	
-	const origin = `git+ssh://git@bitbucket.org/nbl7/urn-${selected_repo}`;
+	console.log(paths);
+	console.log(real_paths);
 	
-	add_submodule(origin, submodule_path, selected_branch);
-	execute(`git submodule update --remote --init --recursive`);
+	// const main_tsconfig = `tsconfig.json`;
+	// _update_paths(main_tsconfig, paths);
 	
-	const urnsub = {submodule: `${selected_repo}`};
-	fs.writeFileSync(json_filepath, JSON.stringify(urnsub) + '\n');
+	// const real_tsconfig_server = `.uranio/server/tsconfig.json`;
+	// _update_paths(real_tsconfig_server, real_paths);
 	
-	execute('git add .');
-	execute(`git commit -m "[added submodules ${selected_repo}]"`);
+	// const real_tsconfig_client = `.uranio/client/tsconfig.json`;
+	// _update_paths(real_tsconfig_client, real_paths);
+	
+	const aliases = _generate_package_aliases(selected_repo);
+	console.log(aliases);
+	
+	// const origin = `git+ssh://git@bitbucket.org/nbl7/urn-${selected_repo}`;
+	
+	// add_submodule(origin, submodule_path, selected_branch);
+	// execute(`git submodule update --remote --init --recursive`);
+	
+	// const urnsub = {submodule: `${selected_repo}`};
+	// fs.writeFileSync(urn_rc_filepath, JSON.stringify(urnsub) + '\n');
+	
+	// execute('git add .');
+	// execute(`git commit -m "[added submodules ${selected_repo}]"`);
 	
 }
 
+function _update_package_aliases(package_filepath, aliases){
+	if(!fs.existsSync(package_filepath)){
+		fs.writeFileSync(package_filepath, '');
+	}
+	const content = fs.readFileSync(package_filepath, {encoding: 'utf8'});
+	const pack_data = JSON.parse(content);
+	if(!pack_data._moduleAliases){
+		pack_data._moduleAliases = [];
+	}
+	pack_data._moduleAliases = aliases;
+	fs.writeFileSync(package_filepath, pack_data);
+}
+
+function _update_paths(tsconfig_filepath, paths){
+	if(!fs.existsSync(tsconfig_filepath)){
+		fs.writeFileSync(tsconfig_filepath, '');
+	}
+	const content = fs.readFileSync(tsconfig_filepath, {encoding: 'utf8'});
+	const tsdata = JSON.parse(content);
+	if(!tsdata.compilerOptions){
+		tsdata.compilerOptions = {};
+	}
+	if(!tsdata.compilerOptions.paths){
+		tsdata.compilerOptions.paths = [];
+	}
+	tsdata.compilerOptions.paths = paths;
+	fs.writeFileSync(tsconfig_filepath, tsdata);
+}
+
+function _generate_package_aliases(repo){
+	let paths = [];
+	paths['uranio'] = [`./dist/server/uranio/`];
+	paths['uranio-books'] = [`./dist/server/books/`];
+	switch(repo){
+		case 'core':{
+			break;
+		}
+		case 'api':{
+			paths['uranio-core'] = [`./dist/server/uranio/core/`];
+			break;
+		}
+		case 'trx':{
+			paths['uranio-core'] = [`./dist/server/uranio/api/core/`];
+			paths['uranio-api'] = [`./dist/server/uranio/api/`];
+			break;
+		}
+		case 'adm':{
+			paths['uranio-core'] = [`./dist/server/uranio/trx/api/core/`];
+			paths['uranio-api'] = [`./dist/server/uranio/trx/api/`];
+			paths['uranio-trx'] = [`./dist/server/uranio/trx/`];
+			break;
+		}
+	}
+	return paths;
+}
+
+function _generate_paths(repo, prefix){
+	let paths = [];
+	paths['uranio'] = [`${prefix}/src/uranio`];
+	paths['uranio-books'] = [`${prefix}/src/books`];
+	paths['uranio-books/*'] = [`${prefix}/src/books/*`];
+	switch(repo){
+		case 'core':{
+			break;
+		}
+		case 'api':{
+			paths['uranio-core'] = [`${prefix}/src/uranio/core`];
+			paths['uranio-core/*'] = [`${prefix}/src/uranio/core/*`];
+			break;
+		}
+		case 'trx':{
+			paths['uranio-core'] = [`${prefix}/src/uranio/api/core`];
+			paths['uranio-core/*'] = [`${prefix}/src/uranio/api/core/*`];
+			paths['uranio-api'] = [`${prefix}/src/uranio/api`];
+			paths['uranio-api/*'] = [`${prefix}/src/uranio/api/*`];
+			break;
+		}
+		case 'adm':{
+			paths['uranio-core'] = [`${prefix}/src/uranio/trx/api/core`];
+			paths['uranio-core/*'] = [`${prefix}/src/uranio/trx/api/core/*`];
+			paths['uranio-api'] = [`${prefix}/src/uranio/trx/api`];
+			paths['uranio-api/*'] = [`${prefix}/src/uranio/trx/api/*`];
+			paths['uranio-trx'] = [`${prefix}/src/uranio/trx/`];
+			paths['uranio-trx/*'] = [`${prefix}/src/uranio/trx/*`];
+			break;
+		}
+	}
+	return paths;
+}
