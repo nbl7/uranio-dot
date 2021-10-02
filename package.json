@@ -28,10 +28,10 @@
 		"urn-trx-dep": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep.git"
 	},
 	"_moduleAliases": {
-		"uranio": ["./dist/server/uranio/"],
-		"uranio-books": ["./dist/server/books/"],
-		"uranio-core": ["./dist/server/uranio/trx/api/core/"],
-		"uranio-api": ["./dist/server/uranio/trx/api/"],
-		"uranio-trx": ["./dist/server/uranio/trx/"]
+		"uranio": "./dist/server/uranio/",
+		"uranio-books": "./dist/server/books/",
+		"uranio-core": "./dist/server/uranio/trx/api/core/",
+		"uranio-api": "./dist/server/uranio/trx/api/",
+		"uranio-trx": "./dist/server/uranio/trx/"
 	}
 }
