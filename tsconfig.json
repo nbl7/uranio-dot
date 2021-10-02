@@ -16,7 +16,15 @@
 		"noUnusedParameters": true,
 		"outDir": "./dist",
 		"rootDir": "./",
-		"paths": [],
+		"paths": {
+			"uranio": [".uranio/server/src/uranio"],
+			"uranio-books": [".uranio/server/src/books"],
+			"uranio-books/*": [".uranio/server/src/books/*"],
+			"uranio-core": [".uranio/server/src/uranio/api/core"],
+			"uranio-core/*": [".uranio/server/src/uranio/api/core/*"],
+			"uranio-api": [".uranio/server/src/uranio/api"],
+			"uranio-api/*": [".uranio/server/src/uranio/api/*"]
+		},
 		"sourceMap": true,
 		"strict": true,
 		"strictNullChecks": true,
