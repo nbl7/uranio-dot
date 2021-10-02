@@ -30,8 +30,9 @@
 	},
 	"_moduleAliases": {
 		"uranio": "./dist/server/uranio/",
-		"uranio-core": "./dist/server/uranio/api/core/",
-		"uranio-api": "./dist/server/uranio/api/",
+		"uranio-core": "./dist/server/uranio/trx/api/core/",
+		"uranio-api": "./dist/server/uranio/trx/api/",
+		"uranio-trx": "./dist/server/uranio/trx/",
 		"uranio-books": "./dist/server/books/"
 	}
 }
