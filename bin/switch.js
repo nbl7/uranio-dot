@@ -117,25 +117,25 @@ function _update_paths(tsconfig_filepath, paths){
 
 function _generate_package_aliases(repo){
 	let paths = {};
-	paths['uranio'] = [`./dist/server/uranio/`];
-	paths['uranio-books'] = [`./dist/server/books/`];
+	paths['uranio'] = `./dist/server/uranio/`;
+	paths['uranio-books'] = `./dist/server/books/`;
 	switch(repo){
 		case 'core':{
 			break;
 		}
 		case 'api':{
-			paths['uranio-core'] = [`./dist/server/uranio/core/`];
+			paths['uranio-core'] = `./dist/server/uranio/core/`;
 			break;
 		}
 		case 'trx':{
-			paths['uranio-core'] = [`./dist/server/uranio/api/core/`];
-			paths['uranio-api'] = [`./dist/server/uranio/api/`];
+			paths['uranio-core'] = `./dist/server/uranio/api/core/`;
+			paths['uranio-api'] = `./dist/server/uranio/api/`;
 			break;
 		}
 		case 'adm':{
-			paths['uranio-core'] = [`./dist/server/uranio/trx/api/core/`];
-			paths['uranio-api'] = [`./dist/server/uranio/trx/api/`];
-			paths['uranio-trx'] = [`./dist/server/uranio/trx/`];
+			paths['uranio-core'] = `./dist/server/uranio/trx/api/core/`;
+			paths['uranio-api'] = `./dist/server/uranio/trx/api/`;
+			paths['uranio-trx'] = `./dist/server/uranio/trx/`;
 			break;
 		}
 	}
