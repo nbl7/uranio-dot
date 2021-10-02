@@ -14,16 +14,14 @@ const output = cp.execSync(`git status --porcelain`).toString();
 const repo_folder_name = 'uranio';
 const submodule_path = `.uranio/server/src/${repo_folder_name}`;
 
-// if(output === ''){
-//   console.log('Working directory clean.');
-//   _proceed();
-// }else{
-//   console.log('-------------------------------------------------------------');
-//   console.log('Working directory not clean. Please commit before proceeding.');
-//   console.log('-------------------------------------------------------------');
-// }
-
-_proceed();
+if(output === ''){
+	console.log('Working directory clean.');
+	_proceed();
+}else{
+	console.log('-------------------------------------------------------------');
+	console.log('Working directory not clean. Please commit before proceeding.');
+	console.log('-------------------------------------------------------------');
+}
 
 function _proceed(){
 	
@@ -96,9 +94,6 @@ function _update_package_aliases(package_filepath, aliases){
 	pack_data._moduleAliases = aliases;
 	const str_data = JSON.stringify(pack_data);
 	const pretty = _pretty(str_data);
-	console.log(pack_data);
-	console.log(str_data);
-	console.log(pretty);
 	fs.writeFileSync(package_filepath, pretty);
 }
 
