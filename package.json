@@ -26,5 +26,10 @@
 		"urn-lib": "git+ssh://git@bitbucket.org/nbl7/urn-lib.git",
 		"urn-trx-dep": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep.git"
 	},
-	"_moduleAliases": []
+	"_moduleAliases": {
+		"uranio": ["./dist/server/uranio/"],
+		"uranio-books": ["./dist/server/books/"],
+		"uranio-core": ["./dist/server/uranio/api/core/"],
+		"uranio-api": ["./dist/server/uranio/api/"]
+	}
 }

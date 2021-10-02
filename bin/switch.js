@@ -51,7 +51,7 @@ function _proceed(){
 	}else{
 		execute(`touch ${urn_rc_filepath}`);
 	}
-
+	
 	const paths = _generate_paths(selected_repo, `.uranio/server`);
 	const real_paths = _generate_paths(selected_repo, `.`);
 	
@@ -91,11 +91,14 @@ function _update_package_aliases(package_filepath, aliases){
 	const content = fs.readFileSync(package_filepath, {encoding: 'utf8'});
 	const pack_data = JSON.parse(content);
 	if(!pack_data._moduleAliases){
-		pack_data._moduleAliases = [];
+		pack_data._moduleAliases = {};
 	}
 	pack_data._moduleAliases = aliases;
 	const str_data = JSON.stringify(pack_data);
 	const pretty = _pretty(str_data);
+	console.log(pack_data);
+	console.log(str_data);
+	console.log(pretty);
 	fs.writeFileSync(package_filepath, pretty);
 }
 
@@ -118,7 +121,7 @@ function _update_paths(tsconfig_filepath, paths){
 }
 
 function _generate_package_aliases(repo){
-	let paths = [];
+	let paths = {};
 	paths['uranio'] = [`./dist/server/uranio/`];
 	paths['uranio-books'] = [`./dist/server/books/`];
 	switch(repo){
@@ -145,7 +148,7 @@ function _generate_package_aliases(repo){
 }
 
 function _generate_paths(repo, prefix){
-	let paths = [];
+	let paths = {};
 	paths['uranio'] = [`${prefix}/src/uranio`];
 	paths['uranio-books'] = [`${prefix}/src/books`];
 	paths['uranio-books/*'] = [`${prefix}/src/books/*`];
