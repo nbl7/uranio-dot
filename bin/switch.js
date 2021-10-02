@@ -50,31 +50,28 @@ function _proceed(){
 	const paths = _generate_paths(selected_repo, `.uranio/server`);
 	const real_paths = _generate_paths(selected_repo, `.`);
 	
-	console.log(paths);
-	console.log(real_paths);
+	const main_tsconfig = `tsconfig.json`;
+	_update_paths(main_tsconfig, paths);
 	
-	// const main_tsconfig = `tsconfig.json`;
-	// _update_paths(main_tsconfig, paths);
+	const real_tsconfig_server = `.uranio/server/tsconfig.json`;
+	_update_paths(real_tsconfig_server, real_paths);
 	
-	// const real_tsconfig_server = `.uranio/server/tsconfig.json`;
-	// _update_paths(real_tsconfig_server, real_paths);
-	
-	// const real_tsconfig_client = `.uranio/client/tsconfig.json`;
-	// _update_paths(real_tsconfig_client, real_paths);
+	const real_tsconfig_client = `.uranio/client/tsconfig.json`;
+	_update_paths(real_tsconfig_client, real_paths);
 	
 	const aliases = _generate_package_aliases(selected_repo);
-	console.log(aliases);
+	_update_package_aliases(`package.json`, aliases);
 	
-	// const origin = `git+ssh://git@bitbucket.org/nbl7/urn-${selected_repo}`;
+	const origin = `git+ssh://git@bitbucket.org/nbl7/urn-${selected_repo}`;
 	
-	// add_submodule(origin, submodule_path, selected_branch);
-	// execute(`git submodule update --remote --init --recursive`);
+	add_submodule(origin, submodule_path, selected_branch);
+	execute(`git submodule update --remote --init --recursive`);
 	
-	// const urnsub = {submodule: `${selected_repo}`};
-	// fs.writeFileSync(urn_rc_filepath, JSON.stringify(urnsub) + '\n');
+	const urnsub = {submodule: `${selected_repo}`};
+	fs.writeFileSync(urn_rc_filepath, JSON.stringify(urnsub) + '\n');
 	
-	// execute('git add .');
-	// execute(`git commit -m "[added submodules ${selected_repo}]"`);
+	execute('git add .');
+	execute(`git commit -m "[added submodules ${selected_repo}]"`);
 	
 }
 
