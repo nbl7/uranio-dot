@@ -11,12 +11,16 @@
 		"type": "git",
 		"url": "git+ssh://git@bitbucket.org/nbl7/urn-dot.git"
 	},
-	"keywords": ["uranio", "urn"],
+	"keywords": [
+		"uranio",
+		"urn"
+	],
 	"author": "Andrea Reni <mail@nbl7.net>",
 	"license": "ISC",
 	"homepage": "https://bitbucket.org/nbl7/urn-dot#readme",
 	"devDependencies": {
 		"@types/minimist": "^1.2.1",
+		"@types/prettier": "^2.4.1",
 		"minimist": "^1.2.5",
 		"prettier": "^2.4.1",
 		"urn-trx-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev.git"
@@ -27,8 +31,14 @@
 		"urn-trx-dep": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep.git"
 	},
 	"_moduleAliases": {
-		"uranio": ["./dist/server/uranio/"],
-		"uranio-books": ["./dist/server/books/"],
-		"uranio-core": ["./dist/server/uranio/core/"]
+		"uranio": [
+			"./dist/server/uranio/"
+		],
+		"uranio-books": [
+			"./dist/server/books/"
+		],
+		"uranio-core": [
+			"./dist/server/uranio/core/"
+		]
 	}
 }
