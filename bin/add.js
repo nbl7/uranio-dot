@@ -14,7 +14,7 @@ function _proceed(){
 	
 	const args = minimist(process.argv.slice(2));
 	const selected_repo = args._[0];
-	const valid_repos = ['core', 'api', 'trx'];
+	const valid_repos = ['core', 'api', 'trx', 'adm'];
 	
 	const selected_branch = args._[1] || 'master';
 	
