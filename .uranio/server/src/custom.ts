@@ -1,4 +1,4 @@
-import * as bll_21212 from "./uranio/api/core/bll";
+import * as bll_21212 from "./uranio/trx/api/core/bll";
 import * as types_202516519 from "./uranio/srv/types";
 export class MYBLL extends bll_21212.BLL<"mykart"> {
 	constructor() {
