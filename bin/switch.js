@@ -4,6 +4,9 @@
 const minimist = require('minimist');
 const cp = require('child_process');
 const fs = require('fs');
+
+const prettier = require('prettier');
+
 const {execute, add_submodule, deinit} = require('./common');
 
 const output = cp.execSync(`git status --porcelain`).toString();
@@ -77,6 +80,10 @@ function _proceed(){
 	
 }
 
+function _pretty(content){
+	return prettier.format(content, {useTabs: true, tabWidth: 2, parser: 'json'});
+}
+
 function _update_package_aliases(package_filepath, aliases){
 	if(!fs.existsSync(package_filepath)){
 		fs.writeFileSync(package_filepath, '');
@@ -87,7 +94,9 @@ function _update_package_aliases(package_filepath, aliases){
 		pack_data._moduleAliases = [];
 	}
 	pack_data._moduleAliases = aliases;
-	fs.writeFileSync(package_filepath, JSON.stringify(pack_data));
+	const str_data = JSON.stringify(pack_data);
+	const pretty = _pretty(str_data);
+	fs.writeFileSync(package_filepath, pretty);
 }
 
 function _update_paths(tsconfig_filepath, paths){
@@ -103,7 +112,9 @@ function _update_paths(tsconfig_filepath, paths){
 		tsdata.compilerOptions.paths = [];
 	}
 	tsdata.compilerOptions.paths = paths;
-	fs.writeFileSync(tsconfig_filepath, JSON.stringify(tsdata));
+	const str_data = JSON.stringify(tsdata);
+	const pretty = _pretty(str_data);
+	fs.writeFileSync(tsconfig_filepath, pretty);
 }
 
 function _generate_package_aliases(repo){
