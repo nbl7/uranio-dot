@@ -12,10 +12,7 @@
 		"type": "git",
 		"url": "git+ssh://git@bitbucket.org/nbl7/urn-dot.git"
 	},
-	"keywords": [
-		"uranio",
-		"urn"
-	],
+	"keywords": ["uranio", "urn"],
 	"author": "Andrea Reni <mail@nbl7.net>",
 	"license": "ISC",
 	"homepage": "https://bitbucket.org/nbl7/urn-dot#readme",
