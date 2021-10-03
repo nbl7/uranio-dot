@@ -24,7 +24,6 @@
 	},
 	"dependencies": {
 		"mongoose": "^5.11.15",
-		"urn-lib": "git+ssh://git@bitbucket.org/nbl7/urn-lib.git",
 		"urn-trx-dep": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep.git"
 	},
 	"_moduleAliases": {
