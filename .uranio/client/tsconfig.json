@@ -17,14 +17,14 @@
 		"outDir": "../../dist/client",
 		"rootDir": "./src",
 		"paths": {
-			"uranio": ["./src/uranio/client"],
+			"uranio": ["./src/uranio"],
 			"uranio-books": ["./src/books"],
 			"uranio-books/*": ["./src/books/*"],
-			"uranio-core": ["./src/uranio/trx/api/core/client"],
+			"uranio-core": ["./src/uranio/trx/api/core"],
 			"uranio-core/*": ["./src/uranio/trx/api/core/*"],
-			"uranio-api": ["./src/uranio/trx/api/client"],
+			"uranio-api": ["./src/uranio/trx/api"],
 			"uranio-api/*": ["./src/uranio/trx/api/*"],
-			"uranio-trx": ["./src/uranio/trx/client"],
+			"uranio-trx": ["./src/uranio/trx"],
 			"uranio-trx/*": ["./src/uranio/trx/*"]
 		},
 		"sourceMap": true,
