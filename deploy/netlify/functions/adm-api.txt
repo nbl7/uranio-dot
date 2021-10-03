@@ -1,7 +1,0 @@
-import uranio from '../uranio/';
-const uranio_lambda = uranio.trx.api.lambda.create();
-const handler = async (event:uranio.trx.api.lambda.LambdaEvent, context:uranio.trx.api.lambda.LambdaContext)
-		:Promise<uranio.trx.api.lambda.HandlerResponse> => {
-	return await uranio_lambda.handle(event, context);
-};
-export { handler };
