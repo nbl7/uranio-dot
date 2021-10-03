@@ -3,8 +3,9 @@ import { resolve } from 'path';
 export default {
 	alias: {
 		'uranio': resolve(__dirname, './src/uranio/client'),
-		'uranio-api': resolve(__dirname, './src/uranio/api/'),
-		'uranio-core': resolve(__dirname, './src/uranio/api/core/'),
+		'uranio-trx': resolve(__dirname, './src/uranio/trx/'),
+		'uranio-api': resolve(__dirname, './src/uranio/trx/api'),
+		'uranio-core': resolve(__dirname, './src/uranio/trx/api/core/'),
 		'uranio-books': resolve(__dirname, './src/books/'),
 	},
 	components: [
