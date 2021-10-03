@@ -70,6 +70,8 @@ function _proceed(){
 	add_submodule(origin, submodule_path, selected_branch);
 	execute(`git submodule update --remote --init --recursive`);
 	
+	// checkout master?
+	
 	const urnsub = {submodule: `${selected_repo}`};
 	fs.writeFileSync(urn_rc_filepath, JSON.stringify(urnsub) + '\n');
 	

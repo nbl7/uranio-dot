@@ -8,7 +8,7 @@ export class MYBLL extends uranio.core.bll.BLL<'mykart'>{
 		query: uranio.types.Query<'mykart'>,
 		options?: uranio.types.Query.Options<'mykart', D>
 	):Promise<uranio.types.Molecule<'mykart', D>[]>{
-		console.log('STOCC');
+		console.log('STOCC8');
 		return  await super.find(query, options);
 	}
 }

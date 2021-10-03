@@ -5,13 +5,17 @@
 	"main": "dist/server/index.js",
 	"types": "dist/server/index.d.ts",
 	"scripts": {
-		"dev:server": "cd .uranio/server && npx tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ../../dist/server/uranio/run.js\""
+		"dev:server": "cd .uranio/server && npx tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ../../dist/server/uranio/run.js\"",
+		"dev:client": "cd .uranio/client && npx nuxt dev -c nuxt.config.js"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+ssh://git@bitbucket.org/nbl7/urn-dot.git"
 	},
-	"keywords": ["uranio", "urn"],
+	"keywords": [
+		"uranio",
+		"urn"
+	],
 	"author": "Andrea Reni <mail@nbl7.net>",
 	"license": "ISC",
 	"homepage": "https://bitbucket.org/nbl7/urn-dot#readme",
@@ -20,11 +24,11 @@
 		"@types/prettier": "^2.4.1",
 		"minimist": "^1.2.5",
 		"prettier": "^2.4.1",
-		"urn-trx-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev.git"
+		"urn-adm-dep-dev": "git+ssh://git@bitbucket.org/nbl7/urn-adm-dep-dev.git"
 	},
 	"dependencies": {
 		"mongoose": "^5.11.15",
-		"urn-trx-dep": "git+ssh://git@bitbucket.org/nbl7/urn-trx-dep.git"
+		"urn-adm-dep": "git+ssh://git@bitbucket.org/nbl7/urn-adm-dep.git"
 	},
 	"_moduleAliases": {
 		"uranio": "./dist/server/uranio/",

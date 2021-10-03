@@ -6,11 +6,43 @@
 
 import uranio from 'uranio';
 
-import {some} from './server/s';
+import {some} from './mylib/s';
 
-import {MYBLL} from './server/custom';
+import {MYBLL} from './custom/custom';
 
 export const atom_book:uranio.types.Book = {
+	customer:{
+		plural: 'customers',
+		security:{
+			type: uranio.types.BookSecurityType.UNIFORM,
+			_w: uranio.types.BookPermissionType.PUBLIC
+		},
+		properties: {
+			first_name: {
+				type: uranio.types.BookPropertyType.TEXT,
+				label: 'First name'
+			},
+			last_name: {
+				type: uranio.types.BookPropertyType.TEXT,
+				label: 'Last name'
+			}
+		},
+		dock:{
+			url: '/customers',
+			routes:{
+				pippi:{
+					method: uranio.types.RouteMethod.GET,
+					action: uranio.types.AuthAction.READ,
+					url: '/pippo',
+					return: Number,
+					call: async (req:uranio.types.Api.Request<'customer', 'pippi'>):Promise<number> => {
+						console.log(req.route_name);
+						return 899;
+					}
+				}
+			}
+		}
+	},
 	mykart: {
 		security: {
 			type: uranio.types.BookSecurityType.UNIFORM,
@@ -20,7 +52,7 @@ export const atom_book:uranio.types.Book = {
 		properties:{
 			title:{
 				type: uranio.types.BookPropertyType.TEXT,
-				label: `${some}titless`
+				label: `${some}-titless`
 			}
 		},
 		dock: {
@@ -33,15 +65,19 @@ export const atom_book:uranio.types.Book = {
 		}
 	},
 	product: {
+		security:{
+			type: uranio.types.BookSecurityType.UNIFORM,
+			_w: uranio.types.BookPermissionType.PUBLIC
+		},
 		properties: {
 			title: {
 				type: uranio.types.BookPropertyType.TEXT,
 				label: 'Title',
-				validation: {
-					alphanum: true,
-					contain_digit: false,
-					max: 8
-				}
+				// validation: {
+				//   alphanum: true,
+				//   contain_digit: false,
+				//   max: 7
+				// }
 			},
 			description: {
 				type: uranio.types.BookPropertyType.LONG_TEXT,
@@ -50,7 +86,8 @@ export const atom_book:uranio.types.Book = {
 			kart: {
 				type: uranio.types.BookPropertyType.ATOM,
 				label: 'Kart',
-				atom: 'mykart'
+				atom: 'mykart',
+				optional: true
 			},
 			users: {
 				type: uranio.types.BookPropertyType.ATOM_ARRAY,
@@ -72,7 +109,9 @@ export const atom_book:uranio.types.Book = {
 			type: {
 				type: uranio.types.BookPropertyType.ENUM_NUMBER,
 				label: 'Type Code',
-				values: [1,2,3]
+				values: [1,2,3],
+				optional: true,
+				default: 1
 			},
 			type_str: {
 				type: uranio.types.BookPropertyType.ENUM_STRING,
@@ -82,24 +121,26 @@ export const atom_book:uranio.types.Book = {
 			price: {
 				type: uranio.types.BookPropertyType.FLOAT,
 				label: 'Price',
-				validation: {
-					min: 0
-				}
+				// validation: {
+				//   min: 0
+				// }
 			},
 			unit: {
 				type: uranio.types.BookPropertyType.INTEGER,
 				label: 'Unit',
-				validation: {
-					min: 0,
-					max: 10
-				}
+				// validation: {
+				//   min: 0,
+				//   max: 10
+				// }
 			},
 			categories: {
 				type: uranio.types.BookPropertyType.SET_NUMBER,
 				label: 'Categories',
-				validation: {
-					length: 2
-				}
+				// validation: {
+				//   length: 2
+				// },
+				default: [1,2],
+				optional: true
 			},
 			categories_str: {
 				type: uranio.types.BookPropertyType.SET_STRING,
@@ -108,14 +149,25 @@ export const atom_book:uranio.types.Book = {
 			pub_date: {
 				type: uranio.types.BookPropertyType.TIME,
 				label: 'Pub date',
-				validation: {
-					min: new Date('2011-03-08')
-				}
+				// validation: {
+				//   min: new Date('2011-03-08')
+				// }
 			},
 		},
 		dock: {
 			url: '/products',
-			auth: '/proauths'
+			auth: '/proauths',
+			routes: {
+				myroute: {
+					method: uranio.types.RouteMethod.GET,
+					action: uranio.types.AuthAction.READ,
+					url: '/myroute',
+					call: async (api_request:uranio.types.Api.Request<'product','myroute'>):Promise<number> => {
+						console.log(api_request);
+						return 8;
+					}
+				}
+			}
 		}
 	}
 };
