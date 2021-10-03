@@ -10,7 +10,7 @@ export default {
 	},
 	components: [
 		{
-			path: '~/src/uranio/nuxt/components/',
+			path: '~/components/',
 			extensions: ['vue']
 		}
 	],

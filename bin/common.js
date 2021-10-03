@@ -14,6 +14,7 @@ function deinit(submodule_path){
 function add_submodule(origin, submodule_path, branch='master'){
 	execute(`git submodule add -b ${branch} ${origin} ${submodule_path}`);
 	execute(`git config -f .gitmodules submodule.${submodule_path}.update rebase`);
+	execute(`git submodule update --remote --init --recursive`);
 	execute(`git submodule foreach --recursive 'case $displaypath in ".uranio"*) git checkout ${branch} ;; *) : ;; esac'`);
 }
 
