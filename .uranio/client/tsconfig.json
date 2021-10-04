@@ -24,7 +24,7 @@
 			"uranio-core/*": ["./src/uranio/trx/api/core/*"],
 			"uranio-api": ["./src/uranio/trx/api"],
 			"uranio-api/*": ["./src/uranio/trx/api/*"],
-			"uranio-trx": ["./src/uranio/trx/"],
+			"uranio-trx": ["./src/uranio/trx"],
 			"uranio-trx/*": ["./src/uranio/trx/*"]
 		},
 		"sourceMap": true,
