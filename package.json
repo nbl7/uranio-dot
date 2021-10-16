@@ -6,8 +6,8 @@
 	"types": "dist/server/index.d.ts",
 	"scripts": {
 		"dev": "uranio dev -vu --is_dot=true",
-		"dev:server": "cd .uranio/server && npx tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ../../dist/server/uranio/run.js\"",
-		"dev:client": "cd .uranio/client && npx nuxt dev -c nuxt.config.js"
+		"dev:server": "uranio dev:server",
+		"dev:client": "uranio dev:client"
 	},
 	"repository": {
 		"type": "git",

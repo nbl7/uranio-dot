@@ -6,10 +6,6 @@
 
 import uranio from 'uranio';
 
-import {some} from './mylib/s';
-
-import {MYBLL} from './custom/custom';
-
 export const atom_book:uranio.types.Book = {
 	customer:{
 		plural: 'customers',
@@ -52,17 +48,18 @@ export const atom_book:uranio.types.Book = {
 		properties:{
 			title:{
 				type: uranio.types.BookPropertyType.TEXT,
-				label: `${some}-titless`
+				// label: `${some}-titless`
+				label: `titless`
 			}
 		},
 		dock: {
 			url: '/mykarts',
 			auth: '/myauthkart'
 		},
-		bll: () => {
-			console.log(some + `s`);
-			return new MYBLL();
-		}
+		// bll: () => {
+		//   console.log(some + `s`);
+		//   return new MYBLL();
+		// }
 	},
 	product: {
 		security:{
