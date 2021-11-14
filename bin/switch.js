@@ -75,6 +75,28 @@ function _proceed(){
 	execute('git add .');
 	execute(`git commit -m "[added submodules ${selected_repo}]"`);
 	
+	_update_uranio_json(selected_repo);
+	
+}
+
+function _update_uranio_json(selected_repo){
+	const uranio_json = `.uranio/uranio.json`;
+	if(!fs.existsSync(uranio_json)){
+		fs.writeFileSync(uranio_json, '');
+	}
+	const content = fs.readFileSync(uranio_json, {encoding: 'utf8'});
+	let urndata = {};
+	try{
+		urndata = JSON.parse(content);
+		urndata.repo = selected_repo;
+	}catch(err){
+		urndata.repo = selected_repo;
+		urndata.pacman = 'yarn';
+		urndata.deploy = 'netlify';
+	}
+	const str_data = JSON.stringify(urndata);
+	const pretty = _pretty(str_data);
+	fs.writeFileSync(uranio_json, pretty);
 }
 
 function _pretty(content){
