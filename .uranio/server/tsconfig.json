@@ -20,10 +20,12 @@
 			"uranio": ["./src/uranio"],
 			"uranio-books": ["./src/books"],
 			"uranio-books/*": ["./src/books/*"],
-			"uranio-core": ["./src/uranio/api/core"],
-			"uranio-core/*": ["./src/uranio/api/core/*"],
-			"uranio-api": ["./src/uranio/api"],
-			"uranio-api/*": ["./src/uranio/api/*"]
+			"uranio-core": ["./src/uranio/trx/api/core"],
+			"uranio-core/*": ["./src/uranio/trx/api/core/*"],
+			"uranio-api": ["./src/uranio/trx/api"],
+			"uranio-api/*": ["./src/uranio/trx/api/*"],
+			"uranio-trx": ["./src/uranio/trx/"],
+			"uranio-trx/*": ["./src/uranio/trx/*"]
 		},
 		"sourceMap": true,
 		"strict": true,
