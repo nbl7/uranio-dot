@@ -1,5 +1,1 @@
-{
-	"repo": "trx",
-	"pacman": "yarn",
-	"deploy": "netlify"
-}
+{ "repo": "trx", "pacman": "yarn", "deploy": "netlify" }

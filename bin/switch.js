@@ -72,10 +72,10 @@ function _proceed(){
 	const urnsub = {submodule: `${selected_repo}`};
 	fs.writeFileSync(urn_rc_filepath, JSON.stringify(urnsub) + '\n');
 	
+	_update_uranio_json(selected_repo);
+	
 	execute('git add .');
 	execute(`git commit -m "[added submodules ${selected_repo}]"`);
-	
-	_update_uranio_json(selected_repo);
 	
 }
 
