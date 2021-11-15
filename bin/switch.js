@@ -189,7 +189,7 @@ function _generate_paths(repo, prefix){
 			paths['uranio-core/*'] = [`${prefix}/src/uranio/trx/api/core/*`];
 			paths['uranio-api'] = [`${prefix}/src/uranio/trx/api`];
 			paths['uranio-api/*'] = [`${prefix}/src/uranio/trx/api/*`];
-			paths['uranio-trx'] = [`${prefix}/src/uranio/trx/`];
+			paths['uranio-trx'] = [`${prefix}/src/uranio/trx`];
 			paths['uranio-trx/*'] = [`${prefix}/src/uranio/trx/*`];
 			break;
 		}
