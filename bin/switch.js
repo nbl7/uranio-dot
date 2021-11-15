@@ -12,7 +12,7 @@ const {execute, add_submodule, deinit} = require('./common');
 const output = cp.execSync(`git status --porcelain`).toString();
 
 const repo_folder_name = 'uranio';
-const submodule_path = `.uranio/server/src/${repo_folder_name}`;
+const submodule_path = `src/${repo_folder_name}`;
 
 if(output === ''){
 	console.log('Working directory clean.');
