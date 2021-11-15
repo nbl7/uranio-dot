@@ -1,0 +1,521 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+$and	dist/server/uranio/api/core/acl/acl.js	/^            query = { $and: [query, this._read_query] };$/;"	p	class:query
+$and	dist/server/uranio/api/core/dal/validate.js	/^            query = { $and: [{ _id: { $ne: id } }, { $or: $or }] };$/;"	p	class:query
+$or	dist/server/uranio/api/core/acl/acl.js	/^        this._read_query = { $or: [{ _r: { $exists: 0 } }, { _r: { $in: user_groups } }] };$/;"	p	class:this._read_query
+$or	dist/server/uranio/api/core/dal/validate.js	/^            query = { $or: $or };$/;"	p	class:query
+$set	dist/server/uranio/api/core/rel/mongo/relation.js	/^        const update = {$/;"	p	class:const
+$unset	dist/server/uranio/api/core/rel/mongo/relation.js	/^            $set: partial_atom,$/;"	p	class:const
+ACL	dist/server/uranio/api/core/acl/acl.d.ts	/^export declare class ACL<A extends AtomName> implements AccessLayer<A> {$/;"	c
+AccessLayer	dist/server/uranio/api/core/typ/layer.d.ts	/^export interface AccessLayer<A extends AtomName> {$/;"	i
+Arguments	dist/server/uranio/base/types.d.ts	/^    type Arguments<A extends client_types.AtomName, R extends client_types.RouteName<A>> = {$/;"	t
+Atom	dist/server/uranio/api/core/typ/book_cln.d.ts	/^                interface Atom {$/;"	i
+Atom	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface Atom extends SharedFields {$/;"	i
+Atom	dist/server/uranio/api/typ/book_cln.d.ts	/^                    type Atom = urn_core_client.types.Book.Definition.Property.Validation.Atom;$/;"	t
+Atom	dist/server/uranio/api/typ/book_cln.d.ts	/^            type Atom = urn_core_client.types.Book.Definition.Property.Atom;$/;"	t
+AtomArray	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface AtomArray extends SharedFields {$/;"	i
+AtomArray	dist/server/uranio/api/typ/book_cln.d.ts	/^            type AtomArray = urn_core_client.types.Book.Definition.Property.AtomArray;$/;"	t
+AuthAction	dist/server/uranio/api/core/typ/auth.js	/^var AuthAction;$/;"	v
+AuthBLL	dist/server/uranio/api/core/bll/auth.d.ts	/^export declare class AuthBLL<A extends AtomName> extends SecurityBLL<A> {$/;"	c
+BLL	dist/server/uranio/api/core/bll/bll.d.ts	/^export declare class BLL<A extends AtomName> extends AuthBLL<A> {$/;"	c
+BasicBLL	dist/server/uranio/api/core/bll/basic.d.ts	/^export declare class BasicBLL<A extends AtomName> {$/;"	c
+BasicDAL	dist/server/uranio/api/core/dal/basic.d.ts	/^export declare class BasicDAL<A extends AtomName> implements AccessLayer<A> {$/;"	c
+BasicDefinition	dist/server/uranio/api/core/typ/book_cln.d.ts	/^    type BasicDefinition = {$/;"	t
+BasicDefinition	dist/server/uranio/api/core/typ/book_srv.d.ts	/^    type BasicDefinition = book_cln.Book.BasicDefinition & {$/;"	t
+BasicDefinition	dist/server/uranio/api/typ/book_cln.d.ts	/^    type BasicDefinition = urn_core_client.types.Book.BasicDefinition & {$/;"	t
+BasicDefinition	dist/server/uranio/api/typ/book_srv.d.ts	/^    type BasicDefinition = urn_core.types.Book.BasicDefinition & {$/;"	t
+Binary	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface Binary extends SharedFields {$/;"	i
+Binary	dist/server/uranio/api/typ/book_cln.d.ts	/^            type Binary = urn_core_client.types.Book.Definition.Property.Binary;$/;"	t
+Book	dist/server/uranio/api/core/typ/book_srv.js	/^var Book;$/;"	v
+Book	dist/server/uranio/api/typ/book_srv.js	/^var Book;$/;"	v
+Call	dist/server/uranio/api/typ/book_srv.d.ts	/^                    type Call<A extends urn_core.types.AtomName, R extends RouteName<A>> = (route_request: ApiRequest.Request<A, R>) => any;$/;"	t
+Comparsion	dist/server/uranio/api/core/typ/query.d.ts	/^    type Comparsion<T> = {$/;"	t
+CustomResponse	dist/server/uranio/base/types.d.ts	/^    type CustomResponse<A extends client_types.AtomName, R extends client_types.RouteName<A>> = 'dock' extends keyof typeof dock_book[A] ? 'routes' extends keyof typeof dock_book[A]['dock'] ? R extends keyof typeof dock_book[A]['dock']['routes'] ? 'return' extends keyof typeof dock_book[A]['dock']['routes'][R] ? typeof dock_book[A]['dock']['routes'][R]['return'] : any : any : any : any;$/;"	t
+DAL	dist/server/uranio/api/core/dal/dal.d.ts	/^export declare class DAL<A extends AtomName> extends SelfishDAL<A> {$/;"	c
+Day	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface Day extends SharedFields {$/;"	i
+Day	dist/server/uranio/api/typ/book_cln.d.ts	/^                    type Day = urn_core_client.types.Book.Definition.Property.Validation.DayTime;$/;"	t
+Day	dist/server/uranio/api/typ/book_cln.d.ts	/^            type Day = urn_core_client.types.Book.Definition.Property.Day;$/;"	t
+DayTime	dist/server/uranio/api/core/typ/book_cln.d.ts	/^                interface DayTime {$/;"	i
+DayTime	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            type DayTime = Day | Time;$/;"	t
+DayTime	dist/server/uranio/api/typ/book_cln.d.ts	/^            type DayTime = urn_core_client.types.Book.Definition.Property.DayTime;$/;"	t
+DefaultResponse	dist/server/uranio/base/types.d.ts	/^    type DefaultResponse<A extends client_types.AtomName, R extends client_types.RouteDefaultName, D extends client_types.Depth> = R extends 'count' ? number : R extends 'find_id' ? urn_response.General<client_types.Molecule<A, D>, any> : R extends 'find' ? urn_response.General<client_types.Molecule<A, D>[], any> : R extends 'find_one' ? urn_response.General<client_types.Molecule<A, D>, any> : R extends 'insert' ? urn_response.General<client_types.Molecule<A, D>, any> : R extends 'update' ? urn_response.General<client_types.Molecule<A, D>, any> : R extends 'delete' ? urn_response.General<client_types.Molecule<A, D>, any> : never;$/;"	t
+Definition	dist/server/uranio/api/core/typ/book_cln.d.ts	/^    namespace Definition {$/;"	c
+Definition	dist/server/uranio/api/core/typ/book_cln.d.ts	/^    type Definition = BasicDefinition;$/;"	t
+Definition	dist/server/uranio/api/core/typ/book_srv.d.ts	/^    namespace Definition {$/;"	c
+Definition	dist/server/uranio/api/core/typ/book_srv.d.ts	/^    type Definition<A extends AtomName> = BasicDefinition & {$/;"	t
+Definition	dist/server/uranio/api/typ/book_cln.d.ts	/^    namespace Definition {$/;"	c
+Definition	dist/server/uranio/api/typ/book_cln.d.ts	/^    type Definition = Book.BasicDefinition;$/;"	t
+Definition	dist/server/uranio/api/typ/book_srv.d.ts	/^    namespace Definition {$/;"	c
+Definition	dist/server/uranio/api/typ/book_srv.d.ts	/^    type Definition<A extends urn_core.types.AtomName> = Book.BasicDefinition & {$/;"	t
+Dock	dist/server/uranio/api/core/typ/book_cln.d.ts	/^        type Dock = {$/;"	t
+Dock	dist/server/uranio/api/typ/book_cln.d.ts	/^        namespace Dock {$/;"	c
+Dock	dist/server/uranio/api/typ/book_cln.d.ts	/^        type Dock = {$/;"	t
+Dock	dist/server/uranio/api/typ/book_srv.d.ts	/^        namespace Dock {$/;"	c
+Dock	dist/server/uranio/api/typ/book_srv.d.ts	/^        type Dock = book_cln.Book.Definition.Dock;$/;"	t
+Email	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface Email extends SharedFields {$/;"	i
+Email	dist/server/uranio/api/typ/book_cln.d.ts	/^            type Email = urn_core_client.types.Book.Definition.Property.Email;$/;"	t
+EncryptDAL	dist/server/uranio/api/core/dal/encrypt.d.ts	/^export declare class EncryptDAL<A extends AtomName> extends ValidateDAL<A> {$/;"	c
+Encrypted	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface Encrypted extends SharedFields {$/;"	i
+Encrypted	dist/server/uranio/api/typ/book_cln.d.ts	/^            type Encrypted = urn_core_client.types.Book.Definition.Property.Encrypted;$/;"	t
+Enum	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            type Enum = EnumString | EnumNumber;$/;"	t
+Enum	dist/server/uranio/api/typ/book_cln.d.ts	/^            type Enum = urn_core_client.types.Book.Definition.Property.Enum;$/;"	t
+EnumNumber	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface EnumNumber extends SharedFields {$/;"	i
+EnumNumber	dist/server/uranio/api/typ/book_cln.d.ts	/^            type EnumNumber = urn_core_client.types.Book.Definition.Property.EnumNumber;$/;"	t
+EnumString	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface EnumString extends SharedFields {$/;"	i
+EnumString	dist/server/uranio/api/typ/book_cln.d.ts	/^            type EnumString = urn_core_client.types.Book.Definition.Property.EnumString;$/;"	t
+Equal	dist/server/uranio/api/core/typ/query.d.ts	/^    export type Equal<A extends AtomName> = {$/;"	t
+EventHeaders	dist/server/uranio/api/lambda/types.d.ts	/^interface EventHeaders {$/;"	i
+EventMultiValueHeaders	dist/server/uranio/api/lambda/types.d.ts	/^interface EventMultiValueHeaders {$/;"	i
+EventMultiValueQueryStringParameters	dist/server/uranio/api/lambda/types.d.ts	/^interface EventMultiValueQueryStringParameters {$/;"	i
+EventQueryStringParameters	dist/server/uranio/api/lambda/types.d.ts	/^interface EventQueryStringParameters {$/;"	i
+Expression	dist/server/uranio/api/core/typ/query.d.ts	/^    export type Expression<A extends AtomName> = Equal<A> | WithComparsion<A>;$/;"	t
+Float	dist/server/uranio/api/core/typ/book_cln.d.ts	/^                interface Float {$/;"	i
+Float	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface Float extends SharedFields {$/;"	i
+Float	dist/server/uranio/api/typ/book_cln.d.ts	/^                type Float = urn_core_client.types.Book.Definition.Property.Format.Float;$/;"	t
+Float	dist/server/uranio/api/typ/book_cln.d.ts	/^            type Float = urn_core_client.types.Book.Definition.Property.Float;$/;"	t
+Format	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            namespace Format {$/;"	c
+Format	dist/server/uranio/api/typ/book_cln.d.ts	/^            namespace Format {$/;"	c
+Handler	dist/server/uranio/api/lambda/types.d.ts	/^export interface Handler {$/;"	i
+HandlerCallback	dist/server/uranio/api/lambda/types.d.ts	/^export interface HandlerCallback {$/;"	i
+HandlerResponse	dist/server/uranio/api/lambda/types.d.ts	/^export interface HandlerResponse {$/;"	i
+Headers	dist/server/uranio/api/typ/request.d.ts	/^        type Headers = {$/;"	t
+ID	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface ID extends SharedFields {$/;"	i
+ID	dist/server/uranio/api/typ/book_cln.d.ts	/^            type ID = urn_core_client.types.Book.Definition.Property.ID;$/;"	t
+Integer	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface Integer extends SharedFields {$/;"	i
+Integer	dist/server/uranio/api/typ/book_cln.d.ts	/^            type Integer = urn_core_client.types.Book.Definition.Property.Integer;$/;"	t
+Lambda	dist/server/uranio/api/lambda/types.d.ts	/^export interface Lambda {$/;"	i
+LambdaContext	dist/server/uranio/api/lambda/types.d.ts	/^export interface LambdaContext {$/;"	i
+LambdaEvent	dist/server/uranio/api/lambda/types.d.ts	/^export interface LambdaEvent {$/;"	i
+LambdaHeaders	dist/server/uranio/api/lambda/types.d.ts	/^export interface LambdaHeaders {$/;"	i
+LambdaMultiValueHeaders	dist/server/uranio/api/lambda/types.d.ts	/^export interface LambdaMultiValueHeaders {$/;"	i
+LogDAL	dist/server/uranio/api/core/dal/log.d.ts	/^export declare class LogDAL<A extends LogName> extends DAL<A> {$/;"	c
+Logical	dist/server/uranio/api/core/typ/query.d.ts	/^    export type Logical<A extends AtomName> = {$/;"	t
+LongText	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface LongText extends SharedFields {$/;"	i
+LongText	dist/server/uranio/api/typ/book_cln.d.ts	/^            type LongText = urn_core_client.types.Book.Definition.Property.LongText;$/;"	t
+MYBLL	.uranio/server/src/custom.ts	/^export class MYBLL extends bll_21212.BLL<"mykart"> {$/;"	c
+MYBLL	dist/server/custom.d.ts	/^export declare class MYBLL extends bll_21212.BLL<"mykart"> {$/;"	c
+MongooseLogRelation	dist/server/uranio/api/core/rel/mongo/log.d.ts	/^export declare class MongooseLogRelation<A extends AtomName> extends MongooseRelation<A> implements Relation<A> {$/;"	c
+MongooseRelation	dist/server/uranio/api/core/rel/mongo/relation.d.ts	/^export declare class MongooseRelation<A extends AtomName> implements Relation<A> {$/;"	c
+MongooseTrashRelation	dist/server/uranio/api/core/rel/mongo/trash.d.ts	/^export declare class MongooseTrashRelation<A extends AtomName> extends MongooseRelation<A> implements Relation<A> {$/;"	c
+Number	dist/server/uranio/api/core/typ/book_cln.d.ts	/^                interface Number {$/;"	i
+Number	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            type Number = Integer | Float;$/;"	t
+Number	dist/server/uranio/api/typ/book_cln.d.ts	/^                    type Number = urn_core_client.types.Book.Definition.Property.Validation.Number;$/;"	t
+Number	dist/server/uranio/api/typ/book_cln.d.ts	/^            type Number = urn_core_client.types.Book.Definition.Property.Number;$/;"	t
+Options	dist/server/uranio/api/core/typ/query.d.ts	/^    export type Options<A extends AtomName, D extends Depth = 0> = {$/;"	t
+Params	dist/server/uranio/api/typ/request.d.ts	/^        type Params<A extends types.AtomName, R extends RouteName<A>> = {$/;"	t
+Params	dist/server/uranio/base/types.d.ts	/^    type Params<A extends client_types.AtomName, R extends client_types.RouteName<A>> = client_types.Api.Request.Params<A, R>;$/;"	t
+Paths	dist/server/uranio/api/typ/request.d.ts	/^        type Paths = {$/;"	t
+Properties	dist/server/uranio/api/core/typ/book_cln.d.ts	/^        type Properties = {$/;"	t
+Properties	dist/server/uranio/api/typ/book_cln.d.ts	/^        type Properties = urn_core_client.types.Book.Definition.Properties;$/;"	t
+Property	dist/server/uranio/api/core/typ/book_cln.d.ts	/^        namespace Property {$/;"	c
+Property	dist/server/uranio/api/core/typ/book_cln.d.ts	/^        type Property = Property.ID | Property.Text | Property.LongText | Property.Email | Property.Integer | Property.Float | Property.Binary | Property.Encrypted | Property.Day | Property.Time | Property.SetString | Property.SetNumber | Property.EnumString | Property.EnumNumber | Property.Atom | Property.AtomArray;$/;"	t
+Property	dist/server/uranio/api/typ/book_cln.d.ts	/^        namespace Property {$/;"	c
+Property	dist/server/uranio/api/typ/book_cln.d.ts	/^        type Property = urn_core_client.types.Book.Definition.Property;$/;"	t
+Query	dist/server/uranio/api/typ/request.d.ts	/^        type Query<A extends types.AtomName, R extends RouteName<A>> = {$/;"	t
+Query	dist/server/uranio/base/types.d.ts	/^    type Query<A extends client_types.AtomName, R extends client_types.RouteName<A>> = client_types.Api.Request.Query<A, R>;$/;"	t
+QueryAtomKey	dist/server/uranio/api/core/typ/query.d.ts	/^    type QueryAtomKey<A extends AtomName> = KeyOfHardProperties | KeyOfCommonProperties | KeyOfPropertyOfAtomDefinition<A>;$/;"	t
+QueryAtomRealType	dist/server/uranio/api/core/typ/query.d.ts	/^    type QueryAtomRealType<A extends AtomName, P extends QueryAtomKey<A>> = P extends KeyOfHardProperties ? RealTypeOfAtomHardProperty<P> : P extends KeyOfCommonProperties ? RealTypeOfAtomCommonProperty<P> : P extends KeyOfPropertyOfAtomDefinition<A> ? RealTypeOfAtomProperty<A, P> : never;$/;"	t
+QueryString	dist/server/uranio/api/lambda/netlify/types.d.ts	/^import QueryString from 'qs';$/;"	I
+QueryString	dist/server/uranio/api/service/express/types.d.ts	/^import QueryString from 'qs';$/;"	I
+RAW	dist/server/uranio/raw/types.d.ts	/^export interface RAW<A extends client_types.AtomName> {$/;"	i
+RecycleDAL	dist/server/uranio/api/core/dal/recycle.d.ts	/^export declare class RecycleDAL<A extends AtomName> extends EncryptDAL<A> {$/;"	c
+Relation	dist/server/uranio/api/core/dsc/types.d.ts	/^export interface Relation<A extends AtomName> {$/;"	i
+Relation	dist/server/uranio/api/core/rel/types.d.ts	/^export interface Relation<A extends AtomName> {$/;"	i
+RelationDAL	dist/server/uranio/api/core/dal/rel.d.ts	/^export declare class RelationDAL<A extends AtomName> extends BasicDAL<A> {$/;"	c
+Request	dist/server/uranio/api/typ/request.d.ts	/^    namespace Request {$/;"	c
+Request	dist/server/uranio/api/typ/request.d.ts	/^    type Request<A extends types.AtomName, R extends RouteName<A>> = Request.Paths & {$/;"	t
+Response	dist/server/uranio/base/types.d.ts	/^    type Response<A extends client_types.AtomName, R extends client_types.RouteName<A>, D extends client_types.Depth> = R extends client_types.RouteDefaultName ? DefaultResponse<A, R, D> : 'dock' extends keyof typeof dock_book[A] ? 'routes' extends keyof typeof dock_book[A]['dock'] ? R extends keyof typeof dock_book[A]['dock']['routes'] ? CustomResponse<A, R> : never : never : never;$/;"	t
+Route	dist/server/uranio/api/typ/book_cln.d.ts	/^                type Route = {$/;"	t
+Route	dist/server/uranio/api/typ/book_srv.d.ts	/^                namespace Route {$/;"	c
+Route	dist/server/uranio/api/typ/book_srv.d.ts	/^                type Route<A extends urn_core.types.AtomName, R extends RouteName<A>> = book_cln.Book.Definition.Dock.Routes.Route & {$/;"	t
+Routes	dist/server/uranio/api/typ/book_cln.d.ts	/^            namespace Routes {$/;"	c
+Routes	dist/server/uranio/api/typ/book_cln.d.ts	/^            type Routes = {$/;"	t
+Routes	dist/server/uranio/api/typ/book_srv.d.ts	/^            namespace Routes {$/;"	c
+Routes	dist/server/uranio/api/typ/book_srv.d.ts	/^            type Routes = book_cln.Book.Definition.Dock.Routes;$/;"	t
+Security	dist/server/uranio/api/core/typ/book_srv.d.ts	/^        type Security = {$/;"	t
+SecurityBLL	dist/server/uranio/api/core/bll/security.d.ts	/^export declare class SecurityBLL<A extends AtomName> extends BasicBLL<A> {$/;"	c
+SelfishDAL	dist/server/uranio/api/core/dal/selfish.d.ts	/^export declare class SelfishDAL<A extends AtomName> extends RecycleDAL<A> {$/;"	c
+Service	dist/server/uranio/api/service/types.d.ts	/^export interface Service {$/;"	i
+Set	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            type Set = SetString | SetNumber;$/;"	t
+Set	dist/server/uranio/api/typ/book_cln.d.ts	/^            type Set = urn_core_client.types.Book.Definition.Property.Set;$/;"	t
+SetNumber	dist/server/uranio/api/core/typ/book_cln.d.ts	/^                interface SetNumber {$/;"	i
+SetNumber	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface SetNumber extends SharedFields {$/;"	i
+SetNumber	dist/server/uranio/api/typ/book_cln.d.ts	/^                    type SetNumber = urn_core_client.types.Book.Definition.Property.Validation.SetNumber;$/;"	t
+SetNumber	dist/server/uranio/api/typ/book_cln.d.ts	/^            type SetNumber = urn_core_client.types.Book.Definition.Property.SetString;$/;"	t
+SetString	dist/server/uranio/api/core/typ/book_cln.d.ts	/^                interface SetString {$/;"	i
+SetString	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface SetString extends SharedFields {$/;"	i
+SetString	dist/server/uranio/api/typ/book_cln.d.ts	/^                    type SetString = urn_core_client.types.Book.Definition.Property.Validation.SetString;$/;"	t
+SetString	dist/server/uranio/api/typ/book_cln.d.ts	/^            type SetString = urn_core_client.types.Book.Definition.Property.SetNumber;$/;"	t
+SharedFields	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface SharedFields {$/;"	i
+String	dist/server/uranio/api/core/typ/book_cln.d.ts	/^                interface String {$/;"	i
+String	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            type String = Text | LongText | Encrypted;$/;"	t
+String	dist/server/uranio/api/typ/book_cln.d.ts	/^                    type String = urn_core_client.types.Book.Definition.Property.Validation.String;$/;"	t
+String	dist/server/uranio/api/typ/book_cln.d.ts	/^            type String = urn_core_client.types.Book.Definition.Property.String;$/;"	t
+Text	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface Text extends SharedFields {$/;"	i
+Text	dist/server/uranio/api/typ/book_cln.d.ts	/^            type Text = urn_core_client.types.Book.Definition.Property.Text;$/;"	t
+Time	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            interface Time extends SharedFields {$/;"	i
+Time	dist/server/uranio/api/typ/book_cln.d.ts	/^                    type Time = urn_core_client.types.Book.Definition.Property.Validation.DayTime;$/;"	t
+Time	dist/server/uranio/api/typ/book_cln.d.ts	/^            type Time = urn_core_client.types.Book.Definition.Property.Time;$/;"	t
+ValidateDAL	dist/server/uranio/api/core/dal/validate.d.ts	/^export declare class ValidateDAL<A extends AtomName> extends RelationDAL<A> {$/;"	c
+Validation	dist/server/uranio/api/core/typ/book_cln.d.ts	/^            namespace Validation {$/;"	c
+Validation	dist/server/uranio/api/typ/book_cln.d.ts	/^                namespace Validation {$/;"	c
+WithComparsion	dist/server/uranio/api/core/typ/query.d.ts	/^    type WithComparsion<A extends AtomName> = {$/;"	t
+_add_schema_middleware	dist/server/uranio/api/core/rel/mongo/models.js	/^function _add_schema_middleware(atom_name, conn_name, mongo_schema) {$/;"	f
+_al	dist/server/uranio/api/core/bll/basic.d.ts	/^    protected _al: AccessLayer<A>;$/;"	m
+_atom_name	dist/server/uranio/api/core/bll/authenticate.d.ts	/^    private _atom_name;$/;"	m
+_auth_validate	dist/server/uranio/api/mdlw/mdlw.js	/^function _auth_validate(api_request) {$/;"	f
+_axios_instance	dist/server/uranio/raw/axios.d.ts	/^    private _axios_instance;$/;"	m
+_basic_bll	dist/server/uranio/api/core/bll/authenticate.d.ts	/^    private _basic_bll;$/;"	m
+_can_atom_write	dist/server/uranio/api/core/acl/acl.d.ts	/^    protected _can_atom_write(id: string): Promise<boolean>;$/;"	m
+_can_uniform_read	dist/server/uranio/api/core/acl/acl.d.ts	/^    protected _can_uniform_read(): void;$/;"	m
+_can_uniform_write	dist/server/uranio/api/core/acl/acl.d.ts	/^    protected _can_uniform_write(): void;$/;"	m
+_check_atom_name	dist/server/uranio/base/class.js	/^function _check_atom_name(atom_name) {$/;"	f
+_check_ids	dist/server/uranio/api/core/dal/validate.js	/^function _check_ids(atom_name, partial_atom, is_valid_id) {$/;"	f
+_check_passport_key_type	dist/server/uranio/api/core/bll/authenticate.js	/^function _check_passport_key_type(passport, key) {$/;"	f
+_check_unique	dist/server/uranio/api/core/dal/validate.d.ts	/^    protected _check_unique(partial_atom: Partial<AtomShape<A>>, id?: string): Promise<true>;$/;"	m
+_clean_atom	dist/server/uranio/api/core/rel/mongo/relation.js	/^function _clean_atom(atom_name, atom) {$/;"	f
+_clean_molecule	dist/server/uranio/api/core/rel/mongo/relation.js	/^function _clean_molecule(atom_name, molecule) {$/;"	f
+_clean_unset	dist/server/uranio/api/core/rel/mongo/relation.js	/^function _clean_unset(atom_name, partial_atom) {$/;"	f
+_conn_name	dist/server/uranio/api/core/rel/mongo/relation.d.ts	/^    protected _conn_name: ConnectionName;$/;"	m
+_connection	dist/server/uranio/api/core/rel/mongo/connection.d.ts	/^    private _connection;$/;"	m
+_convert_for_trash	dist/server/uranio/api/core/rel/mongo/models.js	/^function _convert_for_trash(schema_definition) {$/;"	f
+_create_models	dist/server/uranio/api/core/rel/mongo/models.js	/^function _create_models(mongoose_db_connection, connection) {$/;"	f
+_custom_validate_bond_atom	dist/server/uranio/api/core/atm/validate.js	/^function _custom_validate_bond_atom(prop_key, prop_def, prop_value) {$/;"	f
+_custom_validate_number	dist/server/uranio/api/core/atm/validate.js	/^function _custom_validate_number(prop_key, prop_def, prop_value) {$/;"	f
+_custom_validate_set_number	dist/server/uranio/api/core/atm/validate.js	/^function _custom_validate_set_number(prop_key, prop_def, prop_value) {$/;"	f
+_custom_validate_set_string	dist/server/uranio/api/core/atm/validate.js	/^function _custom_validate_set_string(prop_key, prop_def, prop_value) {$/;"	f
+_custom_validate_string	dist/server/uranio/api/core/atm/validate.js	/^function _custom_validate_string(prop_key, prop_def, prop_value) {$/;"	f
+_custom_validate_time	dist/server/uranio/api/core/atm/validate.js	/^function _custom_validate_time(prop_key, prop_def, prop_value) {$/;"	f
+_dal	dist/server/uranio/api/core/acl/acl.d.ts	/^    protected _dal: urn_dal.DAL<A>;$/;"	m
+_db_relation	dist/server/uranio/api/core/dal/basic.d.ts	/^    protected _db_relation: urn_rel.Relation<A>;$/;"	m
+_encrypt_changed_properties	dist/server/uranio/api/core/dal/encrypt.d.ts	/^    protected _encrypt_changed_properties(id: string, atom: Atom<A>): Promise<Atom<A>>;$/;"	m
+_encrypt_changed_properties	dist/server/uranio/api/core/dal/encrypt.d.ts	/^    protected _encrypt_changed_properties(id: string, atom: Partial<AtomShape<A>>): Promise<Partial<AtomShape<A>>>;$/;"	m
+_filter_lambda_body_request	dist/server/uranio/api/lambda/netlify/class.js	/^function _filter_lambda_body_request(event) {$/;"	f
+_find_unsets	dist/server/uranio/api/core/rel/mongo/relation.js	/^function _find_unsets(atom_name, partial_atom) {$/;"	f
+_fix_atom_on_validation_error	dist/server/uranio/api/core/dal/selfish.d.ts	/^    private _fix_atom_on_validation_error;$/;"	m
+_fix_molecule_on_validation_error	dist/server/uranio/api/core/dal/selfish.d.ts	/^    private _fix_molecule_on_validation_error;$/;"	m
+_generate_date_schema_options	dist/server/uranio/api/core/rel/mongo/schema.js	/^function _generate_date_schema_options(prop_def, schema_type_options) {$/;"	f
+_generate_enum_schema_options	dist/server/uranio/api/core/rel/mongo/schema.js	/^function _generate_enum_schema_options(prop_def, schema_type_options, type) {$/;"	f
+_generate_mongoose_schema_type_options	dist/server/uranio/api/core/rel/mongo/schema.js	/^function _generate_mongoose_schema_type_options(atom_name, prop_def, prop_key) {$/;"	f
+_generate_number_schema_options	dist/server/uranio/api/core/rel/mongo/schema.js	/^function _generate_number_schema_options(prop_def, schema_type_options) {$/;"	f
+_generate_package_aliases	bin/switch.js	/^function _generate_package_aliases(repo){$/;"	f
+_generate_passport	dist/server/uranio/api/core/bll/authenticate.d.ts	/^    private _generate_passport;$/;"	m
+_generate_populate_obj	dist/server/uranio/api/core/rel/mongo/relation.js	/^function _generate_populate_obj(atom_name, depth, depth_query) {$/;"	f
+_generate_string_schema_options	dist/server/uranio/api/core/rel/mongo/schema.js	/^function _generate_string_schema_options(prop_def, schema_type_options) {$/;"	f
+_generate_subatomkey_populate_obj	dist/server/uranio/api/core/rel/mongo/relation.js	/^function _generate_subatomkey_populate_obj(atom_name, subatom_key, depth, depth_query) {$/;"	f
+_generate_token	dist/server/uranio/api/core/bll/authenticate.d.ts	/^    private _generate_token;$/;"	m
+_get_atom_dock	dist/server/uranio/api/mdlw/mdlw.js	/^function _get_atom_dock(atom_name) {$/;"	f
+_get_atom_dock	dist/server/uranio/api/routes/routes.js	/^function _get_atom_dock(atom_name) {$/;"	f
+_get_atom_dock	dist/server/uranio/api/util/request.js	/^function _get_atom_dock(atom_name) {$/;"	f
+_get_conn_name	dist/server/uranio/api/core/rel/mongo/log.d.ts	/^    protected _get_conn_name(): ConnectionName;$/;"	m
+_get_conn_name	dist/server/uranio/api/core/rel/mongo/relation.d.ts	/^    protected _get_conn_name(): ConnectionName;$/;"	m
+_get_conn_name	dist/server/uranio/api/core/rel/mongo/trash.d.ts	/^    protected _get_conn_name(): ConnectionName;$/;"	m
+_get_route	dist/server/uranio/base/class.js	/^function _get_route(atom_name, route_name) {$/;"	f
+_get_route_def	dist/server/uranio/api/mdlw/mdlw.js	/^function _get_route_def(api_request) {$/;"	f
+_has_all_properties	dist/server/uranio/api/core/atm/validate.js	/^function _has_all_properties(atom_name, atom_shape) {$/;"	f
+_has_no_other_properties	dist/server/uranio/api/core/atm/validate.js	/^function _has_no_other_properties(atom_name, partial_atom) {$/;"	f
+_hide_hidden_properties_single_molecule	dist/server/uranio/api/core/atm/util.js	/^function _hide_hidden_properties_single_molecule(atom_name, molecule) {$/;"	f
+_id	dist/server/uranio/api/core/acl/acl.js	/^        let query = { _id: id };$/;"	p	class:let
+_id	dist/server/uranio/api/core/stc/static.js	/^exports.abstract_passport = {$/;"	p	class:exports.abstract_passport
+_id	dist/server/uranio/api/core/stc/static.js	/^exports.atom_hard_properties = {$/;"	p	class:exports.atom_hard_properties
+_is_base_query_type	dist/server/uranio/api/core/val/query.js	/^function _is_base_query_type(val) {$/;"	f
+_is_empty_id	dist/server/uranio/api/core/dal/validate.js	/^function _is_empty_id(id) {$/;"	f
+_is_valid_id	dist/server/uranio/api/core/rel/mongo/relation.js	/^function _is_valid_id(id) {$/;"	f
+_lambda_request_to_partial_api_request	dist/server/uranio/api/lambda/netlify/class.js	/^function _lambda_request_to_partial_api_request(event, context) {$/;"	f
+_lambda_response	dist/server/uranio/api/lambda/netlify/class.js	/^function _lambda_response(urn_resp, headers, multi_value_headers, is_base64) {$/;"	f
+_limit	dist/server/uranio/api/mdlw/mdlw.js	/^function _limit(api_request) {$/;"	f
+_log_auth_route_request	dist/server/uranio/api/mdlw/mdlw.js	/^function _log_auth_route_request(auth_request) {$/;"	f
+_log_route_request	dist/server/uranio/api/mdlw/mdlw.js	/^function _log_route_request(api_request) {$/;"	f
+_on_close	dist/server/uranio/api/core/rel/mongo/connection.d.ts	/^    private _on_close;$/;"	m
+_on_connected	dist/server/uranio/api/core/rel/mongo/connection.d.ts	/^    private _on_connected;$/;"	m
+_on_connecting	dist/server/uranio/api/core/rel/mongo/connection.d.ts	/^    private _on_connecting;$/;"	m
+_on_disconnected	dist/server/uranio/api/core/rel/mongo/connection.d.ts	/^    private _on_disconnected;$/;"	m
+_on_disconnecting	dist/server/uranio/api/core/rel/mongo/connection.d.ts	/^    private _on_disconnecting;$/;"	m
+_on_error	dist/server/uranio/api/core/rel/mongo/connection.d.ts	/^    private _on_error;$/;"	m
+_on_reconnect_failed	dist/server/uranio/api/core/rel/mongo/connection.d.ts	/^    private _on_reconnect_failed;$/;"	m
+_on_reconnect_tries	dist/server/uranio/api/core/rel/mongo/connection.d.ts	/^    private _on_reconnect_tries;$/;"	m
+_on_reconnected	dist/server/uranio/api/core/rel/mongo/connection.d.ts	/^    private _on_reconnected;$/;"	m
+_pretty	bin/switch.js	/^function _pretty(content){$/;"	f
+_proceed	bin/add.js	/^function _proceed(){$/;"	f
+_proceed	bin/double.js	/^function _proceed(){$/;"	f
+_proceed	bin/remove.js	/^function _proceed(){$/;"	f
+_proceed	bin/switch.js	/^function _proceed(){$/;"	f
+_r	dist/server/uranio/api/core/stc/static.js	/^exports.atom_common_properties = {$/;"	p	class:exports.atom_common_properties
+_raw	dist/server/uranio/api/core/rel/mongo/relation.d.ts	/^    protected _raw: mongoose.Model<mongoose.Document>;$/;"	m
+_read	dist/server/uranio/api/core/acl/acl.d.ts	/^    protected _read?: RealType<BookPropertyType.ID>;$/;"	m
+_read_query	dist/server/uranio/api/core/acl/acl.d.ts	/^    protected _read_query: Query<A>;$/;"	m
+_replace_atom_on_error	dist/server/uranio/api/core/dal/selfish.d.ts	/^    protected _replace_atom_on_error(id: string, atom: Atom<A>): Promise<Atom<A>>;$/;"	m
+_replace_molecule_on_error	dist/server/uranio/api/core/dal/selfish.d.ts	/^    protected _replace_molecule_on_error<D extends Depth>(id: string, molecule: Molecule<A, D>, depth?: D): Promise<Molecule<A, D>>;$/;"	m
+_return_acl	dist/server/uranio/api/core/bll/security.js	/^function _return_acl(atom_name, passport) {$/;"	f
+_return_express_auth_middleware	dist/server/uranio/api/service/express/routes/auth.js	/^function _return_express_auth_middleware(handler) {$/;"	f
+_return_express_middleware	dist/server/uranio/api/service/express/routes/default.js	/^function _return_express_middleware() {$/;"	f
+_security_type	dist/server/uranio/api/core/acl/acl.d.ts	/^    protected _security_type: BookSecurityType;$/;"	m
+_serialize	dist/server/uranio/raw/axios.js	/^function _serialize(obj, prefix = '') {$/;"	f
+_set_and_remove_headers	dist/server/uranio/api/service/express/routes/common.js	/^function _set_and_remove_headers(urn_res, res) {$/;"	f
+_trash_dal	dist/server/uranio/api/core/dal/recycle.d.ts	/^    private _trash_dal?;$/;"	m
+_update_package_aliases	bin/switch.js	/^function _update_package_aliases(package_filepath, aliases){$/;"	f
+_update_paths	bin/switch.js	/^function _update_paths(tsconfig_filepath, paths){$/;"	f
+_update_uranio_json	bin/switch.js	/^function _update_uranio_json(selected_repo){$/;"	f
+_url_with_query	dist/server/uranio/raw/axios.js	/^function _url_with_query(url, query) {$/;"	f
+_urn-admin	.uranio/client/.nuxt/App.js	/^const layouts = { "_urn-admin": sanitizeComponent(_9e3a6686),"_default": sanitizeComponent(_6f6c098b) }$/;"	p	class:from
+_validate_bond_type	dist/server/uranio/api/core/atm/validate.js	/^function _validate_bond_type(prop_key, prop_def, prop_value) {$/;"	f
+_validate_custom_bond_type	dist/server/uranio/api/core/atm/validate.js	/^function _validate_custom_bond_type(prop_key, prop_def, prop_value, partial_atom) {$/;"	f
+_validate_custom_type	dist/server/uranio/api/core/atm/validate.js	/^function _validate_custom_type(prop_key, prop_def, prop_value, partial_atom) {$/;"	f
+_validate_expression	dist/server/uranio/api/core/val/query.js	/^function _validate_expression(field, atom_name) {$/;"	f
+_validate_hard_properties	dist/server/uranio/api/core/atm/validate.js	/^function _validate_hard_properties(atom) {$/;"	f
+_validate_id	dist/server/uranio/api/core/dal/validate.js	/^function _validate_id(id, is_valid_id, key) {$/;"	f
+_validate_molecule_bond_properties	dist/server/uranio/api/core/atm/validate.js	/^function _validate_molecule_bond_properties(atom_name, molecule, depth) {$/;"	f
+_validate_partial_atom_bond_properties	dist/server/uranio/api/core/atm/validate.js	/^function _validate_partial_atom_bond_properties(atom_name, partial_atom) {$/;"	f
+_validate_primitive_properties	dist/server/uranio/api/core/atm/validate.js	/^function _validate_primitive_properties(atom_name, partial_atom) {$/;"	f
+_validate_primitive_type	dist/server/uranio/api/core/atm/validate.js	/^function _validate_primitive_type(prop_key, prop_def, prop_value) {$/;"	f
+_validate_route	dist/server/uranio/api/mdlw/mdlw.js	/^function _validate_route(api_request) {$/;"	f
+_write	dist/server/uranio/api/core/acl/acl.d.ts	/^    protected _write?: RealType<BookPropertyType.ID>;$/;"	m
+add_submodule	bin/common.js	/^function add_submodule(origin, submodule_path, branch='master'){$/;"	f
+any	dist/server/uranio/api/core/atm/index.js	/^exports.validate = {$/;"	p	class:exports.validate
+any	dist/server/uranio/api/core/atm/validate.js	/^function any(atom_name, molecule, depth) {$/;"	f
+api	dist/server/uranio/cln/main.d.ts	/^import api from 'uranio-api\/client';$/;"	I
+api	dist/server/uranio/srv/main.d.ts	/^import api from 'uranio-api';$/;"	I
+api_handle_and_store_exception	dist/server/uranio/api/util/request.js	/^function api_handle_and_store_exception(ex, partial_api_request) {$/;"	f
+api_handle_exception	dist/server/uranio/api/util/request.js	/^function api_handle_exception(ex, partial_api_request) {$/;"	f
+app.context.enablePreview	.uranio/client/.nuxt/index.js	/^  if (process.static && process.client) {$/;"	f
+appear	.uranio/client/.nuxt/index.js	/^const defaultTransition = {"name":"page","mode":"out-in","appear":true,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}$/;"	p	class:from.component.component.component.component.component.defineProperty.use
+appearActiveClass	.uranio/client/.nuxt/index.js	/^const defaultTransition = {"name":"page","mode":"out-in","appear":true,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}$/;"	p	class:from.component.component.component.component.component.defineProperty.use
+appearClass	.uranio/client/.nuxt/index.js	/^const defaultTransition = {"name":"page","mode":"out-in","appear":true,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}$/;"	p	class:from.component.component.component.component.component.defineProperty.use
+appearToClass	.uranio/client/.nuxt/index.js	/^const defaultTransition = {"name":"page","mode":"out-in","appear":true,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}$/;"	p	class:from.component.component.component.component.component.defineProperty.use
+array_op	dist/server/uranio/api/core/val/query.js	/^const _query_op_keys = {$/;"	p	class:const
+atom	dist/server/uranio/api/core/atm/validate.js	/^function atom(atom_name, atom) {$/;"	f
+atom_book	.uranio/client/src/books/atom.ts	/^export const atom_book = {$/;"	v
+atom_book	.uranio/server/src/books/atom.ts	/^export const atom_book = {$/;"	v
+atom_book	src/book.ts	/^export const atom_book:uranio.types.Book = {$/;"	v
+atom_dock_with_defaults	dist/server/uranio/api/routes/client.js	/^function atom_dock_with_defaults(default_routes, atom_name) {$/;"	f
+atom_dock_with_defaults	dist/server/uranio/api/routes/routes.js	/^function atom_dock_with_defaults(default_routes, atom_name) {$/;"	f
+atom_dock_with_defaults	dist/server/uranio/api/routes/server.js	/^function atom_dock_with_defaults(default_routes, atom_name) {$/;"	f
+atom_partial	dist/server/uranio/api/core/atm/validate.js	/^function atom_partial(atom_name, partial_atom) {$/;"	f
+atom_path	dist/server/uranio/api/util/request.js	/^        route_path: '',$/;"	p	class:let
+atom_shape	dist/server/uranio/api/core/atm/validate.js	/^function atom_shape(atom_name, atom_shape) {$/;"	f
+auth_atom_name	dist/server/uranio/api/core/stc/static.js	/^    _id: 'string',$/;"	p	class:exports.abstract_passport
+awsRequestId	dist/server/uranio/api/run.js	/^    memoryLimitInMB: '',$/;"	p	class:const
+base	.uranio/client/.nuxt/router.js	/^  mode: 'history',$/;"	p	class:Vue.use
+baseURL	dist/server/uranio/raw/axios.js	/^    const axios_config = {$/;"	p	class:const
+base_url	dist/server/uranio/cln/defaults.js	/^    raw: 'axios',$/;"	p	class:exports.trx_client_config
+beforeMount	.uranio/client/.nuxt/mixins/fetch.client.js	/^function beforeMount() {$/;"	f
+bll_book	.uranio/server/src/books/bll.ts	/^export const bll_book = {$/;"	v
+callMiddleware	.uranio/client/.nuxt/client.js	/^function callMiddleware (Components, context, layout) {$/;"	f	function:applySSRData
+callbackWaitsForEmptyEventLoop	dist/server/uranio/api/run.js	/^const context = {$/;"	p	class:const
+checkForErrors	.uranio/client/.nuxt/client.js	/^function checkForErrors (app) {$/;"	f	function:function
+concat	.uranio/client/.nuxt/utils.js	/^  return Array.prototype.concat.apply([], route.matched.map((m, index) => {$/;"	m	class:export
+connection_path	dist/server/uranio/api/util/request.js	/^        atom_path: '',$/;"	p	class:let
+core	dist/server/uranio/api/srv/main.d.ts	/^import core from 'uranio-core';$/;"	I
+core	dist/server/uranio/cln/main.d.ts	/^import core from 'uranio-core\/client';$/;"	I
+core	dist/server/uranio/srv/main.d.ts	/^import core from 'uranio-core';$/;"	I
+count	dist/server/uranio/api/routes/client.js	/^exports.default_routes = {$/;"	p	class:exports.default_routes
+create	dist/server/uranio/api/core/acl/acl.js	/^function create(atom_name, user_groups) {$/;"	f
+create	dist/server/uranio/api/core/bll/authenticate.js	/^function create(atom_name) {$/;"	f
+create	dist/server/uranio/api/core/bll/basic.js	/^function create(atom_name) {$/;"	f
+create	dist/server/uranio/api/core/bll/create.js	/^function create(atom_name, passport) {$/;"	f
+create	dist/server/uranio/api/core/bll/index.js	/^const basic = { create: basic_1.create };$/;"	p	class:const
+create	dist/server/uranio/api/core/bll/log.js	/^function create(log_name) {$/;"	f
+create	dist/server/uranio/api/core/dal/dal.js	/^function create(atom_name) {$/;"	f
+create	dist/server/uranio/api/core/rel/mongo/connection.js	/^function create(con_name, mongo_connection, db_name) {$/;"	f
+create	dist/server/uranio/api/core/rel/mongo/relation.js	/^function create(atom_name) {$/;"	f
+create	dist/server/uranio/api/lambda/index.js	/^function create(lambda_name) {$/;"	f	function:function
+create	dist/server/uranio/api/lambda/netlify/class.js	/^function create() {$/;"	f
+create	dist/server/uranio/api/service/express/class.js	/^function create() {$/;"	f
+create	dist/server/uranio/api/service/index.js	/^function create(service_name) {$/;"	f	function:function
+create	dist/server/uranio/base/class.js	/^function create(atom_name) {$/;"	f
+create	dist/server/uranio/raw/axios.js	/^function create(config) {$/;"	f
+create_basic	dist/server/uranio/api/core/dal/basic.js	/^function create_basic(atom_name, db_relation) {$/;"	f
+create_encrypt	dist/server/uranio/api/core/dal/encrypt.js	/^function create_encrypt(atom_name) {$/;"	f
+create_express_auth_route	dist/server/uranio/api/service/express/routes/auth.js	/^function create_express_auth_route(atom_name) {$/;"	f
+create_express_route	dist/server/uranio/api/service/express/routes/default.js	/^function create_express_route(atom_name) {$/;"	f
+create_log	dist/server/uranio/api/core/dal/log.js	/^function create_log(log_name) {$/;"	f
+create_main	dist/server/uranio/api/core/dal/rel.js	/^function create_main(atom_name) {$/;"	f
+create_recycle	dist/server/uranio/api/core/dal/recycle.js	/^function create_recycle(atom_name) {$/;"	f
+create_security	dist/server/uranio/api/core/bll/security.js	/^function create_security(atom_name, passport) {$/;"	f
+create_selfish	dist/server/uranio/api/core/dal/selfish.js	/^function create_selfish(atom_name) {$/;"	f
+create_validate	dist/server/uranio/api/core/dal/validate.js	/^function create_validate(atom_name) {$/;"	f
+db_log_name	dist/server/uranio/api/core/conf/defaults.js	/^    db_trash_name: 'uranio_trash_dev',$/;"	p	class:exports.core_config
+db_main_name	dist/server/uranio/api/core/conf/defaults.js	/^    mongo_log_connection: 'mongodb+srv:\/\/local:stdHMgSWmbkkLrfM@cluster0.je8zc.mongodb.net',$/;"	p	class:exports.core_config
+db_trash_name	dist/server/uranio/api/core/conf/defaults.js	/^    db_main_name: 'uranio_dev',$/;"	p	class:exports.core_config
+db_type	dist/server/uranio/api/core/conf/defaults.js	/^exports.core_config = {$/;"	p	class:exports.core_config
+deinit	bin/common.js	/^function deinit(submodule_path){$/;"	f
+delete_undefined_optional	dist/server/uranio/api/core/atm/util.js	/^function delete_undefined_optional(atom_name, partial_atom) {$/;"	f
+dock_book	.uranio/client/src/books/dock.ts	/^export const dock_book = {$/;"	v
+dock_book	.uranio/server/src/books/dock.ts	/^export const dock_book = {$/;"	v
+empty	dist/server/uranio/api/mdlw/validate.js	/^function empty(p, param_name) {$/;"	f
+empty	dist/server/uranio/api/service/express/routes/validate.js	/^function empty(p, param_name) {$/;"	f
+encrypt_property	dist/server/uranio/api/core/atm/validate.js	/^function encrypt_property(prop_key, prop_def, prop_value) {$/;"	f
+encryption_round	dist/server/uranio/api/core/conf/defaults.js	/^    jwt_private_key: 'A_KEY_THAT_NEED_TO_BE_CHANGED',$/;"	p	class:exports.core_config
+env	.eslintrc.js	/^	root: true,$/;"	p	class:module.exports
+error	dist/server/uranio/api/books.js	/^exports.atom = {$/;"	p	class:exports.atom
+error	dist/server/uranio/api/books.js	/^exports.bll = {$/;"	p	class:exports.bll
+error	dist/server/uranio/api/books.js	/^exports.dock = {$/;"	p	class:exports.dock
+execute	bin/common.js	/^function execute(command){$/;"	f
+export	.uranio/client/.nuxt/utils.js	/^}$/;"	c
+express	dist/server/uranio/api/service/express/class.d.ts	/^import express from 'express';$/;"	I
+express	dist/server/uranio/api/service/express/routes/auth.d.ts	/^import express from 'express';$/;"	I
+express	dist/server/uranio/api/service/express/routes/common.d.ts	/^import express from 'express';$/;"	I
+express	dist/server/uranio/api/service/express/routes/default.d.ts	/^import express from 'express';$/;"	I
+express_request_to_partial_api_request	dist/server/uranio/api/service/express/routes/common.js	/^function express_request_to_partial_api_request(req) {$/;"	f
+find	.uranio/server/src/custom.ts	/^	public async find<D extends types_202516519.Depth>($/;"	m
+fixPrepatch	.uranio/client/.nuxt/client.js	/^function fixPrepatch (to, ___) {$/;"	f	function:function
+full_path	dist/server/uranio/api/service/express/routes/common.js	/^    let api_request = {$/;"	p	class:let
+full_path	dist/server/uranio/api/util/request.js	/^    const request_shape = {$/;"	p	class:const
+functionName	dist/server/uranio/api/run.js	/^    callbackWaitsForEmptyEventLoop: false,$/;"	p	class:const
+functionVersion	dist/server/uranio/api/run.js	/^    functionName: '',$/;"	p	class:const
+generate_mongo_schema_def	dist/server/uranio/api/core/rel/mongo/schema.js	/^function generate_mongo_schema_def(atom_name) {$/;"	f
+getNuxtChildComponents	.uranio/client/.nuxt/client.js	/^function getNuxtChildComponents ($parent, $components = []) {$/;"	f	function:function
+getRemainingTimeInMillis	dist/server/uranio/api/run.js	/^    logStreamName: '',$/;"	p	class:const
+getStoreModule	.uranio/client/.nuxt/store.js	/^function getStoreModule (storeModule, namespaces, { isProperty = false } = {}) {$/;"	f	function:normalizeState
+get_atom_name_from_atom_path	dist/server/uranio/api/util/request.js	/^function get_atom_name_from_atom_path(atom_path) {$/;"	f
+get_auth_action	dist/server/uranio/api/util/request.js	/^function get_auth_action(atom_name, route_name) {$/;"	f
+get_bll_error	dist/server/uranio/api/nst/index.js	/^function get_bll_error() {$/;"	f
+get_bll_group	dist/server/uranio/api/core/nst/index.js	/^function get_bll_group() {$/;"	f
+get_bll_request	dist/server/uranio/api/nst/index.js	/^function get_bll_request() {$/;"	f
+get_bond	dist/server/uranio/api/core/atm/keys.js	/^function get_bond(atom_name) {$/;"	f
+get_bond_array	dist/server/uranio/api/core/atm/keys.js	/^function get_bond_array(atom_name) {$/;"	f
+get_bond_non_array	dist/server/uranio/api/core/atm/keys.js	/^function get_bond_non_array(atom_name) {$/;"	f
+get_encrypted	dist/server/uranio/api/core/atm/keys.js	/^function get_encrypted(atom_name) {$/;"	f
+get_hidden	dist/server/uranio/api/core/atm/index.js	/^exports.keys = {$/;"	p	class:exports.keys
+get_hidden	dist/server/uranio/api/core/atm/keys.js	/^function get_hidden(atom_name) {$/;"	f
+get_model	dist/server/uranio/api/core/rel/mongo/models.js	/^function get_model(conn_name, atom_name) {$/;"	f
+get_optional	dist/server/uranio/api/core/atm/keys.js	/^function get_optional(atom_name) {$/;"	f
+get_params_from_route_path	dist/server/uranio/api/util/request.js	/^function get_params_from_route_path(atom_name, route_name, route_path) {$/;"	f
+get_route_name	dist/server/uranio/api/util/request.js	/^function get_route_name(atom_name, route_path, http_method) {$/;"	f
+get_subatom_name	dist/server/uranio/api/core/atm/util.js	/^function get_subatom_name(atom_name, atom_key) {$/;"	f
+get_unique	dist/server/uranio/api/core/atm/keys.js	/^function get_unique(atom_name) {$/;"	f
+groups	dist/server/uranio/api/core/stc/static.js	/^    auth_atom_name: 'string',$/;"	p	class:exports.abstract_passport
+handle_exception	dist/server/uranio/api/util/exc_handler.js	/^function handle_exception(service_name) {$/;"	f
+handle_rejected_promise	dist/server/uranio/api/util/exc_handler.js	/^function handle_rejected_promise(service_name) {$/;"	f
+has_property	dist/server/uranio/api/core/atm/index.js	/^exports.util = {$/;"	p	class:exports.util
+has_property	dist/server/uranio/api/core/atm/util.js	/^function has_property(atom_name, key) {$/;"	f
+headers	dist/server/uranio/api/run.js	/^    httpMethod: "GET" \/* GET *\/,$/;"	p	class:const
+hide_hidden_properties	dist/server/uranio/api/core/atm/util.js	/^function hide_hidden_properties(atom_name, molecules) {$/;"	f
+hotReloadAPI	.uranio/client/.nuxt/client.js	/^function hotReloadAPI(_app) {$/;"	f	function:function
+httpMethod	dist/server/uranio/api/run.js	/^    path: '\/uranio\/api\/requests',$/;"	p	class:const
+init	dist/server/uranio/api/core/srv/main.js	/^function init(config) {$/;"	f	function:function
+invokedFunctionArn	dist/server/uranio/api/run.js	/^    functionVersion: '',$/;"	p	class:const
+isStatic	.uranio/client/.nuxt/utils.js	/^    app.context = {$/;"	p	class:export.context
+is_atom	dist/server/uranio/api/core/atm/util.js	/^function is_atom(atom_name, atom) {$/;"	f
+is_auth_atom	dist/server/uranio/api/core/atm/util.js	/^function is_auth_atom(atom) {$/;"	f
+is_auth_atom_name	dist/server/uranio/api/core/atm/util.js	/^function is_auth_atom_name(atom_name) {$/;"	f
+is_auth_request	dist/server/uranio/api/util/request.js	/^function is_auth_request(atom_name, atom_path) {$/;"	f
+is_molecule	dist/server/uranio/api/core/atm/util.js	/^function is_molecule(atom_name, molecule) {$/;"	f
+is_optional_property	dist/server/uranio/api/core/atm/util.js	/^function is_optional_property(atom_name, key) {$/;"	f
+is_public_request	dist/server/uranio/api/core/bll/authenticate.js	/^function is_public_request(atom_name, action) {$/;"	f
+is_superuser	dist/server/uranio/api/core/bll/authenticate.js	/^function is_superuser(passport) {$/;"	f
+is_valid_passport	dist/server/uranio/api/core/bll/authenticate.js	/^function is_valid_passport(passport) {$/;"	f
+jwt_private_key	dist/server/uranio/api/core/conf/defaults.js	/^    db_log_name: 'uranio_log_dev',$/;"	p	class:exports.core_config
+lib	dist/server/uranio/srv/main.d.ts	/^import lib from 'urn-lib';$/;"	I
+linkActiveClass	.uranio/client/.nuxt/router.js	/^  base: '\/',$/;"	p	class:Vue.use
+linkExactActiveClass	.uranio/client/.nuxt/router.js	/^  linkActiveClass: 'urn-active-link',$/;"	p	class:Vue.use
+logGroupName	dist/server/uranio/api/run.js	/^    awsRequestId: '',$/;"	p	class:const
+logStreamName	dist/server/uranio/api/run.js	/^    logGroupName: '',$/;"	p	class:const
+log_create	dist/server/uranio/api/core/rel/mongo/log.js	/^function log_create(atom_name) {$/;"	f
+map_lambda_query_params	dist/server/uranio/api/lambda/util.js	/^function map_lambda_query_params(json) {$/;"	f
+max_password_length	dist/server/uranio/api/core/conf/defaults.js	/^    encryption_round: 12,$/;"	p	class:exports.core_config
+max_query_depth_allowed	dist/server/uranio/api/core/conf/defaults.js	/^    max_password_length: 58,$/;"	p	class:exports.core_config
+memoryLimitInMB	dist/server/uranio/api/run.js	/^    invokedFunctionArn: '',$/;"	p	class:const
+mode	.uranio/client/.nuxt/index.js	/^const defaultTransition = {"name":"page","mode":"out-in","appear":true,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}$/;"	p	class:from.component.component.component.component.component.defineProperty.use
+mode	.uranio/client/.nuxt/router.js	/^export const routerOptions = {$/;"	p	class:Vue.use
+model	dist/server/uranio/api/core/rel/mongo/relation.js	/^    let populate_object = { path: subatom_key, model: subatom_name };$/;"	p	class:let
+molecule	dist/server/uranio/api/core/atm/validate.js	/^function molecule(atom_name, molecule, depth) {$/;"	f
+molecule_primitive_properties	dist/server/uranio/api/core/atm/validate.js	/^function molecule_primitive_properties(atom_name, molecule) {$/;"	f
+molecule_to_atom	dist/server/uranio/api/core/atm/util.js	/^function molecule_to_atom(atom_name, molecule) {$/;"	f
+mongo_log_connection	dist/server/uranio/api/core/conf/defaults.js	/^    mongo_trash_connection: 'mongodb+srv:\/\/local:stdHMgSWmbkkLrfM@cluster0.je8zc.mongodb.net',$/;"	p	class:exports.core_config
+mongo_main_connection	dist/server/uranio/api/core/conf/defaults.js	/^    db_type: 'mongo',$/;"	p	class:exports.core_config
+mongo_trash_connection	dist/server/uranio/api/core/conf/defaults.js	/^    mongo_main_connection: 'mongodb+srv:\/\/local:stdHMgSWmbkkLrfM@cluster0.je8zc.mongodb.net',$/;"	p	class:exports.core_config
+mongoose	dist/server/uranio/api/core/rel/mongo/connection.d.ts	/^import mongoose from 'mongoose';$/;"	I
+mongoose	dist/server/uranio/api/core/rel/mongo/models.d.ts	/^import mongoose from 'mongoose';$/;"	I
+mongoose	dist/server/uranio/api/core/rel/mongo/relation.d.ts	/^import mongoose from 'mongoose';$/;"	I
+mongoose	dist/server/uranio/api/core/rel/mongo/schema.d.ts	/^import mongoose from 'mongoose';$/;"	I
+mongoose	dist/server/uranio/api/core/rel/mongo/types.d.ts	/^import mongoose from 'mongoose';$/;"	I
+name	.uranio/client/.nuxt/index.js	/^const defaultTransition = {"name":"page","mode":"out-in","appear":true,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}$/;"	p	class:from.component.component.component.component.component.defineProperty.use
+normalizeComponents	.uranio/client/.nuxt/client.js	/^function normalizeComponents (to, ___) {$/;"	f	function:function
+nuxtReady	.uranio/client/.nuxt/client.js	/^function nuxtReady (_app) {$/;"	f	function:fixPrepatch
+only_valid_param_keys	dist/server/uranio/api/mdlw/validate.js	/^function only_valid_param_keys(params, valid_params_keys) {$/;"	f
+only_valid_param_keys	dist/server/uranio/api/service/express/routes/validate.js	/^function only_valid_param_keys(params, valid_params_keys) {$/;"	f
+only_valid_query_keys	dist/server/uranio/api/mdlw/validate.js	/^function only_valid_query_keys(query, valid_query_keys) {$/;"	f
+only_valid_query_keys	dist/server/uranio/api/service/express/routes/validate.js	/^function only_valid_query_keys(query, valid_query_keys) {$/;"	f
+params	dist/server/uranio/hooks/index.js	/^            const args = {$/;"	p	class:const
+parse_param	dist/server/uranio/api/lambda/util.js	/^function parse_param(json) {$/;"	f
+partial_api_request_to_atom_request	dist/server/uranio/api/util/request.js	/^function partial_api_request_to_atom_request(partial_api_request) {$/;"	f
+passport_has_all_keys	dist/server/uranio/api/core/bll/authenticate.js	/^function passport_has_all_keys(passport) {$/;"	f
+passport_has_correct_type_values	dist/server/uranio/api/core/bll/authenticate.js	/^function passport_has_correct_type_values(passport) {$/;"	f
+passport_has_no_other_keys	dist/server/uranio/api/core/bll/authenticate.js	/^function passport_has_no_other_keys(passport) {$/;"	f
+path	dist/server/uranio/api/core/rel/mongo/relation.js	/^    let populate_object = { path: subatom_key, model: subatom_name };$/;"	p	class:let
+path	dist/server/uranio/api/run.js	/^    rawQuery: '',$/;"	p	class:const
+path	dist/server/uranio/raw/axios.js	/^                payload = {$/;"	p	class:payload
+process_request_path	dist/server/uranio/api/util/request.js	/^function process_request_path(full_path) {$/;"	f
+process_request_query	dist/server/uranio/api/mdlw/validate.js	/^function process_request_query(query) {$/;"	f
+process_request_query	dist/server/uranio/api/service/express/routes/validate.js	/^function process_request_query(query) {$/;"	f
+property	dist/server/uranio/api/core/atm/fix.js	/^function property(atom_name, atom, key) {$/;"	f
+property	dist/server/uranio/api/core/atm/index.js	/^exports.fix = {$/;"	p	class:exports.fix
+property	dist/server/uranio/api/core/atm/validate.js	/^function property(prop_key, prop_def, prop_value, atom) {$/;"	f
+raw	dist/server/uranio/base/class.d.ts	/^    private raw;$/;"	m
+raw	dist/server/uranio/cln/defaults.js	/^exports.trx_client_config = {$/;"	p	class:exports.trx_client_config
+rawQuery	dist/server/uranio/api/run.js	/^    rawURL: '',$/;"	p	class:const
+rawURL	dist/server/uranio/api/run.js	/^const event = {$/;"	p	class:const
+recursively_check_if_array	dist/server/uranio/api/lambda/util.js	/^function recursively_check_if_array(parentObj) {$/;"	f
+register_exception_handler	dist/server/uranio/api/util/exc_handler.js	/^function register_exception_handler(name) {$/;"	f
+request	dist/server/uranio/raw/axios.js	/^                payload = {$/;"	p	class:payload
+required	dist/server/uranio/api/core/rel/mongo/schema.js	/^        type: undefined,$/;"	p	class:let
+resolveComponents	.uranio/client/.nuxt/client.js	/^function resolveComponents (route) {$/;"	f	function:applySSRData
+response	dist/server/uranio/raw/axios.js	/^                payload = {$/;"	p	class:payload
+return_default_routes	dist/server/uranio/api/routes/server.js	/^function return_default_routes(atom_name) {$/;"	f
+return_uranio_response_to_express	dist/server/uranio/api/service/express/routes/common.js	/^function return_uranio_response_to_express(urn_res, res) {$/;"	f
+root	.eslintrc.js	/^module.exports = {$/;"	p	class:module.exports
+route_def	dist/server/uranio/api/routes/client.js	/^function route_def(atom_name, route_name) {$/;"	f
+route_def	dist/server/uranio/api/routes/routes.js	/^function route_def(default_routes, atom_name, route_name) {$/;"	f
+route_def	dist/server/uranio/api/routes/server.js	/^function route_def(atom_name, route_name) {$/;"	f
+route_path	dist/server/uranio/api/util/request.js	/^        full_path,$/;"	p	class:let
+routes	.uranio/client/.nuxt/router.js	/^  scrollBehavior,$/;"	p	class:Vue.use
+routes_book	.uranio/client/src/books/routes.ts	/^export const routes_book = {$/;"	v
+routes_book	.uranio/server/src/books/routes.ts	/^export const routes_book = {$/;"	v
+shouldScrollToTop	.uranio/client/.nuxt/router.scrollBehavior.js	/^function shouldScrollToTop(route) {$/;"	f
+some	.uranio/server/src/s.ts	/^export const some = 4;$/;"	v
+status	dist/server/uranio/api/util/request.js	/^    const error_log = {$/;"	p	class:const
+statusCode	dist/server/uranio/api/lambda/netlify/class.js	/^    const handler_response = {$/;"	p	class:const
+store_error	dist/server/uranio/api/util/request.js	/^function store_error(urn_res, atom_request, ex) {$/;"	f
+submodule	bin/add.js	/^	const urnsub = {submodule: `${selected_repo}`};$/;"	p	class:const
+submodule	bin/double.js	/^	const urnsub = {submodule: `${selected_repo}`};$/;"	p	class:const
+submodule	bin/switch.js	/^	const urnsub = {submodule: `${selected_repo}`};$/;"	p	class:const
+superuser	dist/server/books/atom.js	/^exports.atom_book = {$/;"	p	class:exports.atom_book
+superuser	dist/server/books/bll.js	/^exports.bll_book = {$/;"	p	class:exports.bll_book
+superuser	dist/server/books/dock.js	/^exports.dock_book = {$/;"	p	class:exports.dock_book
+superuser	dist/server/books/routes.js	/^exports.routes_book = {$/;"	p	class:exports.routes_book
+superuser	dist/server/uranio/api/core/books.js	/^exports.atom = {$/;"	p	class:exports.atom
+superuser	dist/server/uranio/api/core/books.js	/^exports.bll = {$/;"	p	class:exports.bll
+superuser	dist/server/uranio/api/core/books.js	/^exports.dock = {$/;"	p	class:exports.dock
+superusers	dist/server/uranio/hooks/index.js	/^exports.hooks = {$/;"	p	class:exports.hooks
+trash_create	dist/server/uranio/api/core/rel/mongo/trash.js	/^function trash_create(atom_name) {$/;"	f
+type	dist/server/uranio/api/core/rel/mongo/models.js	/^        schema_without_unique[k] = { type: 'Mixed' };$/;"	p	class:schema_without_unique
+type	dist/server/uranio/api/core/rel/mongo/schema.js	/^    let schema_type_options = {$/;"	p	class:let
+uranio	dist/server/uranio/api/books.d.ts	/^import uranio from 'uranio';$/;"	I
+uranio	dist/server/uranio/api/core/books.d.ts	/^import uranio from 'uranio';$/;"	I
+uranio	src/book.ts	/^import uranio from 'uranio';$/;"	I
+urn_core	dist/server/uranio/api/nst/index.d.ts	/^import urn_core from 'uranio-core';$/;"	I
+urn_core	dist/server/uranio/api/typ/book_srv.d.ts	/^import urn_core from 'uranio-core';$/;"	I
+urn_core_client	dist/server/uranio/api/typ/book_cln.d.ts	/^import urn_core_client from 'uranio-core\/client';$/;"	I
+urn_lib	dist/server/uranio/api/srv/main.d.ts	/^import urn_lib from 'urn-lib';$/;"	I
+useCreateIndex	dist/server/uranio/api/core/rel/mongo/connection.js	/^    useFindAndModify: false,$/;"	p	class:const
+useFindAndModify	dist/server/uranio/api/core/rel/mongo/connection.js	/^    useUnifiedTopology: true,$/;"	p	class:const
+useNewUrlParser	dist/server/uranio/api/core/rel/mongo/connection.js	/^const mongoose_options = {$/;"	p	class:const
+useUnifiedTopology	dist/server/uranio/api/core/rel/mongo/connection.js	/^    useNewUrlParser: true,$/;"	p	class:const
+user_groups	dist/server/uranio/api/core/acl/acl.d.ts	/^    protected user_groups: RealType<BookPropertyType.ID>[];$/;"	m
+validate	dist/server/uranio/api/core/dal/selfish.d.ts	/^    protected validate(molecule: Atom<A>): Promise<Atom<A>>;$/;"	m
+validate	dist/server/uranio/api/core/dal/selfish.d.ts	/^    protected validate(molecule: Atom<A>, depth?: 0): Promise<Atom<A>>;$/;"	m
+validate	dist/server/uranio/api/core/dal/selfish.d.ts	/^    protected validate<D extends Depth>(molecule: Molecule<A, D>, depth?: D): Promise<Molecule<A, D>>;$/;"	m
+validate	dist/server/uranio/api/core/dal/validate.d.ts	/^    protected validate(molecule: Atom<A>): Promise<Atom<A>>;$/;"	m
+validate	dist/server/uranio/api/core/dal/validate.d.ts	/^    protected validate(molecule: Atom<A>, depth?: 0): Promise<Atom<A>>;$/;"	m
+validate	dist/server/uranio/api/core/dal/validate.d.ts	/^    protected validate<D extends Depth>(molecule: Molecule<A, D>, depth?: D): Promise<Molecule<A, D>>;$/;"	m
+validate_filter	dist/server/uranio/api/core/val/query.js	/^function validate_filter(query, atom_name) {$/;"	f
+validate_filter_options_params	dist/server/uranio/api/core/val/query.js	/^function validate_filter_options_params(atom_name, query, options) {$/;"	f
+validate_options	dist/server/uranio/api/core/val/query.js	/^function validate_options(options, atom_name) {$/;"	f
+validate_request	dist/server/uranio/api/util/request.js	/^function validate_request(api_request) {$/;"	f
+x	.uranio/client/.nuxt/router.scrollBehavior.js	/^    position = { x: 0, y: 0 }$/;"	p	class:position
+y	.uranio/client/.nuxt/router.scrollBehavior.js	/^    position = { x: 0, y: 0 }$/;"	p	class:position
