@@ -17,7 +17,7 @@
 		"outDir": "../../dist/client",
 		"rootDir": "./src",
 		"paths": {
-			"uranio": ["./src/uranio/client"],
+			"uranio": ["./src/uranio"],
 			"uranio-books": ["./src/books"],
 			"uranio-books/*": ["./src/books/*"],
 			"uranio-core": ["./src/uranio/trx/api/core"],
