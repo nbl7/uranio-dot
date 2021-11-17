@@ -9,6 +9,9 @@
 		"selector-pseudo-element-colon-notation":false,
 		"custom-property-empty-line-before":false,
 		"max-empty-lines":3,
-		"rule-empty-line-before":false
+		"rule-empty-line-before":false,
+		"length-zero-no-unit":false,
+		"color-hex-length":false,
+		"indentation":"tab|2"
 	}
 }
