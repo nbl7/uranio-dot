@@ -12,6 +12,7 @@
 		"rule-empty-line-before":false,
 		"length-zero-no-unit":false,
 		"color-hex-length":false,
-		"indentation":"tab|2"
+		"indentation":"tab|2",
+		"comment-empty-line-before": false
 	}
 }
