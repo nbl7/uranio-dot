@@ -13,6 +13,7 @@
 		"length-zero-no-unit":false,
 		"color-hex-length":false,
 		"indentation":"tab|2",
-		"comment-empty-line-before": false
+		"comment-empty-line-before": false,
+		"number-leading-zero": false
 	}
 }
