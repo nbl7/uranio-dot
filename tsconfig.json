@@ -6,7 +6,11 @@
 		"declaration": true,
 		"esModuleInterop": true,
 		"experimentalDecorators": true,
-		"lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+		"lib": [
+			"ESNext",
+			"ESNext.AsyncIterable",
+			"DOM"
+		],
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"noFallthroughCasesInSwitch": true,
@@ -17,15 +21,33 @@
 		"outDir": "./dist",
 		"rootDir": "./",
 		"paths": {
-			"uranio": [".uranio/server/src/uranio"],
-			"uranio-books": [".uranio/server/src/books"],
-			"uranio-books/*": [".uranio/server/src/books/*"],
-			"uranio-core": [".uranio/server/src/uranio/trx/api/core"],
-			"uranio-core/*": [".uranio/server/src/uranio/trx/api/core/*"],
-			"uranio-api": [".uranio/server/src/uranio/trx/api"],
-			"uranio-api/*": [".uranio/server/src/uranio/trx/api/*"],
-			"uranio-trx": [".uranio/server/src/uranio/trx"],
-			"uranio-trx/*": [".uranio/server/src/uranio/trx/*"]
+			"uranio": [
+				".uranio/server/src/uranio"
+			],
+			"uranio-books": [
+				".uranio/server/src/books"
+			],
+			"uranio-books/*": [
+				".uranio/server/src/books/*"
+			],
+			"uranio-core": [
+				".uranio/server/src/uranio/trx/api/core"
+			],
+			"uranio-core/*": [
+				".uranio/server/src/uranio/trx/api/core/*"
+			],
+			"uranio-api": [
+				".uranio/server/src/uranio/trx/api"
+			],
+			"uranio-api/*": [
+				".uranio/server/src/uranio/trx/api/*"
+			],
+			"uranio-trx": [
+				".uranio/server/src/uranio/trx"
+			],
+			"uranio-trx/*": [
+				".uranio/server/src/uranio/trx/*"
+			]
 		},
 		"sourceMap": true,
 		"strict": true,
@@ -33,15 +55,26 @@
 		"strictFunctionTypes": true,
 		"strictPropertyInitialization": true,
 		"target": "ES2018",
-		"typeRoots": ["node_modules/@types", ".uranio/client/src/types"]
+		"typeRoots": [
+			"node_modules/@types",
+			".uranio/client/src/types"
+		]
 	},
-	"include": ["src/**/*", ".uranio/**/*"],
-	"exclude": ["node_modules"],
+	"include": [
+		"src/**/*",
+		".uranio/**/*"
+	],
+	"exclude": [
+		"node_modules"
+	],
 	"watchOptions": {
 		"watchFile": "useFsEvents",
 		"watchDirectory": "useFsEvents",
 		"fallbackPolling": "dynamicPriority",
 		"synchronousWatchDirectory": true,
-		"excludeFiles": ["src/**/*", ".uranio/.tmp/*"]
+		"excludeFiles": [
+			"src/**/*",
+			".uranio/.tmp/*"
+		]
 	}
 }
