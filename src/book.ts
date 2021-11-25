@@ -15,6 +15,7 @@ export const atom_book:uranio.types.Book = {
 		},
 		properties: {
 			first_name: {
+				sortable: false,
 				type: uranio.types.BookPropertyType.TEXT,
 				label: 'First name'
 			},
