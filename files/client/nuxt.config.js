@@ -33,7 +33,14 @@ export default {
 	router: {
 		trailingSlash: false,
 		linkActiveClass: 'urn-active-link',
-		linkExactActiveClass: 'urn-exact-active-link'
+		linkExactActiveClass: 'urn-exact-active-link',
+		parseQuery(q) {
+			return require('qs').parse(q);
+		},
+		stringifyQuery(q) {
+			const r = require('qs').stringify(q);
+			return r ? '?' + r : '';
+		},
 	},
 	loading: {
 		color: '#2222FF',
