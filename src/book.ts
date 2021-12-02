@@ -21,7 +21,8 @@ export const atom_book:uranio.types.Book = {
 			},
 			last_name: {
 				type: uranio.types.BookPropertyType.TEXT,
-				label: 'Last name'
+				label: 'Last name',
+				is_title: true
 			}
 		},
 		dock:{
@@ -48,9 +49,14 @@ export const atom_book:uranio.types.Book = {
 		plural: 'mykarts',
 		properties:{
 			title:{
+				is_title: true,
 				type: uranio.types.BookPropertyType.TEXT,
 				// label: `${some}-titless`
-				label: `titless`
+				label: `titless`,
+				style: {
+					full_width: true,
+					classes: 'custom-class-name'
+				}
 			}
 		},
 		dock: {
@@ -69,8 +75,12 @@ export const atom_book:uranio.types.Book = {
 		},
 		properties: {
 			title: {
+				is_title: true,
 				type: uranio.types.BookPropertyType.TEXT,
 				label: 'Title',
+				style:{
+					full_width: true
+				}
 				// validation: {
 				//   alphanum: true,
 				//   contain_digit: false,
@@ -79,7 +89,10 @@ export const atom_book:uranio.types.Book = {
 			},
 			description: {
 				type: uranio.types.BookPropertyType.LONG_TEXT,
-				label: 'Description'
+				label: 'text',
+				style:{
+					full_width: true
+				}
 			},
 			kart: {
 				type: uranio.types.BookPropertyType.ATOM,
@@ -90,7 +103,8 @@ export const atom_book:uranio.types.Book = {
 			users: {
 				type: uranio.types.BookPropertyType.ATOM_ARRAY,
 				label: 'Users',
-				atom: 'user'
+				atom: 'user',
+				optional: true
 			},
 			active: {
 				type: uranio.types.BookPropertyType.BINARY,
@@ -114,7 +128,8 @@ export const atom_book:uranio.types.Book = {
 			type_str: {
 				type: uranio.types.BookPropertyType.ENUM_STRING,
 				label: 'Type String',
-				values: ['Red','Green','Blue']
+				values: ['Red','Green','Blue'],
+				optional: true
 			},
 			price: {
 				type: uranio.types.BookPropertyType.FLOAT,
@@ -143,6 +158,7 @@ export const atom_book:uranio.types.Book = {
 			categories_str: {
 				type: uranio.types.BookPropertyType.SET_STRING,
 				label: 'Categories string',
+				optional: true
 			},
 			pub_date: {
 				type: uranio.types.BookPropertyType.TIME,
