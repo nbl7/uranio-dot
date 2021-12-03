@@ -89,7 +89,7 @@ export const atom_book:uranio.types.Book = {
 			},
 			description: {
 				type: uranio.types.BookPropertyType.LONG_TEXT,
-				label: 'text',
+				label: 'Description',
 				style:{
 					full_width: true
 				}

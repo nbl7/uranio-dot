@@ -10325,6 +10325,11 @@ url@^0.11.0:
     tsc-watch "^4.5.0"
     typescript "^4.4.3"
 
+"urn-lib@file:../urn-lib":
+  version "0.0.1"
+  dependencies:
+    dateformat "^3.0.3"
+
 "urn-lib@git+ssh://git@bitbucket.org/nbl7/urn-lib.git":
   version "0.0.1"
   resolved "git+ssh://git@bitbucket.org/nbl7/urn-lib.git#41c8fe71c71d344190389b842474a5a46bb8b0a4"
