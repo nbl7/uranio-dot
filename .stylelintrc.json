@@ -14,6 +14,7 @@
 		"color-hex-length":false,
 		"indentation":"tab|2",
 		"comment-empty-line-before": false,
-		"number-leading-zero": false
+		"number-leading-zero": false,
+		"no-descending-specificity": false
 	}
 }
