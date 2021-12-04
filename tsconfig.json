@@ -22,31 +22,31 @@
 		"rootDir": "./",
 		"paths": {
 			"uranio": [
-				".uranio/server/src/uranio"
+				"./src/uranio"
 			],
 			"uranio-books": [
-				".uranio/server/src/books"
+				"./src/books"
 			],
 			"uranio-books/*": [
-				".uranio/server/src/books/*"
+				"./src/books/*"
 			],
 			"uranio-core": [
-				".uranio/server/src/uranio/trx/api/core"
+				"./src/uranio/trx/api/core"
 			],
 			"uranio-core/*": [
-				".uranio/server/src/uranio/trx/api/core/*"
+				"./src/uranio/trx/api/core/*"
 			],
 			"uranio-api": [
-				".uranio/server/src/uranio/trx/api"
+				"./src/uranio/trx/api"
 			],
 			"uranio-api/*": [
-				".uranio/server/src/uranio/trx/api/*"
+				"./src/uranio/trx/api/*"
 			],
 			"uranio-trx": [
-				".uranio/server/src/uranio/trx"
+				"./src/uranio/trx"
 			],
 			"uranio-trx/*": [
-				".uranio/server/src/uranio/trx/*"
+				"./src/uranio/trx/*"
 			]
 		},
 		"sourceMap": true,
