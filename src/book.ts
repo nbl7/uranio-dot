@@ -80,12 +80,13 @@ export const atom_book:uranio.types.Book = {
 				label: 'Title',
 				style:{
 					full_width: true
-				}
-				// validation: {
-				//   alphanum: true,
-				//   contain_digit: false,
-				//   max: 7
-				// }
+				},
+				validation: {
+					alphanum: true,
+					contain_digit: false,
+					max: 7
+				},
+				on_error: () => 'TITLE'
 			},
 			description: {
 				type: uranio.types.BookPropertyType.LONG_TEXT,
@@ -134,9 +135,9 @@ export const atom_book:uranio.types.Book = {
 			price: {
 				type: uranio.types.BookPropertyType.FLOAT,
 				label: 'Price',
-				// validation: {
-				//   min: 0
-				// }
+				validation: {
+					min: 10
+				}
 			},
 			unit: {
 				type: uranio.types.BookPropertyType.INTEGER,
