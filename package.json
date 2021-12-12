@@ -16,10 +16,7 @@
 		"type": "git",
 		"url": "git+ssh://git@bitbucket.org/nbl7/urn-dot.git"
 	},
-	"keywords": [
-		"uranio",
-		"urn"
-	],
+	"keywords": ["uranio", "urn"],
 	"author": "Andrea Reni <mail@nbl7.net>",
 	"license": "ISC",
 	"homepage": "https://bitbucket.org/nbl7/urn-dot#readme",
@@ -38,7 +35,7 @@
 		"urn-lib": "file:/home/nbl7/repos/uranio/urn-lib/"
 	},
 	"_moduleAliases": {
-		"uranio": "./dist/.uranio/server/src/uranio/",
-		"uranio-books": "./dist/.uranio/server/src/books/"
+		"uranio": "./dist/server/uranio/",
+		"uranio-books": "./dist/server/books/"
 	}
 }
