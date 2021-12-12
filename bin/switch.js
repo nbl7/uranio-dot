@@ -50,11 +50,11 @@ function _proceed(){
 		execute(`touch ${urn_rc_filepath}`);
 	}
 	
-	const paths = _generate_paths(selected_repo, `.uranio/server`);
+	// const paths = _generate_paths(selected_repo, `.uranio/server`);
 	const real_paths = _generate_paths(selected_repo, `.`);
 	
-	const main_tsconfig = `tsconfig.json`;
-	_update_paths(main_tsconfig, paths);
+	// const main_tsconfig = `tsconfig.json`;
+	// _update_paths(main_tsconfig, paths);
 	
 	const real_tsconfig_server = `.uranio/server/tsconfig.json`;
 	_update_paths(real_tsconfig_server, real_paths);
