@@ -1,5 +1,5 @@
 /**
- * URANIO auto-generated file for launching express server
+ * Express index module
  *
  * @packageDocumentation
  */
@@ -8,7 +8,7 @@ import {urn_log} from 'urn-lib';
 
 urn_log.defaults.log_level = urn_log.LogLevel.FUNCTION_DEBUG;
 
-import uranio from './uranio/';
+import uranio from '../index';
 
 console.log(uranio.lib.log.defaults);
 
