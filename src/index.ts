@@ -1,5 +1,5 @@
 /**
- * URANIO auto-generated file for launching express server
+ * URANIO auto-generated file for starting the server
  *
  * @packageDocumentation
  */
@@ -11,6 +11,6 @@ import uranio from 'uranio';
 
 const express_service = uranio.api.service.create();
 
-express_service.listen(3000, () => {
-	urn_log.debug(`Listening on port 3000...`);
+express_service.listen(7777, () => {
+	urn_log.debug(`Listening on port 7777...`);
 });
