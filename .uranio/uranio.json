@@ -1,5 +1,5 @@
 {
-	"repo": "adm",
+	"repo": "core",
 	"pacman": "yarn",
 	"deploy": "express"
 }
