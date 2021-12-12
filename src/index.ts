@@ -1,16 +1,13 @@
 /**
- * Express index module
+ * URANIO auto-generated file for launching express server
  *
  * @packageDocumentation
  */
 
 import {urn_log} from 'urn-lib';
+urn_log.init(urn_log.LogLevel.DEBUG);
 
-urn_log.defaults.log_level = urn_log.LogLevel.FUNCTION_DEBUG;
-
-import uranio from '../index';
-
-console.log(uranio.lib.log.defaults);
+import uranio from 'uranio';
 
 const express_service = uranio.api.service.create();
 
