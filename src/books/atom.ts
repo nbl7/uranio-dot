@@ -7,6 +7,7 @@
 import uranio from "uranio";
 export const atom_book = {
 	superuser: {
+		authenticate: true,
 		plural: "superusers",
 		security: {
 			type: uranio.types.BookSecurityType.UNIFORM,
@@ -35,6 +36,7 @@ export const atom_book = {
 		},
 	},
 	user: {
+		authenticate: true,
 		plural: "users",
 		security: {
 			type: uranio.types.BookSecurityType.GRANULAR,
@@ -68,144 +70,6 @@ export const atom_book = {
 			},
 		},
 	},
-	setting: {
-		plural: "settings",
-		security: {
-			type: uranio.types.BookSecurityType.UNIFORM,
-			_r: uranio.types.BookPermissionType.NOBODY,
-		},
-		properties: {
-			name: {
-				type: uranio.types.BookPropertyType.TEXT,
-				label: "Name",
-			},
-		},
-	},
-	error: {
-		plural: "errors",
-		connection: "log",
-		security: {
-			type: uranio.types.BookSecurityType.UNIFORM,
-			_r: uranio.types.BookPermissionType.NOBODY,
-		},
-		properties: {
-			status: {
-				type: uranio.types.BookPropertyType.INTEGER,
-				label: "Status",
-			},
-			msg: {
-				type: uranio.types.BookPropertyType.TEXT,
-				label: "Message",
-			},
-			error_code: {
-				type: uranio.types.BookPropertyType.TEXT,
-				label: "Error Code",
-			},
-			error_msg: {
-				type: uranio.types.BookPropertyType.TEXT,
-				label: "Error Message",
-			},
-			request: {
-				type: uranio.types.BookPropertyType.ATOM,
-				label: "Request",
-				atom: "request",
-				delete_cascade: true,
-				optional: true,
-			},
-			stack: {
-				type: uranio.types.BookPropertyType.LONG_TEXT,
-				label: "Stack",
-				optional: true,
-			},
-		},
-	},
-	request: {
-		plural: "requests",
-		connection: "log",
-		security: {
-			type: uranio.types.BookSecurityType.UNIFORM,
-			_r: uranio.types.BookPermissionType.NOBODY,
-		},
-		properties: {
-			full_path: {
-				type: uranio.types.BookPropertyType.TEXT,
-				label: "Full path",
-			},
-			route_path: {
-				type: uranio.types.BookPropertyType.TEXT,
-				label: "Route path",
-				optional: true,
-			},
-			atom_path: {
-				type: uranio.types.BookPropertyType.TEXT,
-				label: "Atom path",
-				optional: true,
-			},
-			connection_path: {
-				type: uranio.types.BookPropertyType.TEXT,
-				label: "Connection path",
-				optional: true,
-			},
-			method: {
-				type: uranio.types.BookPropertyType.ENUM_STRING,
-				label: "Method",
-				values: ["GET", "POST", "DELETE"],
-				optional: true,
-			},
-			atom_name: {
-				type: uranio.types.BookPropertyType.TEXT,
-				label: "Atom name",
-				optional: true,
-				on_error: () => {
-					return "generic_atom";
-				},
-			},
-			route_name: {
-				type: uranio.types.BookPropertyType.TEXT,
-				label: "Route name",
-				optional: true,
-			},
-			params: {
-				type: uranio.types.BookPropertyType.TEXT,
-				label: "Params",
-				optional: true,
-			},
-			query: {
-				type: uranio.types.BookPropertyType.TEXT,
-				label: "Query",
-				optional: true,
-			},
-			headers: {
-				type: uranio.types.BookPropertyType.LONG_TEXT,
-				label: "Headers",
-				optional: true,
-			},
-			body: {
-				type: uranio.types.BookPropertyType.LONG_TEXT,
-				label: "Body",
-				optional: true,
-			},
-			ip: {
-				type: uranio.types.BookPropertyType.TEXT,
-				label: "IP",
-				optional: true,
-			},
-			is_auth: {
-				type: uranio.types.BookPropertyType.BINARY,
-				label: "Is auth",
-				optional: true,
-			},
-			auth_action: {
-				type: uranio.types.BookPropertyType.ENUM_STRING,
-				label: "Auth action",
-				values: ["READ", "WRITE", "AUTH"],
-				on_error: () => {
-					return "READ";
-				},
-				optional: true,
-			},
-		},
-	},
 	customer: {
 		plural: "customers",
 		security: {
@@ -214,14 +78,12 @@ export const atom_book = {
 		},
 		properties: {
 			first_name: {
-				sortable: false,
 				type: uranio.types.BookPropertyType.TEXT,
 				label: "First name",
 			},
 			last_name: {
 				type: uranio.types.BookPropertyType.TEXT,
 				label: "Last name",
-				is_title: true,
 			},
 		},
 	},
@@ -233,14 +95,9 @@ export const atom_book = {
 		plural: "mykarts",
 		properties: {
 			title: {
-				is_title: true,
 				type: uranio.types.BookPropertyType.TEXT,
 				// label: `${some}-titless`
 				label: `titless`,
-				style: {
-					full_width: true,
-					classes: "custom-class-name",
-				},
 			},
 		},
 		// bll: () => {
@@ -255,13 +112,8 @@ export const atom_book = {
 		},
 		properties: {
 			title: {
-				is_title: true,
-				primary: true,
 				type: uranio.types.BookPropertyType.TEXT,
 				label: "Title",
-				style: {
-					full_width: true,
-				},
 				validation: {
 					alphanum: true,
 					contain_digit: false,
@@ -270,15 +122,10 @@ export const atom_book = {
 				on_error: () => "TITLE",
 			},
 			description: {
-				primary: true,
 				type: uranio.types.BookPropertyType.LONG_TEXT,
 				label: "Description",
-				style: {
-					full_width: true,
-				},
 			},
 			kart: {
-				primary: true,
 				type: uranio.types.BookPropertyType.ATOM,
 				label: "Kart",
 				atom: "mykart",
@@ -291,12 +138,10 @@ export const atom_book = {
 				optional: true,
 			},
 			active: {
-				primary: true,
 				type: uranio.types.BookPropertyType.BINARY,
 				label: "Active",
 			},
 			email: {
-				primary: true,
 				type: uranio.types.BookPropertyType.EMAIL,
 				label: "Email",
 			},
@@ -305,7 +150,6 @@ export const atom_book = {
 				label: "Password",
 			},
 			type: {
-				primary: true,
 				type: uranio.types.BookPropertyType.ENUM_NUMBER,
 				label: "Type Code",
 				values: [1, 2, 3],
@@ -313,14 +157,12 @@ export const atom_book = {
 				default: 1,
 			},
 			type_str: {
-				primary: true,
 				type: uranio.types.BookPropertyType.ENUM_STRING,
 				label: "Type String",
 				values: ["Red", "Green", "Blue"],
 				optional: true,
 			},
 			price: {
-				primary: true,
 				type: uranio.types.BookPropertyType.FLOAT,
 				label: "Price",
 				validation: {
@@ -328,7 +170,6 @@ export const atom_book = {
 				},
 			},
 			unit: {
-				primary: true,
 				type: uranio.types.BookPropertyType.INTEGER,
 				label: "Unit",
 				// validation: {
