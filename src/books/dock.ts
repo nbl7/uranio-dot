@@ -21,19 +21,35 @@ export const dock_book = {
 			url: "/groups",
 		},
 	},
+	error: {
+		dock: {
+			url: "/errors",
+		},
+	},
+	request: {
+		dock: {
+			url: "/requests",
+		},
+	},
 	customer: {
 		plural: "customers",
-		dock: {},
+		dock: {
+			url: "/customers",
+		},
 	},
 	mykart: {
 		plural: "mykarts",
-		dock: {},
+		dock: {
+			url: "/mykart",
+		},
 		// bll: () => {
 		//   console.log(some + `s`);
 		//   return new MYBLL();
 		// }
 	},
 	product: {
-		dock: {},
+		dock: {
+			url: "/products",
+		},
 	},
 } as const;

@@ -24,6 +24,7 @@ export const atom_book:uranio.types.Book = {
 			}
 		},
 		dock:{
+			url: '/customers'
 		}
 	},
 	mykart: {
@@ -40,6 +41,7 @@ export const atom_book:uranio.types.Book = {
 			}
 		},
 		dock: {
+			url: '/mykart'
 		},
 		// bll: () => {
 		//   console.log(some + `s`);
@@ -141,6 +143,7 @@ export const atom_book:uranio.types.Book = {
 			},
 		},
 		dock: {
+			url: '/products'
 		}
 	}
 };
