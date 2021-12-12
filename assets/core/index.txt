@@ -9,8 +9,8 @@ urn_log.init(urn_log.LogLevel.DEBUG);
 
 import uranio from 'uranio';
 
-const superuser_bll = uranio.bll.basic.create(`superuser`);
+const superuser_bll = uranio.bll.create(`superuser`);
 
 superuser_bll.count({}).then((count_number) => {
-	urn_log.debug(`Superuser count: ${count_number}`);
+	urn_log.debug(count_number);
 });
