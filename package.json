@@ -33,11 +33,8 @@
 		"urn-web-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-api-dep-dev"
 	},
 	"dependencies": {
-		"dropzone": "^6.0.0-beta.2",
 		"mongoose": "^5.11.15",
-		"urn-adm-dep": "ssh://git@bitbucket.org/nbl7/urn-adm-dep",
-		"urn-lib": "file:/home/nbl7/repos/uranio/urn-lib/",
-		"urn-web-dep": "ssh://git@bitbucket.org/nbl7/urn-api-dep"
+		"urn-adm-dep": "ssh://git@bitbucket.org/nbl7/urn-adm-dep"
 	},
 	"_moduleAliases": {
 		"uranio": "./dist/.uranio/server/src/uranio/",
