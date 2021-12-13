@@ -15,11 +15,11 @@ express_service.listen(8888, () => {
 	urn_log.debug(`Listening on port 8888...`);
 });
 
-uranio.hooks.superusers.count({}).then((trx_response) => {
-	if(trx_response.success === true){
-		const count_superuser = trx_response.payload;
-		urn_log.debug(`Superuser count: ${count_superuser}`);
-	}else{
-		urn_log.debug(trx_response.err_code);
-	}
-});
+// uranio.hooks.superusers.count({}).then((trx_response) => {
+//   if(trx_response.success === true){
+//     const count_superuser = trx_response.payload;
+//     urn_log.debug(`Superuser count: ${count_superuser}`);
+//   }else{
+//     urn_log.debug(trx_response.err_code);
+//   }
+// });
