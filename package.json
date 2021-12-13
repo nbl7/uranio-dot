@@ -38,6 +38,7 @@
 	},
 	"_moduleAliases": {
 		"uranio": "./dist/server/uranio/",
-		"uranio-books": "./dist/server/books/"
+		"uranio-books": "./dist/server/books/",
+		"uranio-core": "./dist/server/uranio/core/"
 	}
 }
