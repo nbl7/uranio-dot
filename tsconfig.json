@@ -31,16 +31,10 @@
 				"./src/books/*"
 			],
 			"uranio-core": [
-				"./src/uranio/api/core"
+				"./src/uranio/core"
 			],
 			"uranio-core/*": [
-				"./src/uranio/api/core/*"
-			],
-			"uranio-api": [
-				"./src/uranio/api"
-			],
-			"uranio-api/*": [
-				"./src/uranio/api/*"
+				"./src/uranio/core/*"
 			]
 		},
 		"sourceMap": true,
