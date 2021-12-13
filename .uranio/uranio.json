@@ -1,1 +1,1 @@
-{ "repo": "api", "pacman": "yarn", "deploy": "express" }
+{ "repo": "adm", "pacman": "yarn", "deploy": "express" }
