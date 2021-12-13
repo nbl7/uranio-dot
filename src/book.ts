@@ -15,16 +15,30 @@ export const atom_book:uranio.types.Book = {
 		},
 		properties: {
 			first_name: {
+				sortable: false,
 				type: uranio.types.BookPropertyType.TEXT,
 				label: 'First name'
 			},
 			last_name: {
 				type: uranio.types.BookPropertyType.TEXT,
 				label: 'Last name',
+				is_title: true
 			}
 		},
 		dock:{
-			url: '/customers'
+			url: '/customers',
+			routes:{
+				pippi:{
+					method: uranio.types.RouteMethod.GET,
+					action: uranio.types.AuthAction.READ,
+					url: '/pippo',
+					return: Number,
+					call: async (req:uranio.types.Api.Request<'customer', 'pippi'>):Promise<number> => {
+						console.log(req.route_name);
+						return 899;
+					}
+				}
+			}
 		}
 	},
 	mykart: {
@@ -35,13 +49,19 @@ export const atom_book:uranio.types.Book = {
 		plural: 'mykarts',
 		properties:{
 			title:{
+				is_title: true,
 				type: uranio.types.BookPropertyType.TEXT,
 				// label: `${some}-titless`
 				label: `titless`,
+				style: {
+					full_width: true,
+					classes: 'custom-class-name'
+				}
 			}
 		},
 		dock: {
-			url: '/mykart'
+			url: '/mykarts',
+			auth: '/myauthkart'
 		},
 		// bll: () => {
 		//   console.log(some + `s`);
@@ -55,8 +75,13 @@ export const atom_book:uranio.types.Book = {
 		},
 		properties: {
 			title: {
+				is_title: true,
+				primary: true,
 				type: uranio.types.BookPropertyType.TEXT,
 				label: 'Title',
+				style:{
+					full_width: true
+				},
 				validation: {
 					alphanum: true,
 					contain_digit: false,
@@ -65,10 +90,15 @@ export const atom_book:uranio.types.Book = {
 				on_error: () => 'TITLE'
 			},
 			description: {
+				primary: true,
 				type: uranio.types.BookPropertyType.LONG_TEXT,
 				label: 'Description',
+				style:{
+					full_width: true
+				}
 			},
 			kart: {
+				primary: true,
 				type: uranio.types.BookPropertyType.ATOM,
 				label: 'Kart',
 				atom: 'mykart',
@@ -81,10 +111,12 @@ export const atom_book:uranio.types.Book = {
 				optional: true
 			},
 			active: {
+				primary: true,
 				type: uranio.types.BookPropertyType.BINARY,
 				label: 'Active',
 			},
 			email: {
+				primary: true,
 				type: uranio.types.BookPropertyType.EMAIL,
 				label: 'Email',
 			},
@@ -93,6 +125,7 @@ export const atom_book:uranio.types.Book = {
 				label: 'Password',
 			},
 			type: {
+				primary: true,
 				type: uranio.types.BookPropertyType.ENUM_NUMBER,
 				label: 'Type Code',
 				values: [1,2,3],
@@ -100,12 +133,14 @@ export const atom_book:uranio.types.Book = {
 				default: 1
 			},
 			type_str: {
+				primary: true,
 				type: uranio.types.BookPropertyType.ENUM_STRING,
 				label: 'Type String',
 				values: ['Red','Green','Blue'],
 				optional: true
 			},
 			price: {
+				primary: true,
 				type: uranio.types.BookPropertyType.FLOAT,
 				label: 'Price',
 				validation: {
@@ -113,6 +148,7 @@ export const atom_book:uranio.types.Book = {
 				}
 			},
 			unit: {
+				primary: true,
 				type: uranio.types.BookPropertyType.INTEGER,
 				label: 'Unit',
 				// validation: {
@@ -143,7 +179,19 @@ export const atom_book:uranio.types.Book = {
 			},
 		},
 		dock: {
-			url: '/products'
+			url: '/products',
+			auth: '/proauths',
+			routes: {
+				myroute: {
+					method: uranio.types.RouteMethod.GET,
+					action: uranio.types.AuthAction.READ,
+					url: '/myroute',
+					call: async (api_request:uranio.types.Api.Request<'product','myroute'>):Promise<number> => {
+						console.log(api_request);
+						return 8;
+					}
+				}
+			}
 		}
 	}
 };
