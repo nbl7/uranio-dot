@@ -1,5 +1,5 @@
 /**
- * URANIO auto-generated file for starting the server
+ * URANIO auto-generated file for start developing with uranio-core repo.
  *
  * @packageDocumentation
  */
@@ -9,17 +9,8 @@ urn_log.init(urn_log.LogLevel.DEBUG);
 
 import uranio from 'uranio';
 
-const express_service = uranio.api.service.create();
+const superuser_bll = uranio.bll.basic.create(`superuser`);
 
-express_service.listen(8888, () => {
-	urn_log.debug(`Listening on port 8888...`);
-});
-
-uranio.hooks.superusers.count({}).then((trx_response) => {
-	if(trx_response.success === true){
-		const count_superuser = trx_response.payload;
-		urn_log.debug(`Superuser count: ${count_superuser}`);
-	}else{
-		urn_log.debug(trx_response.err_code);
-	}
+superuser_bll.count({}).then((count_number) => {
+	urn_log.debug(count_number);
 });

@@ -21,16 +21,6 @@ export const dock_book = {
 			url: "/groups",
 		},
 	},
-	error: {
-		dock: {
-			url: "/errors",
-		},
-	},
-	request: {
-		dock: {
-			url: "/requests",
-		},
-	},
 	customer: {
 		plural: "customers",
 		dock: {
