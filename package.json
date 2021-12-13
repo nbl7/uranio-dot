@@ -16,7 +16,10 @@
 		"type": "git",
 		"url": "git+ssh://git@bitbucket.org/nbl7/urn-dot.git"
 	},
-	"keywords": ["uranio", "urn"],
+	"keywords": [
+		"uranio",
+		"urn"
+	],
 	"author": "Andrea Reni <mail@nbl7.net>",
 	"license": "ISC",
 	"homepage": "https://bitbucket.org/nbl7/urn-dot#readme",
@@ -26,21 +29,21 @@
 		"@types/prettier": "^2.4.1",
 		"minimist": "^1.2.5",
 		"prettier": "^2.4.1",
-		"urn-trx-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev",
+		"urn-adm-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-adm-dep-dev",
 		"urn-web-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-api-dep-dev"
 	},
 	"dependencies": {
 		"dropzone": "^6.0.0-beta.2",
 		"mongoose": "^5.11.15",
+		"urn-adm-dep": "ssh://git@bitbucket.org/nbl7/urn-adm-dep",
 		"urn-lib": "file:/home/nbl7/repos/uranio/urn-lib/",
-		"urn-trx-dep": "ssh://git@bitbucket.org/nbl7/urn-trx-dep",
 		"urn-web-dep": "ssh://git@bitbucket.org/nbl7/urn-api-dep"
 	},
 	"_moduleAliases": {
-		"uranio": "./dist/server/uranio/",
-		"uranio-books": "./dist/server/books/",
-		"uranio-core": "./dist/server/uranio/trx/api/core/",
-		"uranio-api": "./dist/server/uranio/trx/api/",
-		"uranio-trx": "./dist/server/uranio/trx/"
+		"uranio": "./dist/.uranio/server/src/uranio/",
+		"uranio-books": "./dist/.uranio/server/src/books/",
+		"uranio-trx": "./dist/.uranio/server/src/uranio/trx/",
+		"uranio-api": "./dist/.uranio/server/src/uranio/trx/api/",
+		"uranio-core": "./dist/.uranio/server/src/uranio/trx/api/core/"
 	}
 }
