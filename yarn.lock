@@ -3251,18 +3251,16 @@
   dependencies:
     "punycode" "^2.1.0"
 
-"urn-core-dep-dev@git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git":
-  "integrity" "sha512-trGYb/2zd/b7azTdYW/z5uASE99imlew+W3elmWMQk38LC6bFTll1Kr2Ruvg6MAMp1mlt4Rg6+FWLUriSQnwGg=="
-  "resolved" "git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git"
+"urn-core-dep-dev@bitbucket:nbl7/urn-core-dep-dev", "urn-core-dep-dev@git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git":
+  "resolved" "git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git#6719b6240213ba99baabc4fca527cfdd2796bd60"
   "version" "0.0.1"
   dependencies:
     "@types/bcryptjs" "^2.4.2"
     "@types/jsonwebtoken" "^8.5.0"
     "urn-dev" "git+ssh://git@bitbucket.org/nbl7/urn-dev.git"
 
-"urn-core-dep@git+ssh://git@bitbucket.org/nbl7/urn-core-dep.git":
-  "integrity" "sha512-EFSdobFI3For6sE5VU9vn0etjT0coirxdAey9y8lGiiqhRJ2fFp4XzIQZ6c2xplqABxyD19IaZeeNV7lT5/8OQ=="
-  "resolved" "git+ssh://git@bitbucket.org/nbl7/urn-core-dep.git"
+"urn-core-dep@bitbucket:nbl7/urn-core-dep", "urn-core-dep@git+ssh://git@bitbucket.org/nbl7/urn-core-dep.git":
+  "resolved" "git+ssh://git@bitbucket.org/nbl7/urn-core-dep.git#1583c19d1e1551cb52095f21672501c7a8f0917e"
   "version" "0.0.1"
   dependencies:
     "bcryptjs" "^2.4.3"
@@ -3307,7 +3305,8 @@
     "dateformat" "^3.0.3"
 
 "urn-web-dep-dev@bitbucket:nbl7/urn-api-dep-dev":
-  "resolved" "git+ssh://git@bitbucket.org/nbl7/urn-api-dep-dev.git#0320a36b838ac99860e9403361e7e83b104b7e55"
+  "integrity" "sha512-2UFOq4lOveiEQEZSpPPFRMR1wqWPXYMSavk6BKs8jjYo/MCiEe8x7L+JQ9phVej6t/KNe41EWfDnyqxdYnU10Q=="
+  "resolved" "git+ssh://git@bitbucket.org/nbl7/urn-api-dep-dev.git"
   "version" "0.0.1"
   dependencies:
     "@types/cors" "^2.8.9"
@@ -3315,7 +3314,8 @@
     "urn-core-dep-dev" "git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git"
 
 "urn-web-dep@bitbucket:nbl7/urn-api-dep":
-  "resolved" "git+ssh://git@bitbucket.org/nbl7/urn-api-dep.git#dd9fc2062d06f51658346ee7862db13a78ca1d77"
+  "integrity" "sha512-Ap4ozfyM9eUv9xoYOjMOUFXQKW3rvVBKF/Ihdofuv8otd488TWB6v+UB27AsjOjNFUpKbgQa+S+9/SoYlF7yfQ=="
+  "resolved" "git+ssh://git@bitbucket.org/nbl7/urn-api-dep.git"
   "version" "0.0.1"
   dependencies:
     "cors" "^2.8.5"
