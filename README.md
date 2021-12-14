@@ -2,6 +2,31 @@
 
 URN-DOT repository allows to develop and test URN modules like urn-core, urn-api, etc.
 
+This repository has different branches for each URANIO repo.
+Each of the repos: core, api, trx and adm can be found in the corresponding branch.
+
+When switching branches remember to run
+```
+uranio init
+```
+
+#### KNOWN ISSUES
+
+I encountered problems with Nuxt 2 when installing dependecies.
+
+Apparently by running
+```
+yarn install
+```
+Nuxt will fail working. It will give error on module loading. Probably related with ts-loader or webpack.
+
+I manage to make it work with
+```
+npm install
+```
+
+
+#### OLD METHOD
 
 Every submodule will be installed in the `src/uranio` folder.
 
