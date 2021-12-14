@@ -43,6 +43,8 @@ function _proceed(){
 		process.exit(1);
 	}
 	
+	execute(`git checkout ${selected_repo}`);
+	
 	execute(`rm -rf node_modules/ yarn.pack package-lock.json`);
 	
 	if(selected_pacman === 'yarn'){
