@@ -4,21 +4,9 @@
  *
  */
 export const dock_book = {
-	superuser: {
+	setting: {
 		dock: {
-			url: "/superusers",
-			auth: "/superauth",
-		},
-	},
-	user: {
-		dock: {
-			url: "/users",
-			auth: "/auth",
-		},
-	},
-	group: {
-		dock: {
-			url: "/groups",
+			url: "/settings",
 		},
 	},
 	customer: {

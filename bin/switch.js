@@ -45,7 +45,7 @@ function _proceed(){
 		execute('npm install');
 	}
 	
-	execute('uranio init');
+	execute(`uranio init --force --pacman=${selected_pacman} --repo=${selected_repo}`);
 	
 }
 
