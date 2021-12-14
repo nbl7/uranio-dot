@@ -29,13 +29,13 @@
 		"@types/prettier": "^2.4.1",
 		"minimist": "^1.2.5",
 		"prettier": "^2.4.1",
-		"urn-core-dep-dev": "bitbucket:nbl7/urn-core-dep-dev",
+		"urn-core-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-core-dep-dev",
 		"urn-web-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-api-dep-dev"
 	},
 	"dependencies": {
 		"dropzone": "^6.0.0-beta.2",
 		"mongoose": "^5.11.15",
-		"urn-core-dep": "bitbucket:nbl7/urn-core-dep",
+		"urn-core-dep": "ssh://git@bitbucket.org/nbl7/urn-core-dep",
 		"urn-lib": "file:/home/nbl7/repos/uranio/urn-lib/",
 		"urn-web-dep": "ssh://git@bitbucket.org/nbl7/urn-api-dep"
 	},
