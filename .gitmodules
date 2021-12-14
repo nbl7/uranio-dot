@@ -38,3 +38,8 @@
 	url = git+ssh://git@bitbucket.org/nbl7/urn-adm-dep-dev.git
 	branch = master
 	update = rebase
+[submodule "src/uranio"]
+	path = src/uranio
+	url = ssh://git@bitbucket.org/nbl7/urn-core.git
+	branch = master
+	update = rebase
