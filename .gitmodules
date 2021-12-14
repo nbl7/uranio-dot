@@ -43,3 +43,5 @@
 	url = git+ssh://git@bitbucket.org/nbl7/urn-adm
 	branch = master
 	update = rebase
+[submodule "bin"]
+	update = rebase
