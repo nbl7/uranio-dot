@@ -5,7 +5,9 @@
  */
 
 export const bll_book = {
-	setting: {},
+	superuser: {},
+	user: {},
+	group: {},
 	customer: {},
 	mykart: {
 		// bll: () => {

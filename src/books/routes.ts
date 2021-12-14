@@ -4,9 +4,21 @@
  *
  */
 export const routes_book = {
-	setting: {
+	superuser: {
 		dock: {
-			url: "/settings",
+			url: "/superusers",
+			auth: "/superauth",
+		},
+	},
+	user: {
+		dock: {
+			url: "/users",
+			auth: "/auth",
+		},
+	},
+	group: {
+		dock: {
+			url: "/groups",
 		},
 	},
 	customer: {
