@@ -1,5 +1,5 @@
 {
 	"repo": "core",
-	"pacman": "npm",
-	"deploy": "netlify"
+	"pacman": "yarn",
+	"deploy": "express"
 }
