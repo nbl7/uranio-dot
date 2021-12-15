@@ -1,5 +1,0 @@
-{
-	"repo": "api",
-	"pacman": "npm",
-	"deploy": "netlify"
-}
