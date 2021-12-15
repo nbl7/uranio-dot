@@ -1,1 +1,0 @@
-module.exports = require('./src/dist/server/functions/api.d.js')
