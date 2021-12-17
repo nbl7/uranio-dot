@@ -23,9 +23,6 @@ export const atom_book:uranio.types.Book = {
 				label: 'Last name',
 			}
 		},
-		dock:{
-			url: '/customers'
-		}
 	},
 	mykart: {
 		security: {
@@ -39,9 +36,6 @@ export const atom_book:uranio.types.Book = {
 				// label: `${some}-titless`
 				label: `titless`,
 			}
-		},
-		dock: {
-			url: '/mykart'
 		},
 		// bll: () => {
 		//   console.log(some + `s`);
@@ -142,8 +136,5 @@ export const atom_book:uranio.types.Book = {
 				// }
 			},
 		},
-		dock: {
-			url: '/products'
-		}
 	}
 };

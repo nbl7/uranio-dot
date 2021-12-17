@@ -21,6 +21,11 @@ export const dock_book = {
 			url: "/groups",
 		},
 	},
+	media: {
+		dock: {
+			url: "/media",
+		},
+	},
 	customer: {
 		plural: "customers",
 		dock: {
@@ -30,8 +35,9 @@ export const dock_book = {
 	mykart: {
 		plural: "mykarts",
 		dock: {
-			url: "/mykart",
+			url: "/mykarts",
 		},
+
 		// bll: () => {
 		//   console.log(some + `s`);
 		//   return new MYBLL();
