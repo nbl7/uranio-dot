@@ -21,14 +21,9 @@ export const dock_book = {
 			url: "/groups",
 		},
 	},
-	error: {
+	media: {
 		dock: {
-			url: "/errors",
-		},
-	},
-	request: {
-		dock: {
-			url: "/requests",
+			url: "/media",
 		},
 	},
 	customer: {
