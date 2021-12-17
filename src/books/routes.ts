@@ -22,19 +22,9 @@ export const routes_book = {
 			url: "/groups",
 		},
 	},
-	setting: {
+	media: {
 		dock: {
-			url: "/settings",
-		},
-	},
-	error: {
-		dock: {
-			url: "/errors",
-		},
-	},
-	request: {
-		dock: {
-			url: "/requests",
+			url: "/media",
 		},
 	},
 	customer: {

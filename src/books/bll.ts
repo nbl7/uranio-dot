@@ -4,13 +4,18 @@
  *
  */
 
+import uranio from "uranio";
 export const bll_book = {
 	superuser: {},
 	user: {},
 	group: {},
-	setting: {},
-	error: {},
-	request: {},
+	media: {
+		bll: {
+			class: (passport?: uranio.types.Passport) => {
+				return uranio.bll.media.create(passport);
+			},
+		},
+	},
 	customer: {},
 	mykart: {
 		// bll: () => {
