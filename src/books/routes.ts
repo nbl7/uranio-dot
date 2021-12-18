@@ -26,6 +26,16 @@ export const routes_book = {
 			url: "/media",
 		},
 	},
+	error: {
+		dock: {
+			url: "/errors",
+		},
+	},
+	request: {
+		dock: {
+			url: "/requests",
+		},
+	},
 	customer: {
 		plural: "customers",
 		dock: {
