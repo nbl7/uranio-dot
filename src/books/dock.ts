@@ -22,6 +22,11 @@ export const dock_book = {
 			url: "/groups",
 		},
 	},
+	media: {
+		dock: {
+			url: "/media",
+		},
+	},
 	setting: {
 		dock: {
 			url: "/settings",

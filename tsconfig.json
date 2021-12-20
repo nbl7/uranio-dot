@@ -49,6 +49,7 @@
 				"./src/uranio/trx/*"
 			]
 		},
+		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
 		"strictNullChecks": true,
