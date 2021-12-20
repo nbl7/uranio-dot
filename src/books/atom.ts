@@ -70,6 +70,46 @@ export const atom_book = {
 			},
 		},
 	},
+	media: {
+		plural: "media",
+		properties: {
+			src: {
+				type: uranio.types.BookPropertyType.TEXT,
+				label: "SRC",
+			},
+			filename: {
+				type: uranio.types.BookPropertyType.TEXT,
+				label: "Filename",
+			},
+			type: {
+				type: uranio.types.BookPropertyType.TEXT,
+				label: "Filetype",
+			},
+			size: {
+				type: uranio.types.BookPropertyType.INTEGER,
+				label: "Size (byte)",
+				validation: {
+					min: 0,
+				},
+			},
+			width: {
+				optional: true,
+				type: uranio.types.BookPropertyType.INTEGER,
+				label: "Width",
+				validation: {
+					min: 0,
+				},
+			},
+			height: {
+				optional: true,
+				type: uranio.types.BookPropertyType.INTEGER,
+				label: "Height",
+				validation: {
+					min: 0,
+				},
+			},
+		},
+	},
 	error: {
 		plural: "errors",
 		connection: "log",

@@ -21,6 +21,11 @@ export const routes_book = {
 			url: "/groups",
 		},
 	},
+	media: {
+		dock: {
+			url: "/media",
+		},
+	},
 	error: {
 		dock: {
 			url: "/errors",

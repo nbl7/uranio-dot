@@ -8,6 +8,7 @@ export const bll_book = {
 	superuser: {},
 	user: {},
 	group: {},
+	media: {},
 	error: {},
 	request: {},
 	customer: {},
