@@ -43,6 +43,7 @@
 				"./src/uranio/api/*"
 			]
 		},
+		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
 		"strictNullChecks": true,
