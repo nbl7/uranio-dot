@@ -28,9 +28,7 @@
 		"@types/prettier": "^2.4.1",
 		"minimist": "^1.2.5",
 		"prettier": "^2.4.1",
-		"ts-loader": "8.2.0",
-		"urn-adm-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-adm-dep-dev",
-		"urn-web-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-api-dep-dev"
+		"urn-adm-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-adm-dep-dev"
 	},
 	"dependencies": {
 		"mongoose": "^5.11.15",
