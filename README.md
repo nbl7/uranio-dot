@@ -48,6 +48,13 @@ uranio dot switch [repo]
 
 #### KNOWN ISSUES FOR URANIO ADM
 
+SOLVED:
+
+The problem was that ts-loader 9 doesn't work with webpack 4 (used by Nuxt)
+In order to make it work we need to use `ts-loader@8.2.0`
+
+--
+
 I encountered problems with Nuxt 2 when installing dependecies.
 
 Apparently by running:
