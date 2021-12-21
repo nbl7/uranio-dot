@@ -312,7 +312,6 @@ export const atom_book = {
 				on_error: () => "TITLE",
 			},
 			description: {
-				primary: true,
 				type: uranio.types.BookPropertyType.LONG_TEXT,
 				label: "Description",
 				style: {
@@ -320,7 +319,6 @@ export const atom_book = {
 				},
 			},
 			kart: {
-				primary: true,
 				type: uranio.types.BookPropertyType.ATOM,
 				label: "Kart",
 				atom: "mykart",
@@ -333,7 +331,6 @@ export const atom_book = {
 				optional: true,
 			},
 			active: {
-				primary: true,
 				type: uranio.types.BookPropertyType.BINARY,
 				label: "Active",
 			},
@@ -362,7 +359,6 @@ export const atom_book = {
 				optional: true,
 			},
 			price: {
-				primary: true,
 				type: uranio.types.BookPropertyType.FLOAT,
 				label: "Price",
 				validation: {
@@ -370,7 +366,6 @@ export const atom_book = {
 				},
 			},
 			unit: {
-				primary: true,
 				type: uranio.types.BookPropertyType.INTEGER,
 				label: "Unit",
 				// validation: {
