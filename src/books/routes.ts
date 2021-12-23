@@ -60,7 +60,7 @@ export const routes_book = {
 		plural: "mykarts",
 		dock: {
 			url: "/mykarts",
-			auth: "/myauthkart",
+			auth_url: "/myauthkart",
 		},
 		// bll: () => {
 		//   console.log(some + `s`);
@@ -70,7 +70,7 @@ export const routes_book = {
 	product: {
 		dock: {
 			url: "/products",
-			auth: "/proauths",
+			auth_url: "/proauths",
 			routes: {
 				myroute: {
 					method: uranio.types.RouteMethod.GET,

@@ -227,6 +227,11 @@ export const atom_book = {
 				label: "Body",
 				optional: true,
 			},
+			file: {
+				type: uranio.types.BookPropertyType.TEXT,
+				label: "File",
+				optional: true,
+			},
 			ip: {
 				type: uranio.types.BookPropertyType.TEXT,
 				label: "IP",

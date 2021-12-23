@@ -61,7 +61,7 @@ export const atom_book:uranio.types.Book = {
 		},
 		dock: {
 			url: '/mykarts',
-			auth: '/myauthkart'
+			auth_url: '/myauthkart'
 		},
 		// bll: () => {
 		//   console.log(some + `s`);
@@ -175,7 +175,7 @@ export const atom_book:uranio.types.Book = {
 		},
 		dock: {
 			url: '/products',
-			auth: '/proauths',
+			auth_url: '/proauths',
 			routes: {
 				myroute: {
 					method: uranio.types.RouteMethod.GET,

@@ -25,6 +25,7 @@
 	"homepage": "https://bitbucket.org/nbl7/urn-dot#readme",
 	"devDependencies": {
 		"@types/dropzone": "^5.7.4",
+		"@types/express-fileupload": "^1.2.0",
 		"@types/minimist": "^1.2.1",
 		"@types/prettier": "^2.4.1",
 		"minimist": "^1.2.5",
@@ -33,6 +34,7 @@
 	},
 	"dependencies": {
 		"dropzone": "^6.0.0-beta.2",
+		"express-fileupload": "^1.2.1",
 		"mongoose": "^5.11.15",
 		"urn-adm-dep": "ssh://git@bitbucket.org/nbl7/urn-adm-dep"
 	},
