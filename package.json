@@ -32,9 +32,16 @@
 		"urn-adm-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-adm-dep-dev"
 	},
 	"dependencies": {
+		"@uppy/audio": "^0.2.1",
+		"@uppy/core": "^2.1.4",
+		"@uppy/image-editor": "^1.1.0",
+		"@uppy/vue": "^0.4.5",
+		"@uppy/webcam": "^2.0.5",
+		"@uppy/xhr-upload": "^2.0.7",
 		"dropzone": "^6.0.0-beta.2",
 		"mongoose": "^5.11.15",
-		"urn-adm-dep": "ssh://git@bitbucket.org/nbl7/urn-adm-dep"
+		"urn-adm-dep": "ssh://git@bitbucket.org/nbl7/urn-adm-dep",
+		"urn-lib": "file:/home/nbl7/repos/uranio/urn-lib/"
 	},
 	"_moduleAliases": {
 		"uranio": "./dist/.uranio/server/src/uranio/",
