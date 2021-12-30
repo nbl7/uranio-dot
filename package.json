@@ -29,13 +29,13 @@
 		"@types/prettier": "^2.4.1",
 		"minimist": "^1.2.5",
 		"prettier": "^2.4.1",
-		"urn-trx-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev",
+		"urn-trx-dep-dev": "git+ssh://git@github.com/nbl7/uranio-trx-dep-dev",
 		"urn-web-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-api-dep-dev"
 	},
 	"dependencies": {
 		"mongoose": "^5.11.15",
 		"urn-lib": "file:/home/nbl7/repos/uranio/urn-lib/",
-		"urn-trx-dep": "ssh://git@bitbucket.org/nbl7/urn-trx-dep"
+		"urn-trx-dep": "git+ssh://git@github.com/nbl7/uranio-trx-dep"
 	},
 	"_moduleAliases": {
 		"uranio": "./dist/.uranio/server/src/uranio/",
