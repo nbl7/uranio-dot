@@ -1,5 +1,75 @@
 ### How to develop on urn-dot
 
+In order to switch URANIO repo you must use a `uranio` cli command:
+
+```
+uranio dot switch [repo] [pacman] [deploy] [branch]
+```
+
+For example if you want to develop URANIO trx on express
+```
+uranio dot switch trx yarn express
+```
+
+You can also use this syntax:
+```
+uranio dot switch --repo=trx --pacman=yarn --deploy=express
+```
+
+The default values are:
+```
+pacman=npm
+deploy=express
+branch=master
+```
+
+So you can also use:
+```
+uranio dot switch trx
+```
+
+The command will:
+· Checkout the branch corrisponding to the repo.
+· Commit the previous submodule src/uranio.
+· Deinit the previous submodule
+· Add the correct submodule for the repo.
+· Commit the added submodule.
+· Run `uranio init` with the provided parameters.
+
+If you ended up in a corrupted repo:
+```
+git checkout master
+git reset --hard
+git add .
+git commit -m "changed submodule src/uranio"
+uranio dot switch [repo]
+```
+
+
+#### KNOWN ISSUES FOR URANIO ADM
+
+SOLVED:
+
+The problem was that ts-loader 9 doesn't work with webpack 4 (used by Nuxt)
+In order to make it work we need to use `ts-loader@8.2.0`
+
+--
+
+I encountered problems with Nuxt 2 when installing dependecies.
+
+Apparently by running:
+```
+yarn install
+```
+Nuxt will fail working. It will give error on module loading. Probably related with ts-loader or webpack.
+
+I manage to make it work with:
+```
+npm install
+```
+
+#### OLD METHOD
+
 URN-DOT repository allows to develop URANIO repo like urn-core, urn-api, etc.
 
 This repository has different branches for each URANIO repo.
@@ -21,24 +91,7 @@ node bin/switch.js adm npm
 node bin/switch.js api yarn
 ```
 
-
-#### KNOWN ISSUES FOR URANIO ADM
-
-I encountered problems with Nuxt 2 when installing dependecies.
-
-Apparently by running:
-```
-yarn install
-```
-Nuxt will fail working. It will give error on module loading. Probably related with ts-loader or webpack.
-
-I manage to make it work with:
-```
-npm install
-```
-
-
-#### OLD METHOD
+#### OLDER METHOD
 
 Every submodule will be installed in the `src/uranio` folder.
 
