@@ -1,8 +1,3 @@
-[submodule "src/uranio"]
-	path = src/uranio
-	url = git+ssh://git@bitbucket.org/nbl7/urn-adm
-	branch = master
-	update = rebase
 [submodule "modules_dep/uranio-core-dep"]
 	path = modules_dep/uranio-core-dep
 	url = git+ssh://git@github.com/nbl7/uranio-core-dep.git
