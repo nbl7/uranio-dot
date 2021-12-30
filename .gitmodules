@@ -1,0 +1,45 @@
+[submodule "modules_dep/uranio-core-dep"]
+	path = modules_dep/uranio-core-dep
+	url = git+ssh://git@github.com/nbl7/uranio-core-dep.git
+	branch = master
+	update = rebase
+[submodule "modules_dep/uranio-core-dep-dev"]
+	path = modules_dep/uranio-core-dep-dev
+	url = git+ssh://git@github.com/nbl7/uranio-core-dep-dev.git
+	branch = master
+	update = rebase
+[submodule "modules_dep/uranio-api-dep-dev"]
+	path = modules_dep/uranio-api-dep-dev
+	url = git+ssh://git@github.com/nbl7/uranio-api-dep-dev.git
+	branch = master
+	update = rebase
+[submodule "modules_dep/uranio-api-dep"]
+	path = modules_dep/uranio-api-dep
+	url = git+ssh://git@github.com/nbl7/uranio-api-dep.git
+	branch = master
+	update = rebase
+[submodule "modules_dep/uranio-trx-dep"]
+	path = modules_dep/uranio-trx-dep
+	url = git+ssh://git@github.com/nbl7/uranio-trx-dep.git
+	branch = master
+	update = rebase
+[submodule "modules_dep/uranio-trx-dep-dev"]
+	path = modules_dep/uranio-trx-dep-dev
+	url = git+ssh://git@github.com/nbl7/uranio-trx-dep-dev.git
+	branch = master
+	update = rebase
+[submodule "modules_dep/uranio-adm-dep-dev"]
+	path = modules_dep/uranio-adm-dep-dev
+	url = git+ssh://git@github.com/nbl7/uranio-adm-dep-dev.git
+	branch = master
+	update = rebase
+[submodule "modules_dep/uranio-adm-dep"]
+	path = modules_dep/uranio-adm-dep
+	url = git+ssh://git@github.com/nbl7/uranio-adm-dep.git
+	branch = master
+	update = rebase
+[submodule "src/uranio"]
+	path = src/uranio
+	url = git+ssh://git@github.com/nbl7/uranio-adm.git
+	branch = master
+	update = rebase
