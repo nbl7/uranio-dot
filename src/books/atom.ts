@@ -291,10 +291,6 @@ export const atom_book = {
 				},
 			},
 		},
-		// bll: () => {
-		//   console.log(some + `s`);
-		//   return new MYBLL();
-		// }
 	},
 	product: {
 		security: {

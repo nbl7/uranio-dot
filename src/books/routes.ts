@@ -62,10 +62,6 @@ export const routes_book = {
 			url: "/mykarts",
 			auth_url: "/myauthkart",
 		},
-		// bll: () => {
-		//   console.log(some + `s`);
-		//   return new MYBLL();
-		// }
 	},
 	product: {
 		dock: {
