@@ -31,6 +31,7 @@
 				"./src/books/*"
 			]
 		},
+		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
 		"strictNullChecks": true,
