@@ -28,12 +28,12 @@
 		"@types/prettier": "^2.4.1",
 		"minimist": "^1.2.5",
 		"prettier": "^2.4.1",
-		"urn-api-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-api-dep-dev",
+		"urn-api-dep-dev": "git+ssh://git@github.com/nbl7/uranio-api-dep-dev",
 		"urn-web-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-api-dep-dev"
 	},
 	"dependencies": {
 		"mongoose": "^5.11.15",
-		"urn-api-dep": "ssh://git@bitbucket.org/nbl7/urn-api-dep",
+		"urn-api-dep": "git+ssh://git@github.com/nbl7/uranio-api-dep",
 		"urn-lib": "file:/home/nbl7/repos/uranio/urn-lib/",
 		"urn-web-dep": "ssh://git@bitbucket.org/nbl7/urn-api-dep"
 	},

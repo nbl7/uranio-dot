@@ -37,6 +37,7 @@
 				"./src/uranio/core/*"
 			]
 		},
+		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
 		"strictNullChecks": true,
