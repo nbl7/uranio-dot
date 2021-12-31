@@ -14,7 +14,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@bitbucket.org/nbl7/urn-dot.git"
+		"url": "git+ssh://git@github.com/nbl7/urn-dot.git"
 	},
 	"keywords": [
 		"uranio",
@@ -22,7 +22,7 @@
 	],
 	"author": "Andrea Reni <mail@nbl7.net>",
 	"license": "ISC",
-	"homepage": "https://bitbucket.org/nbl7/urn-dot#readme",
+	"homepage": "https://github.com/nbl7/urn-dot#readme",
 	"devDependencies": {
 		"@types/dropzone": "^5.7.4",
 		"@types/minimist": "^1.2.1",
