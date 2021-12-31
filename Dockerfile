@@ -1,6 +1,8 @@
-FROM node:14.9.0
+FROM node:16
 WORKDIR /app
+RUN npm install yarn -g
+RUN yarn add uranio -g
 COPY package.json /app
-RUN npm install
+RUN uranio init -vu
 COPY . /app
-CMD ["npm","run","dev"]
+CMD ["uranio","dev"]
