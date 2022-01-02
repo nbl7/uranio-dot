@@ -4,7 +4,7 @@ FROM node:16
 
 WORKDIR /app
 
-COPY .bash_docker /app
+COPY .docker/.bash_docker /app
 
 RUN cat .bash_docker >> ~/.bashrc
 
@@ -17,7 +17,9 @@ RUN --mount=type=ssh yarn global add uranio-cli
 COPY package.json /app
 
 ARG repo
+
 ARG deploy
+
 ARG pacman
 
 RUN --mount=type=ssh uranio init --force -vu --repo=$repo --deploy=$deploy --pacman=$pacman
