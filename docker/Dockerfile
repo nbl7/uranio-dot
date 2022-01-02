@@ -22,12 +22,12 @@ ARG deploy
 
 ARG pacman
 
-RUN --mount=type=ssh uranio init --force -vu --repo=$repo --deploy=$deploy --pacman=$pacman
+RUN --mount=type=ssh uranio init --force -vu --repo=$repo --deploy=$deploy --pacman=$pacman --prefix_color
 
 COPY ./src /app/
 
 COPY .env /app
 
-CMD ["uranio","dev"]
+CMD ["uranio","dev","--prefix_color"]
 
 #CMD tail -f /dev/null
