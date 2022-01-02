@@ -1,0 +1,12 @@
+.git
+.git*
+node_modules
+module_dep
+.uranio
+.urnlog
+dist
+Dockerfile
+.dockerignore
+yarn.lock
+yarn-error.log
+package-lock.json
