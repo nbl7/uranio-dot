@@ -28,6 +28,6 @@ COPY ./src /app/
 
 COPY .env /app
 
-CMD ["uranio","dev","--prefix_color", "--uranio_color=false"]
+CMD ["uranio","dev","--prefix_color", "--color_uranio=false"]
 
 #CMD tail -f /dev/null
