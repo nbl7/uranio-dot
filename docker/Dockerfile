@@ -4,7 +4,7 @@ FROM node:16
 
 WORKDIR /app
 
-COPY .uranio/.docker/.bash_docker /app
+COPY .bash_docker /app
 
 RUN cat .bash_docker >> ~/.bashrc
 
