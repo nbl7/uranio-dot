@@ -14,17 +14,17 @@ RUN mkdir ~/.ssh/ && ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 
 RUN --mount=type=ssh yarn global add uranio-cli
 
-ARG user
+#ARG user
 
-ARG uid
+#ARG uid
 
-ARG gid
+#ARG gid
 
-RUN groupadd -g $gid -o $user
+#RUN groupadd -g $gid -o $user
 
-RUN useradd -m -u $uid -g $gid -o -s /bin/bash $user
+#RUN useradd -m -u $uid -g $gid -o -s /bin/bash $user
 
-USER $user
+#USER $user
 
 COPY package.json /app
 
