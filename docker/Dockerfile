@@ -28,6 +28,6 @@ RUN --mount=type=ssh uranio init --force -vu --prefix_color --repo=$repo --deplo
 
 #COPY .env /app
 
-CMD ["uranio","dev","--prefix_color", "--color_uranio=false"]
+CMD ["uranio", "dev", "-vu", "--prefix_color", "--color_uranio=false"]
 
 #CMD tail -f /dev/null
