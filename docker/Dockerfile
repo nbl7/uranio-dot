@@ -2,18 +2,6 @@
 
 FROM node:16
 
-ARG user
-
-ARG uid
-
-ARG gid
-
-RUN groupadd -g $gid -o $user
-
-RUN useradd -m -u $uid -g $gid -o -s /bin/bash $user
-
-USER $user
-
 WORKDIR /app
 
 COPY .bash_docker /app
@@ -25,6 +13,18 @@ ENV TERM xterm-256color
 RUN mkdir ~/.ssh/ && ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 
 RUN --mount=type=ssh yarn global add uranio-cli
+
+ARG user
+
+ARG uid
+
+ARG gid
+
+RUN groupadd -g $gid -o $user
+
+RUN useradd -m -u $uid -g $gid -o -s /bin/bash $user
+
+USER $user
 
 COPY package.json /app
 
