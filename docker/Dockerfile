@@ -2,6 +2,18 @@
 
 FROM node:16
 
+ARG user
+
+ARG uid
+
+ARG gid
+
+RUN groupadd -g $gid -o $user
+
+RUN useradd -m -u $uid -g $gid -o -s /bin/bash $user
+
+USER $user
+
 WORKDIR /app
 
 COPY .bash_docker /app
