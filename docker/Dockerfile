@@ -6,8 +6,6 @@ WORKDIR /app
 
 RUN chown -R node.node /app
 
-USER node
-
 COPY .uranio/.docker/.bash_docker /app
 
 RUN cat .bash_docker >> ~/.bashrc
@@ -29,6 +27,8 @@ RUN --mount=type=ssh yarn global add uranio-cli
 #RUN useradd -m -u $uid -g $gid -o -s /bin/bash $user
 
 #USER $user
+
+USER node
 
 COPY package.json /app
 
