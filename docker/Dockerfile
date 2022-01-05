@@ -40,7 +40,10 @@ ARG deploy
 
 RUN --mount=type=ssh uranio init --force -vu --prefix_color --repo=$repo --deploy=$deploy --docker=false
 
-#USER node
+RUN chown -R node.node /app/.urnlog
+RUN chown -R node.node /app/uranio.json
+
+USER node
 
 #COPY ./src /app/
 
