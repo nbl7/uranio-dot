@@ -1,0 +1,6 @@
+{
+	"repo": "trx",
+	"pacman": "yarn",
+	"deploy": "express",
+	"docker": false
+}
