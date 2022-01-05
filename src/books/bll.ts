@@ -4,7 +4,6 @@
  *
  */
 
-import { KARTBLL } from "../kartbll";
 export const bll_book = {
 	superuser: {},
 	user: {},
@@ -14,13 +13,6 @@ export const bll_book = {
 	error: {},
 	request: {},
 	customer: {},
-	mykart: {
-		bll: {
-			class: () => {
-				// console.log(some + `s`);
-				return new KARTBLL();
-			},
-		},
-	},
+	mykart: {},
 	product: {},
 } as const;
