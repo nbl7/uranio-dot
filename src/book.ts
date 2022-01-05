@@ -8,7 +8,7 @@ import uranio from 'uranio';
 
 export const atom_book:uranio.types.Book = {
 	customer:{
-		plural: 'customers',
+		plural: 'customerss',
 		security:{
 			type: uranio.types.BookSecurityType.UNIFORM,
 			_w: uranio.types.BookPermissionType.PUBLIC

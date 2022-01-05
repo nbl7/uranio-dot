@@ -112,7 +112,7 @@ export const atom_book = {
 		},
 	},
 	customer: {
-		plural: "customers",
+		plural: "customerss",
 		security: {
 			type: uranio.types.BookSecurityType.UNIFORM,
 			_w: uranio.types.BookPermissionType.PUBLIC,
