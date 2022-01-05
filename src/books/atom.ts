@@ -78,6 +78,7 @@ export const atom_book = {
 				label: "SRC",
 			},
 			filename: {
+				primary: true,
 				type: uranio.types.BookPropertyType.TEXT,
 				label: "Filename",
 			},

@@ -7,13 +7,13 @@ export const dock_book = {
 	superuser: {
 		dock: {
 			url: "/superusers",
-			auth: "/superauth",
+			auth_url: "/superauth",
 		},
 	},
 	user: {
 		dock: {
 			url: "/users",
-			auth: "/auth",
+			auth_url: "/auth",
 		},
 	},
 	group: {
