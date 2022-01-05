@@ -4,6 +4,8 @@ FROM node:16
 
 WORKDIR /app
 
+RUN chown -R node.node /app
+
 COPY .uranio/.docker/.bash_docker /app
 
 RUN cat .bash_docker >> ~/.bashrc
