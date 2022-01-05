@@ -11,7 +11,6 @@ import uranio from 'uranio';
 uranio.init();
 
 // const superuser_bll = uranio.bll.basic.create(`superuser`);
-
 // superuser_bll.count({}).then((count_number) => {
 //   urn_log.debug('COUNT SUPERUSER: ', count_number);
 // });

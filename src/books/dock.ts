@@ -27,9 +27,9 @@ export const dock_book = {
 		},
 	},
 	customer: {
-		plural: "customerss",
+		plural: "customers",
 		dock: {
-			url: "/customerss",
+			url: "/customers",
 		},
 	},
 	mykart: {
