@@ -40,14 +40,14 @@ ARG deploy
 
 RUN --mount=type=ssh uranio init --force -vu --prefix_color --repo=$repo --deploy=$deploy --docker=false
 
-COPY ./src /app/
+#COPY ./src /app/
 
-COPY .env /app
+#COPY .env /app
 
 #RUN uranio build -vu --prefix_color
 
-#CMD ["uranio", "dev", "-vu", "--prefix_color", "--color_uranio=false"]
+CMD ["uranio", "dev", "-vu", "--prefix_color", "--color_uranio=false"]
 
 #CMD ["uranio", "start", "-vu"]
 
-CMD tail -f /dev/null
+#CMD tail -f /dev/null
