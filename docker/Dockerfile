@@ -34,15 +34,17 @@ ARG repo
 
 ARG deploy
 
-ARG pacman
+#ARG pacman
 
-RUN --mount=type=ssh uranio init --force -vu --prefix_color --repo=$repo --deploy=$deploy --pacman=$pacman --docker=false
+#RUN --mount=type=ssh uranio init --force -vu --prefix_color --repo=$repo --deploy=$deploy --pacman=$pacman --docker=false
 
-#COPY ./src /app/
+RUN --mount=type=ssh uranio init --force -vu --prefix_color --repo=$repo --deploy=$deploy --docker=false
 
-#COPY .env /app
+COPY ./src /app/
 
-RUN uranio build -vu --prefix_color
+COPY .env /app
+
+#RUN uranio build -vu --prefix_color
 
 #CMD ["uranio", "dev", "-vu", "--prefix_color", "--color_uranio=false"]
 
