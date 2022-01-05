@@ -28,8 +28,6 @@ RUN --mount=type=ssh yarn global add uranio-cli
 
 #USER $user
 
-USER node
-
 COPY package.json /app
 
 ARG repo
@@ -41,6 +39,8 @@ ARG deploy
 #RUN --mount=type=ssh uranio init --force -vu --prefix_color --repo=$repo --deploy=$deploy --pacman=$pacman --docker=false
 
 RUN --mount=type=ssh uranio init --force -vu --prefix_color --repo=$repo --deploy=$deploy --docker=false
+
+USER node
 
 #COPY ./src /app/
 
