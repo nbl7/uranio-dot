@@ -4,7 +4,7 @@ FROM node:16
 
 WORKDIR /app
 
-COPY .bash_docker /app
+COPY .uranio/.docker/.bash_docker /app
 
 RUN cat .bash_docker >> ~/.bashrc
 
@@ -40,6 +40,10 @@ RUN --mount=type=ssh uranio init --force -vu --prefix_color --repo=$repo --deplo
 
 #COPY .env /app
 
-CMD ["uranio", "dev", "-vu", "--prefix_color", "--color_uranio=false"]
+RUN uranio build -vu --prefix_color
 
-#CMD tail -f /dev/null
+#CMD ["uranio", "dev", "-vu", "--prefix_color", "--color_uranio=false"]
+
+#CMD ["uranio", "start", "-vu"]
+
+CMD tail -f /dev/null
