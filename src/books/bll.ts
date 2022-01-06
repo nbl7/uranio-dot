@@ -9,6 +9,9 @@ export const bll_book = {
 	user: {},
 	group: {},
 	media: {},
+	setting: {},
+	error: {},
+	request: {},
 	customer: {},
 	mykart: {
 		// bll: () => {

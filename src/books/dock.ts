@@ -27,6 +27,21 @@ export const dock_book = {
 			url: "/media",
 		},
 	},
+	setting: {
+		dock: {
+			url: "/settings",
+		},
+	},
+	error: {
+		dock: {
+			url: "/errors",
+		},
+	},
+	request: {
+		dock: {
+			url: "/requests",
+		},
+	},
 	customer: {
 		plural: "customers",
 		dock: {
