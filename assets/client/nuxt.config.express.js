@@ -30,6 +30,9 @@ export default {
 		fallback: '404.html',
 		exclude: ['/urn-admin'],
 	},
+	server: {
+		port: 3333
+	},
 	router: {
 		trailingSlash: false,
 		linkActiveClass: 'urn-active-link',

@@ -26,7 +26,8 @@ module.exports = {
 	devtool: 'inline-source-map',
 	devServer: {
 		static: '../../dist/client/',
-		hot: true
+		hot: true,
+		port: 3333
 	},
 	output: {
 		filename: 'html.js',
