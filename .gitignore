@@ -4,5 +4,5 @@ dist/
 .uranio/
 package-lock.json
 yarn.lock
-
+.env
 uranio.json
