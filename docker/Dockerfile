@@ -51,6 +51,10 @@ USER node
 
 #RUN uranio build -vu --prefix_color
 
+EXPOSE 3333
+
+EXPOSE 7777
+
 CMD ["uranio", "dev", "-vu", "--prefix_color", "--color_uranio=false"]
 
 #CMD ["uranio", "start", "-vu"]
