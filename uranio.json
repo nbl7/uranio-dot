@@ -2,5 +2,7 @@
 	"repo": "adm",
 	"pacman": "yarn",
 	"deploy": "express",
-	"docker": false
+	"docker": false,
+	"docker_db": false,
+	"db": "undefined"
 }
