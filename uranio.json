@@ -3,6 +3,6 @@
 	"pacman": "yarn",
 	"deploy": "express",
 	"docker": false,
-	"docker_db": false,
+	"docker_db": true,
 	"db": "mongo"
 }

@@ -5,12 +5,12 @@
 	"main": "dist/server/index.js",
 	"types": "dist/server/index.d.ts",
 	"scripts": {
-		"dev": "uranio dev",
-		"dev:server": "uranio dev:server",
-		"dev:client": "uranio dev:client",
 		"build": "uranio build",
 		"build:server": "uranio build:client",
-		"build:client": "uranio build:client"
+		"build:client": "uranio build:client",
+		"dev": "uranio dev",
+		"dev:server": "uranio dev:server",
+		"dev:client": "uranio dev:client"
 	},
 	"repository": {
 		"type": "git",
