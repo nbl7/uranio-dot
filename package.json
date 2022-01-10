@@ -4,14 +4,7 @@
 	"description": "Uranio dot",
 	"main": "dist/server/index.js",
 	"types": "dist/server/index.d.ts",
-	"scripts": {
-		"build": "uranio build",
-		"build:server": "uranio build:client",
-		"build:client": "uranio build:client",
-		"dev": "uranio dev",
-		"dev:server": "uranio dev:server",
-		"dev:client": "uranio dev:client"
-	},
+	"scripts": {},
 	"repository": {
 		"type": "git",
 		"url": "git+ssh://git@github.com/nbl7/urn-dot.git"
@@ -24,30 +17,11 @@
 	"license": "ISC",
 	"homepage": "https://github.com/nbl7/urn-dot#readme",
 	"devDependencies": {
-		"@types/dropzone": "^5.7.4",
 		"@types/minimist": "^1.2.1",
 		"@types/prettier": "^2.4.1",
 		"minimist": "^1.2.5",
-		"prettier": "^2.4.1",
-		"urn-adm-dep-dev": "git+ssh://git@github.com/nbl7/uranio-adm-dep-dev"
+		"prettier": "^2.4.1"
 	},
 	"dependencies": {
-		"@uppy/audio": "^0.2.1",
-		"@uppy/core": "^2.1.4",
-		"@uppy/image-editor": "^1.1.0",
-		"@uppy/vue": "^0.4.5",
-		"@uppy/webcam": "^2.0.5",
-		"@uppy/xhr-upload": "^2.0.7",
-		"dropzone": "^6.0.0-beta.2",
-		"mongoose": "^5.11.15",
-		"urn-adm-dep": "git+ssh://git@github.com/nbl7/uranio-adm-dep",
-		"urn-lib": "file:/home/nbl7/repos/uranio/urn-lib/"
-	},
-	"_moduleAliases": {
-		"uranio": "./dist/.uranio/server/src/uranio/",
-		"uranio-books": "./dist/.uranio/server/src/books/",
-		"uranio-trx": "./dist/.uranio/server/src/uranio/trx/",
-		"uranio-api": "./dist/.uranio/server/src/uranio/trx/api/",
-		"uranio-core": "./dist/.uranio/server/src/uranio/trx/api/core/"
 	}
 }

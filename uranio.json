@@ -1,8 +1,0 @@
-{
-	"repo": "adm",
-	"pacman": "yarn",
-	"deploy": "netlify",
-	"docker": false,
-	"docker_db": false,
-	"db": "mongo"
-}
