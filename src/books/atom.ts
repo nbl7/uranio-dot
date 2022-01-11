@@ -126,6 +126,7 @@ export const atom_book = {
 	},
 	error: {
 		plural: "errors",
+		read_only: true,
 		connection: "log",
 		security: {
 			type: uranio.types.BookSecurityType.UNIFORM,
@@ -164,6 +165,7 @@ export const atom_book = {
 	},
 	request: {
 		plural: "requests",
+		read_only: true,
 		connection: "log",
 		security: {
 			type: uranio.types.BookSecurityType.UNIFORM,
