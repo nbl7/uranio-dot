@@ -30,16 +30,16 @@ export const atom_book:uranio.types.Book = {
 			auth_url: '/customers-auth',
 			url: '/customers',
 			routes:{
-				hello:{
+				hello2:{
 					method: uranio.types.RouteMethod.GET,
 					action: uranio.types.AuthAction.READ,
-					query: ['some'],
+					query: ['some', 'other'],
 					url: '/hello',
 					return: Number,
 					call: async (
-						req:uranio.types.Api.Request<'customer', 'hello'>
+						req:uranio.types.Api.Request<'customer', 'hello2'>
 					):Promise<number> => {
-						console.log(req);
+						console.log(req.query.other);
 						return 899;
 					}
 				}

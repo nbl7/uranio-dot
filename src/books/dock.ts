@@ -48,14 +48,14 @@ export const dock_book = {
 			auth_url: "/customers-auth",
 			url: "/customers",
 			routes: {
-				hello: {
+				hello2: {
 					method: uranio.types.RouteMethod.GET,
 					action: uranio.types.AuthAction.READ,
-					query: ["some"],
+					query: ["some", "other"],
 					url: "/hello",
 					return: Number,
 					call: async (req: any): Promise<number> => {
-						console.log(req);
+						console.log(req.query.other);
 						return 899;
 					},
 				},
