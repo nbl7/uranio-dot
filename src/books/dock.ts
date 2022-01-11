@@ -45,17 +45,17 @@ export const dock_book = {
 	customer: {
 		plural: "customers",
 		dock: {
+			auth_url: "/customers-auth",
 			url: "/customers",
 			routes: {
-				pippi: {
+				hello: {
 					method: uranio.types.RouteMethod.GET,
 					action: uranio.types.AuthAction.READ,
-					url: "/pippo",
+					query: ["some"],
+					url: "/hello",
 					return: Number,
-					call: async (
-						req: uranio.types.Api.Request<"customer", "pippi">
-					): Promise<number> => {
-						console.log(req.route_name);
+					call: async (req: any): Promise<number> => {
+						console.log(req);
 						return 899;
 					},
 				},
@@ -78,9 +78,7 @@ export const dock_book = {
 					method: uranio.types.RouteMethod.GET,
 					action: uranio.types.AuthAction.READ,
 					url: "/myroute",
-					call: async (
-						api_request: uranio.types.Api.Request<"product", "myroute">
-					): Promise<number> => {
+					call: async (api_request: any): Promise<number> => {
 						console.log(api_request);
 						return 8;
 					},

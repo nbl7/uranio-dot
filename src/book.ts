@@ -9,6 +9,7 @@ import uranio from 'uranio';
 export const atom_book:uranio.types.Book = {
 	customer:{
 		plural: 'customers',
+		authenticate: true,
 		security:{
 			type: uranio.types.BookSecurityType.UNIFORM,
 			_w: uranio.types.BookPermissionType.PUBLIC
@@ -26,15 +27,19 @@ export const atom_book:uranio.types.Book = {
 			}
 		},
 		dock:{
+			auth_url: '/customers-auth',
 			url: '/customers',
 			routes:{
-				pippi:{
+				hello:{
 					method: uranio.types.RouteMethod.GET,
 					action: uranio.types.AuthAction.READ,
-					url: '/pippo',
+					query: ['some'],
+					url: '/hello',
 					return: Number,
-					call: async (req:uranio.types.Api.Request<'customer', 'pippi'>):Promise<number> => {
-						console.log(req.route_name);
+					call: async (
+						req:uranio.types.Api.Request<'customer', 'hello'>
+					):Promise<number> => {
+						console.log(req);
 						return 899;
 					}
 				}
