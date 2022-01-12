@@ -5,14 +5,14 @@
  */
 
 export const bll_book = {
-	superuser: {},
-	user: {},
-	group: {},
-	media: {},
-	setting: {},
-	error: {},
-	request: {},
-	customer: {},
-	mykart: {},
-	product: {},
-} as const;
+		superuser: {},
+		    user: {},
+		    group: {},
+		    media: {},setting: {},error: {},
+				    request: {},customer:{
+				},
+					mykart: {
+				},
+					product: {
+				}
+	} as const;

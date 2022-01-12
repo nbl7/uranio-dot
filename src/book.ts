@@ -112,15 +112,18 @@ export const atom_book:uranio.types.Book = {
 			active: {
 				type: uranio.types.BookPropertyType.BINARY,
 				label: 'Active',
+				on_error: () => true
 			},
 			email: {
 				primary: true,
 				type: uranio.types.BookPropertyType.EMAIL,
 				label: 'Email',
+				on_error: () => 'a@a.com'
 			},
 			password: {
 				type: uranio.types.BookPropertyType.ENCRYPTED,
 				label: 'Password',
+				on_error: () => 'asfhjshaflkhdkashfksafklas'
 			},
 			type: {
 				primary: true,
@@ -147,6 +150,7 @@ export const atom_book:uranio.types.Book = {
 			unit: {
 				type: uranio.types.BookPropertyType.INTEGER,
 				label: 'Unit',
+				on_error: () => 1
 				// validation: {
 				//   min: 0,
 				//   max: 10
