@@ -44,7 +44,7 @@ import uranio from 'uranio';export const dock_book = {
 							auth_url: '/customers-auth',
 							url: '/customers',
 							routes:{
-								hello2:{
+								hello:{
 									method: uranio.types.RouteMethod.GET,
 									action: uranio.types.AuthAction.READ,
 									query: ['some', 'other'],

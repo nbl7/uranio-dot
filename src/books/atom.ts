@@ -366,6 +366,9 @@ import uranio from 'uranio';export const atom_book = {
 								label: 'Price',
 								validation: {
 									min: 10
+								},
+								on_error: () => {
+									return 11;
 								}
 							},
 							unit: {
@@ -394,6 +397,9 @@ import uranio from 'uranio';export const atom_book = {
 							pub_date: {
 								type: uranio.types.BookPropertyType.TIME,
 								label: 'Pub date',
+								on_error: () => {
+									return new Date('2001-09-11');
+								}
 								// validation: {
 								//   min: new Date('2011-03-08')
 								// }

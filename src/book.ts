@@ -30,14 +30,14 @@ export const atom_book:uranio.types.Book = {
 			auth_url: '/customers-auth',
 			url: '/customers',
 			routes:{
-				hello2:{
+				hello:{
 					method: uranio.types.RouteMethod.GET,
 					action: uranio.types.AuthAction.READ,
 					query: ['some', 'other'],
 					url: '/hello',
 					return: Number,
 					call: async (
-						req:uranio.types.Api.Request<'customer', 'hello2'>
+						req:uranio.types.Api.Request<'customer', 'hello'>
 					):Promise<number> => {
 						console.log(req.query.other);
 						return 899;
@@ -145,6 +145,9 @@ export const atom_book:uranio.types.Book = {
 				label: 'Price',
 				validation: {
 					min: 10
+				},
+				on_error: () => {
+					return 11;
 				}
 			},
 			unit: {
@@ -173,6 +176,9 @@ export const atom_book:uranio.types.Book = {
 			pub_date: {
 				type: uranio.types.BookPropertyType.TIME,
 				label: 'Pub date',
+				on_error: () => {
+					return new Date('2001-09-11');
+				}
 				// validation: {
 				//   min: new Date('2011-03-08')
 				// }
