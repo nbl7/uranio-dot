@@ -47,14 +47,14 @@ import uranio from 'uranio';export const dock_book = {
 								hello:{
 									method: uranio.types.RouteMethod.GET,
 									action: uranio.types.AuthAction.READ,
-									query: ['some', 'other'],
+									query: ['some', 'other', 'third'],
 									url: '/hello',
 									return: Number,
 									call: async (
 										req:any
 									):Promise<number> => {
-										console.log(req.query.other);
-										return 899;
+										console.log(req.query.third);
+										return req.query.some;
 									}
 								}
 							}

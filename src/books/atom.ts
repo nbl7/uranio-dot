@@ -262,7 +262,7 @@ import uranio from 'uranio';export const atom_book = {
 							first_name: {
 								sortable: false,
 								type: uranio.types.BookPropertyType.TEXT,
-								label: 'First name'
+								label: 'First name 2'
 							},
 							last_name: {
 								type: uranio.types.BookPropertyType.TEXT,

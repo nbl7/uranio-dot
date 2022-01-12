@@ -15,8 +15,3 @@ const express_service = uranio.api.service.create();
 express_service.listen(7777, () => {
 	urn_log.debug(`Listening on port 7777...`);
 });
-
-// const bll = uranio.core.bll.basic.create('superuser');
-// bll.insert_new({email: 'b@a.com', password: 'Password'}).then((data) => {
-//   console.log(data);
-// });

@@ -18,7 +18,7 @@ export const atom_book:uranio.types.Book = {
 			first_name: {
 				sortable: false,
 				type: uranio.types.BookPropertyType.TEXT,
-				label: 'First name'
+				label: 'First name 2'
 			},
 			last_name: {
 				type: uranio.types.BookPropertyType.TEXT,
@@ -33,14 +33,14 @@ export const atom_book:uranio.types.Book = {
 				hello:{
 					method: uranio.types.RouteMethod.GET,
 					action: uranio.types.AuthAction.READ,
-					query: ['some', 'other'],
+					query: ['some', 'other', 'third'],
 					url: '/hello',
 					return: Number,
 					call: async (
 						req:uranio.types.Api.Request<'customer', 'hello'>
 					):Promise<number> => {
-						console.log(req.query.other);
-						return 899;
+						console.log(req.query.third);
+						return req.query.some;
 					}
 				}
 			}
