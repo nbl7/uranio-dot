@@ -49,14 +49,16 @@ import uranio from 'uranio';export const dock_book = {
 									action: uranio.types.AuthAction.READ,
 									query: ['some', 'other', 'third'],
 									url: '/hello/:stocazzo',
-									return: Number,
+									return: 'Molecule<customer,1>',
 									call: async (
 										req:any
-									):Promise<number> => {
-										console.log(req.query.third);
-										return req.query.some;
+									):Promise<uranio.types.Molecule<'customer',1>> => {
+										console.log(req.params.stocazzo);
+										console.log(req.query.some);
+										// return req.params.stocazzo || '';
+										return {} as uranio.types.Molecule<'customer',1>;
 									}
-								}
+								},
 							}
 						}
 					},
