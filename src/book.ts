@@ -34,7 +34,7 @@ export const atom_book:uranio.types.Book = {
 					method: uranio.types.RouteMethod.GET,
 					action: uranio.types.AuthAction.READ,
 					query: ['some', 'other', 'third'],
-					url: '/hello',
+					url: '/hello/:stocazzo',
 					return: Number,
 					call: async (
 						req:uranio.types.Api.Request<'customer', 'hello'>
