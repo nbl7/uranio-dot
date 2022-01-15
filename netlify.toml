@@ -17,3 +17,8 @@
     debug = true
     port = 7777
     publish = "dist"
+    #certFile = "cert.pem"
+    #keyFile = "key.pem"
+  #[dev.https]
+  #  certFile = "cert.pem"
+  #  keyFile = "key.pem"
