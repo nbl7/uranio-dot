@@ -14,25 +14,25 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com/nbl7/uranio-dot.git"
+		"url": "git+ssh://git@github.com/x71c9/uranio-dot.git"
 	},
 	"keywords": [
 		"uranio",
 		"urn"
 	],
-	"author": "Andrea Reni <mail@nbl7.net>",
+	"author": "Andrea Reni <108585118+x71c9@users.noreply.github.com>",
 	"license": "ISC",
-	"homepage": "https://github.com/nbl7/uranio-dot#readme",
+	"homepage": "https://github.com/x71c9/uranio-dot#readme",
 	"devDependencies": {
 		"@types/minimist": "^1.2.1",
 		"@types/prettier": "^2.4.1",
 		"minimist": "^1.2.5",
 		"prettier": "^2.4.1",
-		"uranio-core-dep-dev": "ssh://git@github.com/nbl7/uranio-core-dep-dev"
+		"uranio-core-dep-dev": "ssh://git@github.com/x71c9/uranio-core-dep-dev"
 	},
 	"dependencies": {
 		"mongoose": "^5.11.15",
-		"uranio-core-dep": "ssh://git@github.com/nbl7/uranio-core-dep"
+		"uranio-core-dep": "ssh://git@github.com/x71c9/uranio-core-dep"
 	},
 	"_moduleAliases": {
 		"uranio": "./dist/.uranio/server/src/uranio/",
